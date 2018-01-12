@@ -1,9 +1,9 @@
 {
-  "name": "datagrid",
-  "version": "0.0.4",
-  "description": "React DataGrid - UI components that display data in table format (for React)",
+  "name": "chequer.io",
+  "version": "0.0.1",
+  "description": "",
   "main": "",
-  "repository": "https://github.com/axui/datagrid",
+  "repository": "https://github.com/chequer-io/chequer-site",
   "dependencies": {
     "classnames": "^2.2.5",
     "immutable": "^3.8.2",

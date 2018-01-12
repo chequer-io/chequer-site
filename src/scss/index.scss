@@ -5,8 +5,8 @@ $flags-image-path: '../plugins/semantic-ui-scss/images/';
 $body-font-size: 14px;
 $import-google-fonts: false;
 $font-url: '';
-$font-name: 'Roboto, meiryo, "Noto Sans Korean"';
-$font-family: $font-name, sans-serif;
+$font-name: 'Roboto';
+$font-family: $font-name, meiryo, "Noto Sans Korean", sans-serif;
 
 // Colors
 // Body
