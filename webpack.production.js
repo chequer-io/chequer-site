@@ -10,7 +10,10 @@ webpack.logLevel = 'NONE';
 module.exports = {
   context: path.join(basePath, '.'),
   resolve: {
-    extensions: ['.js', '.ts', '.tsx']
+    extensions: ['.js', '.ts', '.tsx'],
+    alias: {
+      '@root': path.resolve(__dirname, '')
+    }
   },
   entry: {
     app: './src/index.tsx',
