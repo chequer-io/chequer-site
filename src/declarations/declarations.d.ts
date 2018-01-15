@@ -15,4 +15,13 @@ interface iSideNavState {}
 
 // PageMain
 interface iPageMainProps{}
-interface iPageMainState{}
+interface iPageMainState{
+  width: number;
+  height: number;
+}
+
+interface iFullPageProps{
+  width: number;
+  height: number;
+}
+interface iFullPageState{}

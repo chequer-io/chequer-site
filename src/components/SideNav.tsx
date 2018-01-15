@@ -17,7 +17,7 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   public render() {
     const { style } = this.props;
     return (
-      <Menu vertical fixed='left' inverted style={{ ...style }}>
+      <Menu vertical inverted style={{ ...style }}>
         <Menu.Item>
           <b>CHEQUER {pkg.version}</b>
         </Menu.Item>
@@ -35,25 +35,6 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
             </Menu.Item>
           </Menu.Menu>
         </Menu.Item>
-
-        <Menu.Item>
-          <Menu.Header>Attributes</Menu.Header>
-          <Menu.Menu>
-            <Menu.Item as={NavLink} to='/props' activeClassName='active'>
-              Props
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu.Item>
-
-        <Menu.Item>
-          <Menu.Header>Example</Menu.Header>
-          <Menu.Menu>
-            <Menu.Item as={NavLink} to='/sample/LargeData' activeClassName='active'>
-              LargeData
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu.Item>
-
       </Menu>
     )
   }
