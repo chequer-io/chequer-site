@@ -17,11 +17,13 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     return (
       <BrowserRouter>
         <div className="fullpage-wrapper">
-          <SideNav />
-          <Switch>
-            <Route exact path='/' render={RedirectToMain} />
-            <Route path='/Main' component={MainRoute} />
-          </Switch>
+          <Container>
+            <SideNav />
+            <Switch>
+              <Route exact path='/' render={RedirectToMain} />
+              <Route path='/Main' component={MainRoute} />
+            </Switch>
+          </Container>
         </div>
       </BrowserRouter>
     );
