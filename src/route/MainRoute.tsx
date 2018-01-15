@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 import throttle from 'lodash-es/throttle';
 import {Header} from 'semantic-ui-react';
 import {FullPage} from '../components';
+import * as Page from '../pages';
 
-export class PageMain extends React.Component<iPageMainProps, iPageMainState> {
+export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
   private throttled_updateDimensions: any;
 
@@ -44,9 +45,7 @@ export class PageMain extends React.Component<iPageMainProps, iPageMainState> {
     return (
       <>
       <FullPage {...FullPageProps}>
-        <h1>Introduction</h1>
-
-        {this.state.height}
+        <Page.CompanyVision/>
       </FullPage>
 
       <FullPage {...FullPageProps}>

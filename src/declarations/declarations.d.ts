@@ -25,3 +25,6 @@ interface iFullPageProps{
   height: number;
 }
 interface iFullPageState{}
+
+interface iCommonPageProps{}
+interface iCommonPageState{}

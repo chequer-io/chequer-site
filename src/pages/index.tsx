@@ -1,1 +1,1 @@
-export * from './PageMain';
+export * from './CompanyVision';
