@@ -11,7 +11,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
   public render() {
 
     return (
-      <div data-page="people">
+      <div data-page-content="people">
 
         <h1>PEOPLE</h1>
 

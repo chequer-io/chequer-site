@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import get from 'lodash-es/get';
 import {Container} from 'semantic-ui-react';
 import {FullPage, SideNav} from '../components';
@@ -42,8 +43,13 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     };
     const Page = this.pages[this.contentId];
 
+    let pageClassNames = {
+      'fullpage-wrapper': true,
+      ['page-' + this.contentId]: true
+    };
+
     return (
-      <div className="fullpage-wrapper" style={{width: this.props.width, height: this.props.height}}>
+      <div className={classNames(pageClassNames)} style={{width: this.props.width, height: this.props.height}}>
         <Container>
           <SideNav />
 

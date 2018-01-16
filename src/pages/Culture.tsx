@@ -11,7 +11,7 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
   public render() {
 
     return (
-      <div data-page="culture">
+      <div data-page-content="culture">
 
         <h1>CULTURE</h1>
 

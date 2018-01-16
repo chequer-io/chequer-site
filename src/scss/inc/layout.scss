@@ -1,3 +1,5 @@
+$menu-width: 250px;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -8,86 +10,104 @@ html, body {
   height: 100%;
 }
 
-.fullpage-wrapper {
-  $menu-width: 250px;
 
+// 페이지의 틀 정리
+.fullpage-wrapper {
   height: 100%;
+
   .container {
     position: relative;
     height: 100%;
-  }
-  .ui.vertical.menu {
-    $item-color: #fff;
-    $item-hover-color: #5C6FE3;
-
-    position: fixed;
-    // left: 0;
-    top: 0;
-    width: $menu-width;
-    height: 100%;
-    margin: 0;
-    padding: 20px;
-    border-radius: 0;
-
-    background: rgba(0, 0, 0, 0.50);
-
-    .logo {
-      display: block;
-      width: 170px;
-      height: 50px;
-      background: url('../assets/images/chequer-logo-white.png');
-      background-size: 170px;
-      margin: 0 auto;
-      text-indent: -100%;
-      overflow: hidden;
-    }
-    .menu-container {
-      padding: 30px 10px;
-    }
-    .item {
-      color: $item-color;
-      font-size: 16px;
-      &:hover {
-        color: $item-hover-color;
-      }
-      .menu {
-        margin: 0;
-        //padding: 5px 0;
-        a.item {
-          font-size: 14px;
-          padding: 10px 10px;
-          &:hover {
-            color: $item-hover-color;
-          }
-        }
-      }
-    }
-
-    .menu-footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      padding-bottom: 60px;
-      a {
-        padding: 10px;
-        font-size: 16px;
-      }
-    }
   }
 
   .fullpage {
     padding: 100px;
     padding-left: $menu-width + 50;
+  }
+}
 
-    h1 {
-      font-size: 55px;
-      font-weight: 700;
-      font-family: $heading-font-family;
+// 페이지의 메뉴 공통 스타일
+[data-page-menu].ui.vertical.menu {
+  $item-color: #fff;
+  $item-hover-color: #5C6FE3;
+
+  position: fixed;
+  // left: 0;
+  top: 0;
+  width: $menu-width;
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  border-radius: 0;
+
+  background: rgba(0, 0, 0, 0.50);
+
+  .logo {
+    display: block;
+    width: 170px;
+    height: 50px;
+    background: url('../assets/images/chequer-logo-white.png');
+    background-size: 170px;
+    margin: 0 auto;
+    text-indent: -100%;
+    overflow: hidden;
+  }
+  .menu-container {
+    padding: 30px 10px;
+  }
+  .item {
+    color: $item-color;
+    font-size: 16px;
+    &:hover {
+      color: $item-hover-color;
+    }
+    .menu {
+      margin: 0;
+      //padding: 5px 0;
+      a.item {
+        font-size: 14px;
+        padding: 10px 10px;
+        &:hover {
+          color: $item-hover-color;
+        }
+      }
+    }
+  }
+
+  .menu-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+    a {
+      padding: 10px;
+      font-size: 16px;
     }
   }
 }
+
+// 페이지의 내용 공통 스타일
+[data-page-content] {
+  h1 {
+    font-size: 55px;
+    font-weight: 700;
+    font-family: $heading-font-family;
+  }
+
+  p{
+    font-size: 18px;
+    &.large{
+      font-size: 1.5em;
+    }
+    &.small{
+      font-size: 0.8em;
+    }
+  }
+}
+
+// ! 개별 페이지별 정의는 scss/pages/... 아래 있는 파일 이용하여 스타일 해야함.
 
 
 

@@ -11,7 +11,7 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
   public render() {
 
     return (
-      <div data-page="company-sqlgate">
+      <div data-page-content="company-sqlgate">
 
         <h1>SQLGate</h1>
 

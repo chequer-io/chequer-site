@@ -16,7 +16,7 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   public render() {
     const {style} = this.props;
     return (
-      <Menu vertical inverted style={{...style}}>
+      <Menu vertical inverted style={{...style}} data-page-menu>
         <Menu.Item>
           <div className="logo">CHEQUER</div>
         </Menu.Item>

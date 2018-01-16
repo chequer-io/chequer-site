@@ -1,3 +1,15 @@
-[data-page="company-vision"]{
+.page-company-vision {
+  .fullpage {
+    background-color: #000;
+    background-image: url($assets-image-path + 'bg-company.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left top;
+  }
 
+  [data-page-menu] {
+  }
+  [data-page-content] {
+
+  }
 }

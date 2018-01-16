@@ -11,7 +11,7 @@ export class CompanyVision extends React.Component<iCommonPageProps, iCommonPage
   public render() {
 
     return (
-      <div data-page="company-vision">
+      <div data-page-content="company-vision">
 
         <h1>VISION</h1>
 

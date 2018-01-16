@@ -11,7 +11,7 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
   public render() {
 
     return (
-      <div data-page="contact">
+      <div data-page-content="contact">
 
         <h1>CONTACT</h1>
 
