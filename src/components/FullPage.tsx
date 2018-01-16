@@ -8,7 +8,7 @@ export class FullPage extends React.Component<iFullPageProps, iFullPageState> {
 
   public render() {
     return (
-      <div className='fullpage' style={{height: this.props.height}}>
+      <div className='fullpage' style={{minHeight: this.props.height}}>
         {this.props.children}
       </div>
     )

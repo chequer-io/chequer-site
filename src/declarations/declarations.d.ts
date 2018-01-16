@@ -5,7 +5,10 @@ declare module '*.json' {
 
 // Router
 interface iAppRouterProps{}
-interface iAppRouterState{}
+interface iAppRouterState{
+  width: number;
+  height: number;
+}
 
 // SideNav
 interface iSideNavProps {
@@ -14,10 +17,13 @@ interface iSideNavProps {
 interface iSideNavState {}
 
 // PageMain
-interface iPageMainProps{}
-interface iPageMainState{
+interface iPageMainProps{
   width: number;
   height: number;
+}
+interface iPageMainState{
+  currentPage: number;
+
 }
 
 interface iFullPageProps{

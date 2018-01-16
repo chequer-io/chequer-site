@@ -9,7 +9,7 @@ html, body {
 }
 
 .fullpage-wrapper {
-  $menu-width: 200px;
+  $menu-width: 250px;
 
   height: 100%;
   .container {
@@ -17,15 +17,77 @@ html, body {
     height: 100%;
   }
   .ui.vertical.menu {
-    position: absolute;
-    left: 0;
+    $item-color: #fff;
+    $item-hover-color: #5C6FE3;
+
+    position: fixed;
+    // left: 0;
     top: 0;
     width: $menu-width;
     height: 100%;
     margin: 0;
+    padding: 20px;
     border-radius: 0;
+
+    background: rgba(0, 0, 0, 0.50);
+
+    .logo {
+      display: block;
+      width: 170px;
+      height: 50px;
+      background: url('../assets/images/chequer-logo-white.png');
+      background-size: 170px;
+      margin: 0 auto;
+      text-indent: -100%;
+      overflow: hidden;
+    }
+    .menu-container {
+      padding: 30px 10px;
+    }
+    .item {
+      color: $item-color;
+      font-size: 16px;
+      &:hover {
+        color: $item-hover-color;
+      }
+      .menu {
+        margin: 0;
+        //padding: 5px 0;
+        a.item {
+          font-size: 14px;
+          padding: 10px 10px;
+          &:hover {
+            color: $item-hover-color;
+          }
+        }
+      }
+    }
+
+    .menu-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 60px;
+      a {
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
   }
+
   .fullpage {
-    padding-left: $menu-width;
+    padding: 100px;
+    padding-left: $menu-width + 50;
+
+    h1 {
+      font-size: 55px;
+      font-weight: 700;
+      font-family: $heading-font-family;
+    }
   }
 }
+
+
+

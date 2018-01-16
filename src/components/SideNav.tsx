@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Icon, Menu } from 'semantic-ui-react';
-import pkg from '@root/package.json';
+import {NavLink} from 'react-router-dom';
+import {Menu} from 'semantic-ui-react';
 
 export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
-  constructor( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
 
-    this.handleItemClick = this.handleItemClick.bind( this );
+    this.handleItemClick = this.handleItemClick.bind(this);
   }
 
   private handleItemClick() {
@@ -15,26 +14,45 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   }
 
   public render() {
-    const { style } = this.props;
+    const {style} = this.props;
     return (
-      <Menu vertical inverted style={{ ...style }}>
+      <Menu vertical inverted style={{...style}}>
         <Menu.Item>
-          <b>CHEQUER {pkg.version}</b>
+          <div className="logo">CHEQUER</div>
         </Menu.Item>
-        <Menu.Item>
-          <Menu.Header>Start</Menu.Header>
-          <Menu.Menu>
-            <Menu.Item as={NavLink} to='/introduction' activeClassName='active'>
-              Introduction
-            </Menu.Item>
-            <Menu.Item as={NavLink} to='/usage' activeClassName='active'>
-              Usage
-            </Menu.Item>
-            <Menu.Item as='a' href={pkg.repository}>
-              <Icon name='github' /> GitHub
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu.Item>
+        <div className="menu-container">
+          <Menu.Item as={NavLink} to='/c/company' activeClassName='active'>
+            Company
+          </Menu.Item>
+          <Menu.Item>
+            <Menu.Menu>
+              <Menu.Item as={NavLink} to='/c/company-vision' activeClassName='active'>
+                Vision
+              </Menu.Item>
+              <Menu.Item as={NavLink} to='/c/company-SQLGate' activeClassName='active'>
+                SQLGate
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu.Item>
+          <Menu.Item as={NavLink} to='/c/people' activeClassName='active'>
+            People
+          </Menu.Item>
+          <Menu.Item as={NavLink} to='/c/culture' activeClassName='active'>
+            Culture
+          </Menu.Item>
+          <Menu.Item as={NavLink} to='/c/contact' activeClassName='active'>
+            Contact
+          </Menu.Item>
+          <Menu.Item as={NavLink} to='/c/recruit' activeClassName='active'>
+            Recruit
+          </Menu.Item>
+        </div>
+
+        <div className="menu-footer">
+          <a href='https://www.facebook.com/SQLGate/' target='_blank'><span className="chi-facebook"></span></a>
+          <a href='https://medium.com/chequer' target='_blank'><span className="chi-medium"></span></a>
+          <a href='https://www.sqlgate.com/' target='_blank'><span className="chi-sqlgate"></span></a>
+        </div>
       </Menu>
     )
   }

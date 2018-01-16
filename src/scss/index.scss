@@ -3,88 +3,85 @@ $flags-image-path: '../plugins/semantic-ui-scss/images/';
 
 //Font
 $body-font-size: 14px;
-$import-google-fonts: false;
-$font-url: '';
+$import-google-fonts: true;
+$font-url: 'https://fonts.googleapis.com/css?family=Montserrat';
 $font-name: 'Roboto';
-$font-family: $font-name, meiryo, "Noto Sans Korean", sans-serif;
+$font-family: $font-name, sans-serif;
+$heading-font-family: 'Montserrat', sans-serif;
 
 // Colors
 // Body
-$body-bg-color:#FFFFFF;
-$body-font-color:rgba(0, 0, 0, 0.87);
+$body-bg-color: #111;
+$body-font-color: #fff;
 
 //Font
-$font-color: rgba(0, 0, 0, 0.87);
-$secondary-font: rgba(0, 0, 0, 0.4);
+$font-color: #fff;
+$secondary-font: #f2f2f2;
 
 //links Variables
-$a-font-color:#4183C4;
-$a-hover-font-color: #1e70bf;
+$a-font-color: #fff;
+$a-hover-font-color: #5C6FE3;
 
 //Primary
-$primary-color:#2185D0;
-$primary-color--hover:#1678c2;
-$primary-color--focus: #0d71bb;
-$primary-color--active: #1a69a4;
-$primary-color-active:#1279c6;
-$primary-color-active--active:#1279c6;
+$primary-color: #5C6FE3;
+$primary-color--hover: #676ef7;
+$primary-color--focus: #676ef7;
+$primary-color--active: #676ef7;
+$primary-color-active: #676ef7;
+$primary-color-active--active: #676eff;
 
 //Secondary
-$secondary-color:#1B1C1D;
-$secondary-color--hover:#27292a;
+$secondary-color: #1B1C1D;
+$secondary-color--hover: #27292a;
 $secondary-color--focus: #2e3032;
 $secondary-color--active: #343637;
-$secondary-color-active:#27292a;
-$secondary-color-active--active:#27292a;
+$secondary-color-active: #27292a;
+$secondary-color-active--active: #27292a;
 
 //Default
-$default-color:#E0E1E2;
-$default-font-color:#rgba(0, 0, 0, 0.6);
-$default-color--active:#BABBBC;
-$default-font-color--active:#rgba(0, 0, 0, 0.9);
-$default-color--hover:#CACBCD;
-$default-font-color--hover:#rgba(0, 0, 0, 0.8);
-$default-color--focus:#CACBCD;
-$default-font-color--focus:#rgba(0, 0, 0, 0.8);
-$default-active-color:#C0C1C2;
-$default-active-font-color:#rgba(0, 0, 0, 0.95);
-$default-active-color--active:#C0C1C2;
-$default-active-color--hover:#C0C1C2;
-$default-active-font-color--hover:#rgba(0, 0, 0, 0.95);
-$default-active-color--focus:#BABBBC;
-$default-active-font-color--focus:#rgba(0, 0, 0, 0.9);
-
-
-
+$default-color: #E0E1E2;
+$default-font-color: #rgba (0, 0, 0, 0.6);
+$default-color--active: #BABBBC;
+$default-font-color--active: #rgba (0, 0, 0, 0.9);
+$default-color--hover: #CACBCD;
+$default-font-color--hover: #rgba (0, 0, 0, 0.8);
+$default-color--focus: #CACBCD;
+$default-font-color--focus: #rgba (0, 0, 0, 0.8);
+$default-active-color: #C0C1C2;
+$default-active-font-color: #rgba (0, 0, 0, 0.95);
+$default-active-color--active: #C0C1C2;
+$default-active-color--hover: #C0C1C2;
+$default-active-font-color--hover: #rgba (0, 0, 0, 0.95);
+$default-active-color--focus: #BABBBC;
+$default-active-font-color--focus: #rgba (0, 0, 0, 0.9);
 
 //Basic
-$red:#DB2828;
-$orange:#F2711C;
-$yellow:#FBBD08;
-$olive:#B5CC18;
-$green:#21BA45;
-$teal:#00B5AD;
-$blue:#2185D0;
-$violet:#6435C9;
-$purple:#A333C8;
-$pink:#E03997;
-$brown:#A5673F;
-$grey:#767676;
-$white:#FFFFFF;
-$inverted-label:rgba(255, 255, 255, 0.9);
-$inverted-red:#FF695E;
-$inverted-orange:#FF851B;
-$inverted-yellow:#FFE21F;
-$inverted-olive:#D9E778;
-$inverted-green:#2ECC40;
-$inverted-teal:#6DFFFF;
-$inverted-blue:#54C8FF;
-$inverted-violet:#A291FB;
-$inverted-purple:#DC73FF;
-$inverted-pink:#FF8EDF;
-$inverted-brown:#D67C1C;
-$inverted-grey:#DCDDDE;
-
+$red: #DB2828;
+$orange: #F2711C;
+$yellow: #FBBD08;
+$olive: #B5CC18;
+$green: #21BA45;
+$teal: #00B5AD;
+$blue: #2185D0;
+$violet: #6435C9;
+$purple: #A333C8;
+$pink: #E03997;
+$brown: #A5673F;
+$grey: #767676;
+$white: #FFFFFF;
+$inverted-label: rgba(255, 255, 255, 0.9);
+$inverted-red: #FF695E;
+$inverted-orange: #FF851B;
+$inverted-yellow: #FFE21F;
+$inverted-olive: #D9E778;
+$inverted-green: #2ECC40;
+$inverted-teal: #6DFFFF;
+$inverted-blue: #54C8FF;
+$inverted-violet: #A291FB;
+$inverted-purple: #DC73FF;
+$inverted-pink: #FF8EDF;
+$inverted-brown: #D67C1C;
+$inverted-grey: #DCDDDE;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ import
 @import '../plugins/semantic-ui-scss/scss/variables/global';
@@ -92,7 +89,6 @@ $inverted-grey:#DCDDDE;
 
 @import '../plugins/semantic-ui-scss/scss/globals/reset';
 @import '../plugins/semantic-ui-scss/scss/globals/site';
-
 
 @import '../plugins/semantic-ui-scss/scss/elements/button';
 @import '../plugins/semantic-ui-scss/scss/elements/container';
@@ -142,9 +138,9 @@ $inverted-grey:#DCDDDE;
 // @import '../plugins/semantic-ui-scss/scss/modules/transition';
 // @import '../plugins/semantic-ui-scss/scss/modules/video';
 
-
 // ~~~~~~~
 @import "inc/font-roboto";
-@import "inc/font-notosans";
+@import "inc/font-montserrat";
 @import "../plugins/chequer-io-icon/style.scss";
 @import "inc/layout";
+@import "pages/index";

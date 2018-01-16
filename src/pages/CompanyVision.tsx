@@ -11,15 +11,15 @@ export class CompanyVision extends React.Component<iCommonPageProps, iCommonPage
   public render() {
 
     return (
-      <>
+      <div data-page="company-vision">
 
-        <h1>Company Vision</h1>
+        <h1>VISION</h1>
 
         <p>
 
         </p>
 
-      </>
+      </div>
     )
   }
 }

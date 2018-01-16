@@ -1,87 +1,60 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
-import throttle from 'lodash-es/throttle';
-import {Header} from 'semantic-ui-react';
-import {FullPage} from '../components';
+import get from 'lodash-es/get';
+import {Container} from 'semantic-ui-react';
+import {FullPage, SideNav} from '../components';
 import * as Page from '../pages';
 
 export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
-  private throttled_updateDimensions: any;
+  private pages: any;
+  private contentId: string;
 
   constructor(props) {
     super(props);
 
-    const rect = document.getElementsByTagName("body")[0]['getBoundingClientRect']();
-    this.state = {
-      width: rect.width,
-      height: rect.height
+    this.contentId = get(props, 'match.params.contentId');
+
+    this.pages = {
+      'company': Page.Company,
+      'company-vision': Page.CompanyVision,
+      'company-SQLGate': Page.CompanySQLGate,
+      'people': Page.People,
+      'culture': Page.Culture,
+      'contact': Page.Contact,
+      'recruit': Page.Recruit
     };
 
-    this.throttled_updateDimensions = throttle(this.updateDimensions.bind(this), 100);
-    window.addEventListener('resize', this.throttled_updateDimensions);
+    this.state = {
+      currentPage: 0
+    };
   }
 
-  public componentWillUnmount() {
-    window.removeEventListener('resize', this.throttled_updateDimensions);
-  }
-
-  // User Functions
-  private updateDimensions() {
-    const rect = document.getElementsByTagName("body")[0]['getBoundingClientRect']();
-    this.setState({
-      width: rect.width,
-      height: rect.height
-    });
+  public componentWillReceiveProps(nextProps) {
+    // console.log(get(nextProps, 'match.params.contentId'));
+    this.contentId = get(nextProps, 'match.params.contentId');
   }
 
   public render() {
 
     const FullPageProps = {
-      width: this.state.width,
-      height: this.state.height
+      width: this.props.width,
+      height: this.props.height
     };
+    const Page = this.pages[this.contentId];
 
     return (
-      <>
-      <FullPage {...FullPageProps}>
-        <Page.CompanyVision/>
-      </FullPage>
+      <div className="fullpage-wrapper" style={{width: this.props.width, height: this.props.height}}>
+        <Container>
+          <SideNav />
 
-      <FullPage {...FullPageProps}>
-        <Header as='h2' dividing>Background 백그라운드</Header>
-        <p>
-          체커 홈페이지 프로젝트
-        </p>
-        <p>
-          Installation instructions are provided in the <Link to='/usage'>Usage</Link> section.
-        </p>
-      </FullPage>
+          <div>
+            <FullPage {...FullPageProps}>
+              <Page />
+            </FullPage>
+          </div>
 
-      <FullPage {...FullPageProps}>
-        <Header as='h2' dividing>React + ES6 + TS</Header>
-        <p>
-          The AXUI datagrid was developed using the React framework. So do not use jQuery.<br />
-          In order to adapt to rapidly changing JS development environment, we use 'babel' to create code based on ES6 + TS, and use Typescript for systematic development.
-          If you're trying to build a web application with React, and you want to make all the code you use in your project complete ES6 + TS, the AXUI datagrid will be a good choice.
-        </p>
-      </FullPage>
-
-      <FullPage {...FullPageProps}>
-        <Header as='h2' dividing>Expressing large amounts of data</Header>
-        <p>
-
-        </p>
-      </FullPage>
-
-      <FullPage {...FullPageProps}>
-        <Header as='h2' dividing>Formatting data</Header>
-        <p>
-
-        </p>
-      </FullPage>
-
-      </>
+        </Container>
+      </div>
     )
   }
 }
