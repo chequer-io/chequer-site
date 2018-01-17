@@ -13,8 +13,12 @@ interface iAppRouterState{
 // SideNav
 interface iSideNavProps {
   style?: any;
+  currentPageIndex: number;
 }
 interface iSideNavState {}
+
+interface iCommonPageProps{}
+interface iCommonPageState{}
 
 // PageMain
 interface iPageMainProps{
@@ -22,8 +26,10 @@ interface iPageMainProps{
   height: number;
 }
 interface iPageMainState{
-  currentPage: number;
-
+  contentId: string;
+  currentPageIndex: number;
+  prevPageUrl?: string;
+  nextPageUrl?: string;
 }
 
 interface iFullPageProps{
@@ -32,5 +38,8 @@ interface iFullPageProps{
 }
 interface iFullPageState{}
 
-interface iCommonPageProps{}
-interface iCommonPageState{}
+interface iPageControlProps{
+  prevPageUrl?: string;
+  nextPageUrl?: string;
+}
+interface iPageControlState{}

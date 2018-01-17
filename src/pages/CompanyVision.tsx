@@ -1,6 +1,4 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
-import {Header} from 'semantic-ui-react';
 
 export class CompanyVision extends React.Component<iCommonPageProps, iCommonPageState> {
   constructor(props) {
@@ -15,9 +13,24 @@ export class CompanyVision extends React.Component<iCommonPageProps, iCommonPage
 
         <h1>VISION</h1>
 
-        <p>
+        <article>
+          <h2>
+            PROFESSIONAL - INNOTATIVE - FLEXIBLE
+          </h2>
 
-        </p>
+          <p>
+            MISSION :<br />
+            We make professional software development
+            more productive and enjoyable experience.
+          </p>
+
+          <p>
+            GOAL :<br />
+            We make professional software development more productive
+            and enjoyable experience. We make professional software development
+            more productive and enjoyable experience.
+          </p>
+        </article>
 
       </div>
     )

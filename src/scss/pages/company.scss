@@ -1,21 +1,42 @@
 .page-company {
   .fullpage {
     background-color: #000;
+
+    /*
     background-image: url($assets-image-path + 'bg-company.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: left top;
+    */
+
+    background-image: url($assets-image-path + 'bg-company-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left bottom;
   }
 
   [data-page-menu] {
   }
   [data-page-content] {
-    text-align: right;
+    // text-align: right;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
 
-    padding-top: 200px;
-    .btn-wrap{
+    h1 {
+      text-align: right;
+
+    }
+    p {
+      text-align: right;
+    }
+    article {
+      max-width: 550px;
+    }
+    .btn-wrap {
       margin: 2em 0;
     }
-
   }
 }

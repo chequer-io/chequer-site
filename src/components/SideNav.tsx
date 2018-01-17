@@ -51,7 +51,7 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
         <div className="menu-footer">
           <a href='https://www.facebook.com/SQLGate/' target='_blank'><span className="chi-facebook"></span></a>
           <a href='https://medium.com/chequer' target='_blank'><span className="chi-medium"></span></a>
-          <a href='https://www.sqlgate.com/' target='_blank'><span className="chi-sqlgate"></span></a>
+          <a href='https://www.sqlgate.com/' target='_blank'><span className="chi-SQLGate"></span></a>
         </div>
       </Menu>
     )

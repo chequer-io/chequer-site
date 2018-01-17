@@ -1,15 +1,18 @@
 .page-company-vision {
   .fullpage {
     background-color: #000;
-    background-image: url($assets-image-path + 'bg-company.jpg');
+    background-image: url($assets-image-path + 'bg-companyVision.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: left top;
+    background-position: right bottom;
+    background-size: 700px;
   }
 
   [data-page-menu] {
   }
   [data-page-content] {
-
+    article{
+      padding-top: 20px;
+    }
   }
 }

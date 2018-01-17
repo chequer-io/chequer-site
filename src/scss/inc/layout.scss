@@ -10,6 +10,11 @@ html, body {
   height: 100%;
 }
 
+a {
+  &:focus {
+    outline: none;
+  }
+}
 
 // 페이지의 틀 정리
 .fullpage-wrapper {
@@ -21,16 +26,47 @@ html, body {
   }
 
   .fullpage {
-    padding: 100px;
+    padding-top: 130px;
+    padding-right: 100px;
+    padding-bottom: 130px;
     padding-left: $menu-width + 50;
+  }
+
+  .page-control-wrap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .page-control {
+      position: absolute;
+      right: 60px;
+      bottom: 60px;
+      font-size: 30px;
+      .go-prev, .go-next {
+        display: inline-block;
+        &:hover {
+          @include rubberBand();
+          span {
+
+          }
+        }
+      }
+
+      .go-prev {
+        margin-right: 0.2em;
+      }
+      .go-next {
+
+      }
+    }
   }
 }
 
 // 페이지의 메뉴 공통 스타일
 [data-page-menu].ui.vertical.menu {
   $item-color: #fff;
-  $item-hover-color: #5C6FE3;
-
+  $item-hover-color: #af8aff;
+  z-index: 100;
   position: fixed;
   // left: 0;
   top: 0;
@@ -58,6 +94,10 @@ html, body {
   .item {
     color: $item-color;
     font-size: 16px;
+    border-radius: 7px;
+    &.active {
+
+    }
     &:hover {
       color: $item-hover-color;
     }
@@ -83,25 +123,34 @@ html, body {
     padding-bottom: 60px;
     a {
       padding: 10px;
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 }
 
 // 페이지의 내용 공통 스타일
 [data-page-content] {
+  position: relative;
+
+  @for $i from 1 to 10 {
+    :nth-child(#{$i}) {
+      @include fadeInUp($delay: ($i - 1) * 0.3s);
+    }
+  }
+
   h1 {
     font-size: 55px;
     font-weight: 700;
     font-family: $heading-font-family;
+    margin-bottom: 0.5em;
   }
 
-  p{
+  p {
     font-size: 18px;
-    &.large{
+    &.large {
       font-size: 1.5em;
     }
-    &.small{
+    &.small {
       font-size: 0.8em;
     }
   }
