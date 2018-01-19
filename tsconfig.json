@@ -12,7 +12,11 @@
     "baseUrl": "./",
     "paths": {
       "@root/*": ["/*"]
-    }
+    },
+    "typeRoots" : [
+      "./node_modules/@types",
+      "./src/typings"
+    ]
   },
   "compileOnSave": false,
   "exclude": [
