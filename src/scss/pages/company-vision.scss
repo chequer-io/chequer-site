@@ -1,5 +1,5 @@
 .page-company-vision {
-  .fullpage {
+  &.fullpage {
     background-color: #000;
     background-image: url($assets-image-path + 'bg-companyVision.jpg');
     background-repeat: no-repeat;
@@ -8,8 +8,6 @@
     background-size: 700px;
   }
 
-  [data-page-menu] {
-  }
   [data-page-content] {
     article{
       padding-top: 20px;

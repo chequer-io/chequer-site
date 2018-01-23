@@ -1,29 +1,82 @@
 import * as React from 'react';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import throttle from 'lodash-es/throttle';
+import debounce from 'lodash-es/debounce';
 import {MainRoute} from './route';
+
+
+const supportPageOffset = window.pageXOffset !== undefined;
+const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+
+function windowScrollY(to: number, duration: number) {
+  /**
+   *
+   * @param {number} t - current time
+   * @param {number} b - start value
+   * @param {number} c - change in value
+   * @param {number} d - duration
+   * @return {number}
+   */
+  const easeInOutQuad = function (t: number, b: number, c: number, d: number) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  };
+
+  const start: number = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+  const change: number = to - start;
+
+  let currentTime: number = 0;
+  let increment: number = 20;
+
+  const animateScroll = function () {
+    currentTime += increment;
+    window.scrollTo(0, easeInOutQuad(currentTime, start, change, duration));
+    if (currentTime < duration) {
+      setTimeout(animateScroll, increment);
+    }
+  };
+  animateScroll();
+}
+
 
 const RedirectToMain = () => <Redirect to='/c/company' />;
 
 export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState> {
 
   private throttled_updateDimensions: any;
+  private throttled_windowScroll: any;
+  private innerState: any;
 
   constructor(props) {
     super(props);
 
     const rect = document.getElementsByTagName("body")[0]['getBoundingClientRect']();
+
     this.state = {
       width: rect.width,
-      height: rect.height
+      height: rect.height,
+      scrollTop: 0
+    };
+
+    this.innerState = {
+      mounted: false,
+      onMountedCallBack: [],
+      willScrollTop: 0
     };
 
     this.throttled_updateDimensions = throttle(this.updateDimensions.bind(this), 100);
     window.addEventListener('resize', this.throttled_updateDimensions);
+    this.throttled_windowScroll = debounce(this.onWindowScroll.bind(this), 50);
+    window.addEventListener('scroll', this.throttled_windowScroll);
+
+    this.scrollTo = this.scrollTo.bind(this);
   }
 
   public componentWillUnmount() {
     window.removeEventListener('resize', this.throttled_updateDimensions);
+    window.removeEventListener('scroll', this.throttled_windowScroll);
   }
 
   // User Functions
@@ -35,15 +88,40 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     });
   }
 
-  public componentDidMount() {
+  private onWindowScroll(e) {
+    const supportPageOffset = window.pageXOffset !== undefined;
+    const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+    let scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
+    this.setState({
+      scrollTop: scrollTop
+    });
+  }
+
+  private scrollTo(y) {
+    if (this.innerState.mounted) {
+      windowScrollY(y, 600);
+    } else {
+      this.innerState.onMountedCallBack.push({
+        fn: this.scrollTo,
+        arg: [y]
+      });
+    }
+  }
+
+  public componentDidMount() {
+    this.innerState.mounted = true;
+    this.innerState.onMountedCallBack.forEach((cb) => {
+      cb.fn(...cb.arg);
+    });
   }
 
   public render() {
 
     const TossProps = {
       width: this.state.width,
-      height: this.state.height
+      height: this.state.height,
+      scrollTop: this.state.scrollTop
     };
 
     return (
@@ -52,7 +130,7 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
         <Switch>
           <Route exact path='/' render={RedirectToMain} />
           <Route path='/c/:contentId' render={(props) => (
-            <MainRoute {...props} {...TossProps} />
+            <MainRoute {...props} {...TossProps} fnScrollTo={this.scrollTo} />
           )} />
         </Switch>
 

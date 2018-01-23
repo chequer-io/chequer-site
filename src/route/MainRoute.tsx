@@ -1,11 +1,13 @@
 import * as React from 'react';
-import classNames from 'classnames';
 import createHistory from 'history/createBrowserHistory';
 import get from 'lodash-es/get';
+import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
+import assign from 'lodash-es/assign';
 import {Container} from 'semantic-ui-react';
-import {FullPage, PageControl, SideNav} from '../components';
+import {FullPage, SideNav} from '../components';
 import * as Page from '../pages';
+import * as ReactDOM from 'react-dom';
 
 const history = createHistory({
   forceRefresh: false
@@ -13,10 +15,13 @@ const history = createHistory({
 
 export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
-  private pages: [{
+  private pages: {
     id: string,
-    component: any
-  }];
+    component: any,
+    label: string
+  }[];
+  private pageRefs: any[];
+  private pagePositions: any[];
 
   constructor(props) {
     super(props);
@@ -24,13 +29,13 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     const contentId = get(props, 'match.params.contentId');
 
     this.pages = [
-      {id: 'company', component: Page.Company},
-      {id: 'company-vision', component: Page.CompanyVision},
-      {id: 'company-SQLGate', component: Page.CompanySQLGate},
-      {id: 'people', component: Page.People},
-      {id: 'culture', component: Page.Culture},
-      {id: 'contact', component: Page.Contact},
-      {id: 'recruit', component: Page.Recruit}
+      {id: 'company', label: 'Company', component: Page.Company},
+      {id: 'company-vision', label: 'Vision', component: Page.CompanyVision},
+      {id: 'company-SQLGate', label: 'SQLGate', component: Page.CompanySQLGate},
+      {id: 'people', label: 'People', component: Page.People},
+      {id: 'culture', label: 'Culture', component: Page.Culture},
+      {id: 'contact', label: 'Contact', component: Page.Contact},
+      {id: 'recruit', label: 'Recruit', component: Page.Recruit}
     ];
 
     const {
@@ -42,25 +47,54 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     this.state = {
       contentId: contentId,
       currentPageIndex: currentPageIndex || 0,
+      focusedPageIndex: null,
       prevPageUrl,
       nextPageUrl
     };
+
+    this.pageRefs = [];
+    this.pagePositions = [];
   }
 
   public componentWillReceiveProps(nextProps) {
     const contentId = get(nextProps, 'match.params.contentId');
-    const {
-      currentPageIndex,
-      prevPageUrl,
-      nextPageUrl
-    } = this.getControlPageInfo(contentId);
+    let newState = {};
 
-    this.setState({
-      contentId: contentId,
-      currentPageIndex: currentPageIndex || 0,
-      prevPageUrl,
-      nextPageUrl
-    });
+    if (contentId !== this.state.contentId) {
+      const {
+        currentPageIndex,
+        prevPageUrl,
+        nextPageUrl
+      } = this.getControlPageInfo(contentId);
+
+      newState = assign(newState, {
+        contentId: contentId,
+        currentPageIndex: currentPageIndex || 0,
+        prevPageUrl,
+        nextPageUrl
+      });
+
+      this.props.fnScrollTo(this.pagePositions[currentPageIndex].sy);
+    }
+    else if (this.props.scrollTop !== nextProps.scrollTop) {
+      // console.log(nextProps.scrollTop);
+      // this.pagePositions.forEach()
+      let focusedPageIndex = 0;
+      let minv = this.props.height;
+      for (let i = 0, l = this.pagePositions.length; i < l; i++) {
+        if (minv > Math.abs(nextProps.scrollTop - this.pagePositions[i].sy)) {
+          minv = Math.abs(nextProps.scrollTop - this.pagePositions[i].sy);
+          focusedPageIndex = i;
+        }
+      }
+
+      newState = assign(newState, {
+        focusedPageIndex: focusedPageIndex
+      });
+    }
+
+    this.calcPagePositions();
+    this.setState(newState);
   }
 
   private getControlPageInfo(contentId: string) {
@@ -83,29 +117,64 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     }
   }
 
+  public componentDidMount() {
+    let pageRefs: {
+      pIndex: number;
+      dom: any
+    }[] = [];
+
+    forEach(this.refs, (value, key) => {
+      pageRefs.push({
+        pIndex: Number(key),
+        dom: ReactDOM.findDOMNode(value)
+      });
+    });
+
+    this.onDidMount(pageRefs);
+  }
+
+  private onDidMount(pageRefs) {
+    this.pageRefs = pageRefs;
+    this.calcPagePositions();
+
+    this.props.fnScrollTo(this.pagePositions[this.state.currentPageIndex].sy);
+  }
+
+  private calcPagePositions() {
+    let _y: number = 0;
+    this.pagePositions = [];
+
+    forEach(this.pageRefs, (value, key) => {
+      this.pagePositions.push({
+        pIndex: value.pIndex,
+        sy: _y,
+        ey: _y = _y + value.dom.getBoundingClientRect().height
+      });
+    });
+  }
+
   public render() {
 
     const FullPageProps = {
       width: this.props.width,
       height: this.props.height
     };
-    const Page = this.pages[this.state.currentPageIndex].component;
-
-    let pageClassNames = {
-      'fullpage-wrapper': true,
-      ['page-' + this.state.contentId]: true
-    };
 
     return (
-      <div className={classNames(pageClassNames)} style={{width: this.props.width, height: this.props.height}}>
+      <div className={'fullpage-wrapper'}>
         <Container>
 
-          <FullPage {...FullPageProps}>
-            <Page />
-          </FullPage>
+          {this.pages.map((p, i) => {
+            return <FullPage key={i}
+                             {...FullPageProps}
+                             className={'page-' + p.id}
+                             pageIndex={i}
+                             ref={'' + i}>
+              <p.component />
+            </FullPage>
+          })}
 
-          <SideNav currentPageIndex={this.state.currentPageIndex} />
-          <PageControl prevPageUrl={this.state.prevPageUrl} nextPageUrl={this.state.nextPageUrl} />
+          <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
 
         </Container>
       </div>

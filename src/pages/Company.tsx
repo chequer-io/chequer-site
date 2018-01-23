@@ -27,6 +27,42 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
           </p>
         </article>
 
+        <article>
+          <p className='large'>
+            The world always goes on with data,
+            and CHEQUER allows to manage them fast and safely.
+          </p>
+
+          <p>
+            The first product, SQLGate, is an integrated data management solution
+            that supports all data-driven activities within the enterprise.
+          </p>
+        </article>
+
+        <article>
+          <p className='large'>
+            The world always goes on with data,
+            and CHEQUER allows to manage them fast and safely.
+          </p>
+
+          <p>
+            The first product, SQLGate, is an integrated data management solution
+            that supports all data-driven activities within the enterprise.
+          </p>
+        </article>
+
+        <article>
+          <p className='large'>
+            The world always goes on with data,
+            and CHEQUER allows to manage them fast and safely.
+          </p>
+
+          <p>
+            The first product, SQLGate, is an integrated data management solution
+            that supports all data-driven activities within the enterprise.
+          </p>
+        </article>
+
         <div className='btn-wrap'>
           <Button size='big' color='violet' animated>
             <Button.Content visible>Go to SQLGate Website</Button.Content>

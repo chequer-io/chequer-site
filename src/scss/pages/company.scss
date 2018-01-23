@@ -1,5 +1,5 @@
 .page-company {
-  .fullpage {
+  &.fullpage {
     background-color: #000;
 
     /*
@@ -13,9 +13,6 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: left bottom;
-  }
-
-  [data-page-menu] {
   }
   [data-page-content] {
     // text-align: right;

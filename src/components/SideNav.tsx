@@ -21,31 +21,15 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
           <div className="logo">CHEQUER</div>
         </Menu.Item>
         <div className="menu-container">
-          <Menu.Item as={NavLink} to='/c/company' activeClassName='active'>
-            Company
-          </Menu.Item>
-          <Menu.Item>
-            <Menu.Menu>
-              <Menu.Item as={NavLink} to='/c/company-vision' activeClassName='active'>
-                Vision
-              </Menu.Item>
-              <Menu.Item as={NavLink} to='/c/company-SQLGate' activeClassName='active'>
-                SQLGate
-              </Menu.Item>
-            </Menu.Menu>
-          </Menu.Item>
-          <Menu.Item as={NavLink} to='/c/people' activeClassName='active'>
-            People
-          </Menu.Item>
-          <Menu.Item as={NavLink} to='/c/culture' activeClassName='active'>
-            Culture
-          </Menu.Item>
-          <Menu.Item as={NavLink} to='/c/contact' activeClassName='active'>
-            Contact
-          </Menu.Item>
-          <Menu.Item as={NavLink} to='/c/recruit' activeClassName='active'>
-            Recruit
-          </Menu.Item>
+          {this.props.pages.map((p, pi) => {
+            return <Menu.Item
+              key={pi}
+              as={NavLink}
+              to={'/c/' + p.id}
+              activeClassName='active'>
+              {p.label}
+            </Menu.Item>
+          })}
         </div>
 
         <div className="menu-footer">
