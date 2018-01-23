@@ -60,4 +60,5 @@ gulp.task( 'dev run!', [ 'scss-watch' ], shell.task( [
 
 gulp.task( 'deploy to docs', shell.task( [
   'webpack -p --env=production --progress --profile --colors',
+  'git add -A'
 ] ) );

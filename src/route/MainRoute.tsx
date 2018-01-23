@@ -47,7 +47,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     this.state = {
       contentId: contentId,
       currentPageIndex: currentPageIndex || 0,
-      focusedPageIndex: null,
+      focusedPageIndex: currentPageIndex || 0,
       prevPageUrl,
       nextPageUrl
     };
@@ -70,6 +70,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       newState = assign(newState, {
         contentId: contentId,
         currentPageIndex: currentPageIndex || 0,
+        focusedPageIndex: currentPageIndex || 0,
         prevPageUrl,
         nextPageUrl
       });

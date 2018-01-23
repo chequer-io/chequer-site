@@ -68,7 +68,7 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
 
     this.throttled_updateDimensions = throttle(this.updateDimensions.bind(this), 100);
     window.addEventListener('resize', this.throttled_updateDimensions);
-    this.throttled_windowScroll = debounce(this.onWindowScroll.bind(this), 50);
+    this.throttled_windowScroll = throttle(this.onWindowScroll.bind(this), 100);
     window.addEventListener('scroll', this.throttled_windowScroll);
 
     this.scrollTo = this.scrollTo.bind(this);

@@ -92,9 +92,13 @@ a {
   .item {
     color: $item-color;
     font-size: 16px;
+    border: 1px solid transparent;
     border-radius: 7px;
     &.active {
 
+    }
+    &.focused{
+      border: 1px solid #fff;
     }
     &:hover {
       color: $item-hover-color;

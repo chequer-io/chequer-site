@@ -1,15 +1,11 @@
 import * as React from 'react';
 import {NavLink} from 'react-router-dom';
 import {Menu} from 'semantic-ui-react';
+import cx from 'classnames';
 
 export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   constructor(props) {
     super(props);
-
-    this.handleItemClick = this.handleItemClick.bind(this);
-  }
-
-  private handleItemClick() {
 
   }
 
@@ -22,11 +18,19 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
         </Menu.Item>
         <div className="menu-container">
           {this.props.pages.map((p, pi) => {
+
+            let additionalClass: any = {};
+            if(pi === this.props.focusedPageIndex){
+              additionalClass.focused = true;
+            }
+
             return <Menu.Item
               key={pi}
               as={NavLink}
               to={'/c/' + p.id}
-              activeClassName='active'>
+              activeClassName='active'
+              className={cx(additionalClass)}
+            >
               {p.label}
             </Menu.Item>
           })}
