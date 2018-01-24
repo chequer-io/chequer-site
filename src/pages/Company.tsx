@@ -38,7 +38,9 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
         </article>
 
         <div className='btn-wrap'>
-          <Button size='big' color='red' animated>
+          <Button size='big' color='red' animated onClick={e => {
+            window.open('https://www.sqlgate.com');
+          }}>
             <Button.Content visible>Go to SQLGate Website</Button.Content>
             <Button.Content hidden>
               <span className='chi-right' /> www.sqlgate.com

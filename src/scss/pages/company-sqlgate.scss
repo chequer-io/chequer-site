@@ -1,16 +1,49 @@
 .page-company-SQLGate {
+  color: #444;
+
   &.fullpage {
-    background-color: #000;
-    background-image: url($assets-image-path + 'bg-company.jpg');
+    background-color: #f6f6f6;
+    background-image: url($assets-image-path + 'bg-companySQLGate.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: left top;
+    background-position: right top;
+
+    padding: 0;
   }
 
   [data-page-content] {
-    h1{}
-    article{
-      padding-top: 20px;
+
+    .key-box{
+      padding: 150px;
+      min-height: 500px;
+    }
+    .features-box{
+      background: rgba(255, 255, 255, 0.5);
+      min-height: 500px;
+    }
+    .client-box{
+      background: rgba(255, 255, 255, 0.7);
+      min-height: 500px;
+    }
+
+
+    h1{
+      font-family: $heading-font-family;
+      font-size: 18px;
+      color: #FF344D;
+      letter-spacing: 1.84px;
+      line-height: 27px;
+    }
+    h2{
+      font-size: 45px;
+      color: #000000;
+      letter-spacing: 3.67px;
+      line-height: 54px;
+      font-weight: 500;
+      text-shadow: -1px 1px 1px #ff6161;
+    }
+    p{
+      font-size: 18px;
     }
   }
 }

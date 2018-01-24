@@ -1,6 +1,7 @@
 import * as React from 'react';
+import {Container} from 'semantic-ui-react';
 
-export class CompanyVision extends React.Component<iCommonPageProps, iCommonPageState> {
+export class CompanyVision extends React.Component<any, any> {
   constructor(props) {
     super(props);
 
@@ -10,28 +11,30 @@ export class CompanyVision extends React.Component<iCommonPageProps, iCommonPage
 
     return (
       <div data-page-content="company-vision">
+        <Container style={{height: this.props.height}}>
+          <h1>VISION</h1>
 
-        <h1>VISION</h1>
+          <article>
+            <h2>
+              PROFESSIONAL<br />
+              INNOTATIVE<br />
+              FLEXIBLE
+            </h2>
 
-        <article>
-          <h2>
-            PROFESSIONAL - INNOTATIVE - FLEXIBLE
-          </h2>
+            <p>
+              MISSION :<br />
+              We make professional software development
+              more productive and enjoyable experience.
+            </p>
 
-          <p>
-            MISSION :<br />
-            We make professional software development
-            more productive and enjoyable experience.
-          </p>
-
-          <p>
-            GOAL :<br />
-            We make professional software development more productive
-            and enjoyable experience. We make professional software development
-            more productive and enjoyable experience.
-          </p>
-        </article>
-
+            <p>
+              GOAL :<br />
+              We make professional software development more productive
+              and enjoyable experience. We make professional software development
+              more productive and enjoyable experience.
+            </p>
+          </article>
+        </Container>
       </div>
     )
   }

@@ -1,6 +1,4 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
-import {Header} from 'semantic-ui-react';
 
 export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPageState> {
   constructor(props) {
@@ -13,11 +11,25 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
     return (
       <div data-page-content="company-sqlgate">
 
-        <h1>SQLGate</h1>
+        <div className={'key-box'}>
 
-        <p>
-사람이 가장중요한 회사.
-        </p>
+          <h1>SQLGate</h1>
+
+          <p>
+            데이터베이스를 다루는 가장 똑똑한 방법.
+          </p>
+
+        </div>
+
+        <div className={'features-box'}>
+
+        </div>
+
+        <div className={'client-box'}>
+
+        </div>
+
+
 
       </div>
     )

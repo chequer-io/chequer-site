@@ -1,16 +1,49 @@
 .page-company-vision {
+  color: #444;
+
   &.fullpage {
-    background-color: #000;
+    background-color: #fff;
     background-image: url($assets-image-path + 'bg-companyVision.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: right bottom;
-    background-size: 700px;
+    background-position: left center;
+    background-size: contain;
+
+    padding: 0 150px;
   }
 
+
   [data-page-content] {
-    article{
-      padding-top: 20px;
+    text-align: right;
+
+    .ui.container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+
+      article{
+        width: 55%;
+      }
+    }
+
+    h1{
+      font-family: $heading-font-family;
+      font-size: 18px;
+      color: #FF344D;
+      letter-spacing: 1.84px;
+      line-height: 27px;
+    }
+    h2{
+      font-size: 45px;
+      color: #000000;
+      letter-spacing: 3.67px;
+      line-height: 54px;
+      font-weight: 500;
+      text-shadow: -1px 1px 1px #ff6161;
+    }
+    p{
+      font-size: 18px;
     }
   }
 }

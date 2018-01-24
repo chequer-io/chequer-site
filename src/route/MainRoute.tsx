@@ -163,9 +163,13 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       width: this.props.width,
       height: this.props.height
     };
+    let wrapperClass: any = {
+      'fullpage-wrapper': true,
+      ['wrapper-' + this.state.contentId]: true
+    };
 
     return (
-      <div className={'fullpage-wrapper'}>
+      <div className={cx(wrapperClass)}>
 
         {this.pages.map((p, pi) => {
 
@@ -181,7 +185,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
                            className={cx(additionalClass)}
                            pageIndex={pi}
                            ref={'' + pi}>
-            <p.component />
+            <p.component height={this.props.height} />
           </FullPage>
         })}
 

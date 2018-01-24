@@ -1,21 +1,20 @@
 .page-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   &.fullpage {
     background-color: #000;
-
     background-image: url($assets-image-path + 'bg-company.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
 
-  .chequer-logo{
+  .chequer-logo {
     font-size: 35px;
     position: absolute;
     top: 40px;
@@ -34,16 +33,16 @@
     justify-content: center;
     text-align: center;
 
-    .circles{
+    .circles {
       color: #FF344D;
       font-size: 12px;
       margin-bottom: 15px;
       text-shadow: 2px 2px 5px #000000;
-      span{
+      span {
         margin: 5px;
       }
     }
-    .h1Label{
+    .h1Label {
       font-size: 22px;
       color: #FF344D;
       letter-spacing: 3.36px;
@@ -66,7 +65,7 @@
     }
     .btn-wrap {
       margin-top: 5em;
-      .ui.button{
+      .ui.button {
         border-radius: 25px;
         /* btn-shape: */
         background-image: linear-gradient(90deg, #FF344D 0%, #881919 100%);
@@ -75,7 +74,7 @@
     }
   }
 
-  .footer{
+  .footer {
     font-size: 35px;
     position: absolute;
     bottom: 40px;
@@ -84,7 +83,7 @@
 
     @include bounceInUp($duration: 1s, $delay: 1s);
 
-    &:hover{
+    &:hover {
       color: #FF344D;
       // @include rubberBand($duration: 1s, $delay: 0s, $count: 1);
     }
