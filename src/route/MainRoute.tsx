@@ -4,7 +4,7 @@ import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
-import {AsideNav, FullPage, SideNav} from '../components';
+import {AsideNav, Footer, FullPage, SideNav} from '../components';
 import * as Page from '../pages';
 import * as ReactDOM from 'react-dom';
 import cx from 'classnames';
@@ -45,6 +45,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     } = this.getControlPageInfo(contentId);
 
     this.state = {
+      locationKey: '',
       contentId: contentId,
       currentPageIndex: currentPageIndex || 0,
       focusedPageIndex: currentPageIndex || 0,
@@ -57,12 +58,11 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
   }
 
   public componentWillReceiveProps(nextProps) {
+    const locationKey = get(nextProps, 'location.key');
     const contentId = get(nextProps, 'match.params.contentId');
     let newState = {};
 
     if (this.props.scrollTop !== nextProps.scrollTop) {
-      // console.log(nextProps.scrollTop);
-      // this.pagePositions.forEach()
       let focusedPageIndex = 0;
       let minv = this.props.height;
       for (let i = 0, l = this.pagePositions.length; i < l; i++) {
@@ -79,7 +79,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     else if (this.props.width !== nextProps.width || this.props.height !== nextProps.height) {
       // 아무것도 안하기.
     }
-    else {
+    else if (this.state.locationKey !== locationKey) {
       const {
         currentPageIndex,
         prevPageUrl,
@@ -87,6 +87,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       } = this.getControlPageInfo(contentId);
 
       newState = assign(newState, {
+        locationKey: locationKey,
         contentId: contentId,
         currentPageIndex: currentPageIndex || 0,
         focusedPageIndex: currentPageIndex || 0,
@@ -141,7 +142,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     this.pageRefs = pageRefs;
     this.calcPagePositions();
 
-    this.props.fnScrollTo(this.pagePositions[this.state.currentPageIndex].sy);
+    // this.props.fnScrollTo(this.pagePositions[this.state.currentPageIndex].sy);
   }
 
   private calcPagePositions() {
@@ -192,6 +193,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
         <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
         <AsideNav />
 
+        <Footer />
       </div>
     )
   }

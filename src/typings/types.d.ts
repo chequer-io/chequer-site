@@ -34,6 +34,7 @@ interface iPageMainProps{
   fnScrollTo: Function;
 }
 interface iPageMainState{
+  locationKey: string;
   contentId: string;
   currentPageIndex: number;
   focusedPageIndex: number | null;

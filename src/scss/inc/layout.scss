@@ -25,24 +25,23 @@ a {
   padding: 50px;
 
   [data-page-content] {
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    opacity: 0;
+    //transition: all 0.5s ease-in-out;
+    //-webkit-transition: all 0.5s ease-in-out;
+    //opacity: 0;
   }
   &.focused {
     [data-page-content] {
-      opacity: 1;
+      //opacity: 1;
       // display: block;
     }
   }
 }
 
-
 // 페이지의 메뉴 공통 스타일
 .side-nav {
   z-index: 1000;
   position: fixed;
-  left: 50px;
+  left: 30px;
   top: 0;
 
   //width: $menu-width;
@@ -62,7 +61,6 @@ a {
     background: rgba(0, 0, 0, 0.8);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
-    transform: translateX(-10px);
 
     .item {
       cursor: pointer;
@@ -77,8 +75,8 @@ a {
     }
     &:hover {
       padding: 20px 30px;
-      transform: translateX(0px);
-      border-radius: 0;
+      transform: translateX(-20px);
+      // border-radius: 0;
 
       .item {
         .label {
@@ -149,7 +147,7 @@ a {
 .aside-nav {
   z-index: 1000;
   position: fixed;
-  right: 50px;
+  right: 30px;
   top: 0;
 
   height: 100%;
@@ -169,7 +167,7 @@ a {
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
-    transform: translateX(5px);
+    transform: translateX(0px);
 
     .item {
       cursor: pointer;
@@ -184,9 +182,9 @@ a {
     }
 
     &:hover {
-      transform: translateX(0px);
+      transform: translateX(20px);
       padding: 10px 20px;
-      border-radius: 0;
+      // border-radius: 0;
 
       .item {
         .label {
@@ -238,6 +236,16 @@ a {
 }
 
 // ! 개별 페이지별 정의는 scss/pages/... 아래 있는 파일 이용하여 스타일 해야함.
+.page-footer {
+  background-color: #000;
+  background-image: url($assets-image-path + 'bg-footer.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+  height: 490px;
+}
 
 
 

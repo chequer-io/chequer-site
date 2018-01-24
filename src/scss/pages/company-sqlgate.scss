@@ -12,7 +12,6 @@
   }
 
   [data-page-content] {
-
     .key-box{
       padding: 150px;
       min-height: 500px;
@@ -24,26 +23,6 @@
     .client-box{
       background: rgba(255, 255, 255, 0.7);
       min-height: 500px;
-    }
-
-
-    h1{
-      font-family: $heading-font-family;
-      font-size: 18px;
-      color: #FF344D;
-      letter-spacing: 1.84px;
-      line-height: 27px;
-    }
-    h2{
-      font-size: 45px;
-      color: #000000;
-      letter-spacing: 3.67px;
-      line-height: 54px;
-      font-weight: 500;
-      text-shadow: -1px 1px 1px #ff6161;
-    }
-    p{
-      font-size: 18px;
     }
   }
 }

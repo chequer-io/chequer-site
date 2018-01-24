@@ -1,13 +1,12 @@
 .page-recruit {
   &.fullpage {
     background-color: #111111;
-
+    padding: 0;
   }
 
   [data-page-content] {
-    h1{}
-    article{
-      padding-top: 20px;
+    .ui.container {
+      padding: 150px;
     }
   }
 }

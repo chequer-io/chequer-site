@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 
   &.fullpage {
     background-color: #000;
@@ -81,7 +82,7 @@
     text-shadow: 2px 2px 5px #000000;
     cursor: pointer;
 
-    @include bounceInUp($duration: 1s, $delay: 1s);
+    @include flash($duration: 1s, $delay: 1s);
 
     &:hover {
       color: #FF344D;

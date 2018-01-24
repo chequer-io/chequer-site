@@ -1,22 +1,17 @@
 import * as React from 'react';
+import {NavLink} from 'react-router-dom';
 import {Container} from 'semantic-ui-react';
 
-export class People extends React.Component<iCommonPageProps, iCommonPageState> {
+export class Footer extends React.Component<iPageControlProps, iPageControlState> {
   constructor(props) {
     super(props);
 
   }
 
   public render() {
-
     return (
-      <div data-page-content="people">
+      <div className='page-footer'>
         <Container>
-          <h1>PEOPLE</h1>
-
-          <p>
-            사람이 가장중요한 회사.
-          </p>
 
         </Container>
       </div>
