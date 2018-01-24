@@ -2,38 +2,91 @@
   &.fullpage {
     background-color: #000;
 
-    /*
     background-image: url($assets-image-path + 'bg-company.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: left top;
-    */
+    background-position: center center;
+    background-size: cover;
 
-    background-image: url($assets-image-path + 'bg-company-1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: left bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .chequer-logo{
+    font-size: 35px;
+    position: absolute;
+    top: 40px;
+    text-shadow: 2px 2px 5px #000000;
+
+    @include fadeInDown($duration: 1s, $delay: 0.5s);
+  }
+
   [data-page-content] {
-    // text-align: right;
+    // @include fadeIn($duration: 2s, $delay: 0s);
+    max-width: 550px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    text-align: center;
 
+    .circles{
+      color: #FF344D;
+      font-size: 12px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px #000000;
+      span{
+        margin: 5px;
+      }
+    }
+    .h1Label{
+      font-size: 22px;
+      color: #FF344D;
+      letter-spacing: 3.36px;
+      line-height: 30px;
+      text-shadow: 2px 2px 5px #000000;
+      margin: 0;
+      font-weight: 600;
+    }
     h1 {
-      text-align: right;
-
+      margin-top: 0;
+      text-shadow: 2px 2px 5px #000000;
+      letter-spacing: 3.36px;
     }
     p {
-      text-align: right;
+      font-weight: 300;
+      text-shadow: 2px 2px 5px #000000;
     }
     article {
       max-width: 550px;
     }
     .btn-wrap {
-      margin: 2em 0;
+      margin-top: 5em;
+      .ui.button{
+        border-radius: 25px;
+        /* btn-shape: */
+        background-image: linear-gradient(90deg, #FF344D 0%, #881919 100%);
+        box-shadow: 0 2px 30px 0 #000000;
+      }
+    }
+  }
+
+  .footer{
+    font-size: 35px;
+    position: absolute;
+    bottom: 40px;
+    text-shadow: 2px 2px 5px #000000;
+    cursor: pointer;
+
+    @include bounceInUp($duration: 1s, $delay: 1s);
+
+    &:hover{
+      color: #FF344D;
+      // @include rubberBand($duration: 1s, $delay: 0s, $count: 1);
     }
   }
 }

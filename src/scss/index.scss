@@ -21,15 +21,15 @@ $secondary-font: #f2f2f2;
 
 //links Variables
 $a-font-color: #fff;
-$a-hover-font-color: #6435C9;
+$a-hover-font-color: #FF344D;
 
 //Primary
-$primary-color: #5C6FE3;
-$primary-color--hover: #676ef7;
-$primary-color--focus: #676ef7;
-$primary-color--active: #676ef7;
-$primary-color-active: #676ef7;
-$primary-color-active--active: #676eff;
+$primary-color: #fff;
+$primary-color--hover: #FF344D;
+$primary-color--focus: #FF344D;
+$primary-color--active: #FF344D;
+$primary-color-active: #FF344D;
+$primary-color-active--active: #FF344D;
 
 //Secondary
 $secondary-color: #1B1C1D;
@@ -276,6 +276,7 @@ $inverted-grey: #DCDDDE;
 // Import the animations
 @import "../plugins/animatewithsass/_attention-seekers/attention-seekers";
 @import "../plugins/animatewithsass/_fading-entrances/fading-entrances";
+@import "../plugins/animatewithsass/_bouncing-entrances/bouncing-entrances";
 @import "../plugins/animatewithsass/_zooming-entrances/zooming-entrances";
 
 @import "inc/font-roboto";

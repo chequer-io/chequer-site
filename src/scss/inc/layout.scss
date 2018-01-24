@@ -1,4 +1,4 @@
-$menu-width: 250px;
+$menu-width: 200px;
 
 html, body {
   margin: 0;
@@ -18,139 +18,203 @@ a {
 
 // 페이지의 틀 정리
 .fullpage-wrapper {
-
   .container {
     position: relative;
   }
 
   .fullpage {
-    padding-top: 130px;
-    padding-right: 100px;
-    padding-bottom: 130px;
-    padding-left: $menu-width + 50;
-  }
+    padding: 50px;
 
-  .page-control-wrap {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    .page-control {
-      position: absolute;
-      right: 60px;
-      bottom: 60px;
-      font-size: 30px;
-      .go-prev, .go-next {
-        display: inline-block;
-        &:hover {
-          @include rubberBand();
-          span {
-
-          }
-        }
-      }
-
-      .go-prev {
-        margin-right: 0.2em;
-      }
-      .go-next {
-
+    [data-page-content] {
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      opacity: 0;
+    }
+    &.focused {
+      [data-page-content] {
+        opacity: 1;
+        // display: block;
       }
     }
   }
 }
 
 // 페이지의 메뉴 공통 스타일
-[data-page-menu].ui.vertical.menu {
-  $item-color: #fff;
-  $item-hover-color: #af8aff;
-  z-index: 100;
+.side-nav {
+  z-index: 1000;
   position: fixed;
-  // left: 0;
+  left: 50px;
   top: 0;
-  width: $menu-width;
+
+  //width: $menu-width;
   height: 100%;
   margin: 0;
-  padding: 20px;
   border-radius: 0;
 
-  background: rgba(0, 0, 0, 0.50);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
-  .logo {
-    display: block;
-    width: 170px;
-    height: 50px;
-    background: url('../assets/images/chequer-logo-white.png');
-    background-size: 170px;
-    margin: 0 auto;
-    text-indent: -100%;
-    overflow: hidden;
-  }
-  .menu-container {
-    padding: 30px 10px;
-  }
-  .item {
-    color: $item-color;
-    font-size: 16px;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    &.active {
+  .nav-container {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transform: translateX(-5px);
 
-    }
-    &.focused{
-      border: 1px solid #fff;
+    .item {
+      cursor: pointer;
+      .label {
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+
+        transform: translateX(-10px);
+        opacity: 0;
+      }
     }
     &:hover {
-      color: $item-hover-color;
-    }
-    .menu {
-      margin: 0;
-      //padding: 5px 0;
-      a.item {
-        font-size: 14px;
-        padding: 10px 10px;
-        &:hover {
-          color: $item-hover-color;
+      transform: translateX(0px);
+
+      .item {
+        line-height: 60px;
+        .label {
+          transform: translateX(0px);
+          opacity: 1;
         }
       }
     }
   }
 
-  .menu-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 60px;
-    a {
-      padding: 10px;
-      font-size: 20px;
+  $item-height: 30px;
+  $item-dot-size: 12px;
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    // font-family: $heading-font-family;
+    text-shadow: 2px 2px 5px #000000;
+    line-height: $item-height;
+
+    .dot {
+      transition: all 0.3s ease-in-out;
+      content: ' ';
+      display: block;
+      width: $item-dot-size;
+      height: $item-dot-size;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      float: left;
+      margin-right: 0.5em;
+    }
+    .label {
+
+    }
+
+    &.active {
+      .dot {
+        border: 2px solid #FF344D;
+        background: #FF344D;
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &.focused {
+      color: #FF344D;
+      .dot {
+        background: #FF344D;
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &:hover {
+      color: #FF344D;
+      .dot {
+        border: 2px solid #FF344D;
+      }
+    }
+
+  }
+}
+.aside-nav{
+  z-index: 1000;
+  position: fixed;
+  right: 50px;
+  top: 0;
+
+  //width: $menu-width;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+  .nav-container {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transform: translateX(5px);
+
+    .item {
+      cursor: pointer;
+      .label {
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+
+        transform: translateX(10px);
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      transform: translateX(0px);
+
+      .item {
+        .label {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
     }
   }
+
+  .item{
+    font-size: 24px;
+    line-height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .label{
+      font-size: 14px;
+      margin-right: 0.5em;
+    }
+  }
+
 }
 
 // 페이지의 내용 공통 스타일
 [data-page-content] {
   position: relative;
 
-  @for $i from 1 to 10 {
-    :nth-child(#{$i}) {
-      @include fadeInUp($delay: ($i - 1) * 0.3s);
-    }
-  }
-
   h1 {
     font-size: 55px;
-    font-weight: 700;
-    font-family: $heading-font-family;
+    font-weight: 600;
+    // font-family: $heading-font-family;
     margin-bottom: 0.5em;
   }
 
   p {
     font-size: 18px;
     &.large {
-      font-size: 1.5em;
+      font-size: 22px;
     }
     &.small {
       font-size: 0.8em;

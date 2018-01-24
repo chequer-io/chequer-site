@@ -4,10 +4,10 @@ import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
-import {Container} from 'semantic-ui-react';
-import {FullPage, SideNav} from '../components';
+import {AsideNav, FullPage, SideNav} from '../components';
 import * as Page from '../pages';
 import * as ReactDOM from 'react-dom';
+import cx from 'classnames';
 
 const history = createHistory({
   forceRefresh: false
@@ -29,7 +29,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     const contentId = get(props, 'match.params.contentId');
 
     this.pages = [
-      {id: 'company', label: 'Company', component: Page.Company},
+      {id: 'company', label: 'CHEQUER', component: Page.Company},
       {id: 'company-vision', label: 'Vision', component: Page.CompanyVision},
       {id: 'company-SQLGate', label: 'SQLGate', component: Page.CompanySQLGate},
       {id: 'people', label: 'People', component: Page.People},
@@ -60,7 +60,26 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     const contentId = get(nextProps, 'match.params.contentId');
     let newState = {};
 
-    if (contentId !== this.state.contentId) {
+    if (this.props.scrollTop !== nextProps.scrollTop) {
+      // console.log(nextProps.scrollTop);
+      // this.pagePositions.forEach()
+      let focusedPageIndex = 0;
+      let minv = this.props.height;
+      for (let i = 0, l = this.pagePositions.length; i < l; i++) {
+        if (minv > Math.abs(nextProps.scrollTop - this.pagePositions[i].sy)) {
+          minv = Math.abs(nextProps.scrollTop - this.pagePositions[i].sy);
+          focusedPageIndex = i;
+        }
+      }
+
+      newState = assign(newState, {
+        focusedPageIndex: focusedPageIndex
+      });
+    }
+    else if (this.props.width !== nextProps.width || this.props.height !== nextProps.height) {
+      // 아무것도 안하기.
+    }
+    else {
       const {
         currentPageIndex,
         prevPageUrl,
@@ -76,22 +95,6 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       });
 
       this.props.fnScrollTo(this.pagePositions[currentPageIndex].sy);
-    }
-    else if (this.props.scrollTop !== nextProps.scrollTop) {
-      // console.log(nextProps.scrollTop);
-      // this.pagePositions.forEach()
-      let focusedPageIndex = 0;
-      let minv = this.props.height;
-      for (let i = 0, l = this.pagePositions.length; i < l; i++) {
-        if (minv > Math.abs(nextProps.scrollTop - this.pagePositions[i].sy)) {
-          minv = Math.abs(nextProps.scrollTop - this.pagePositions[i].sy);
-          focusedPageIndex = i;
-        }
-      }
-
-      newState = assign(newState, {
-        focusedPageIndex: focusedPageIndex
-      });
     }
 
     this.calcPagePositions();
@@ -163,21 +166,28 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
     return (
       <div className={'fullpage-wrapper'}>
-        <Container>
 
-          {this.pages.map((p, i) => {
-            return <FullPage key={i}
-                             {...FullPageProps}
-                             className={'page-' + p.id}
-                             pageIndex={i}
-                             ref={'' + i}>
-              <p.component />
-            </FullPage>
-          })}
+        {this.pages.map((p, pi) => {
 
-          <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
+          let additionalClass: any = {
+            ['page-' + p.id]: true
+          };
+          if (pi === this.state.focusedPageIndex) {
+            additionalClass.focused = true;
+          }
 
-        </Container>
+          return <FullPage key={pi}
+                           {...FullPageProps}
+                           className={cx(additionalClass)}
+                           pageIndex={pi}
+                           ref={'' + pi}>
+            <p.component />
+          </FullPage>
+        })}
+
+        <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
+        <AsideNav />
+
       </div>
     )
   }

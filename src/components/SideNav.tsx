@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {NavLink} from 'react-router-dom';
-import {Menu} from 'semantic-ui-react';
 import cx from 'classnames';
 
 export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
@@ -12,36 +11,30 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   public render() {
     const {style} = this.props;
     return (
-      <Menu vertical inverted style={{...style}} data-page-menu>
-        <Menu.Item>
-          <div className="logo">CHEQUER</div>
-        </Menu.Item>
-        <div className="menu-container">
+        <div className="side-nav">
+          <div className={'nav-container'}>
           {this.props.pages.map((p, pi) => {
 
-            let additionalClass: any = {};
+            let additionalClass: any = {
+              'item': true
+            };
             if(pi === this.props.focusedPageIndex){
               additionalClass.focused = true;
             }
 
-            return <Menu.Item
+            return <NavLink
               key={pi}
-              as={NavLink}
               to={'/c/' + p.id}
               activeClassName='active'
               className={cx(additionalClass)}
             >
-              {p.label}
-            </Menu.Item>
+              <span className={'dot'} />
+              <span className={'label'}>{p.label}</span>
+            </NavLink>
           })}
+          </div>
         </div>
 
-        <div className="menu-footer">
-          <a href='https://www.facebook.com/SQLGate/' target='_blank'><span className="chi-facebook"></span></a>
-          <a href='https://medium.com/chequer' target='_blank'><span className="chi-medium"></span></a>
-          <a href='https://www.sqlgate.com/' target='_blank'><span className="chi-SQLGate"></span></a>
-        </div>
-      </Menu>
     )
   }
 }

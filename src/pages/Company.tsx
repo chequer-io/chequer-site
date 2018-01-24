@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Button} from 'semantic-ui-react';
+import {NavLink} from 'react-router-dom';
 
 export class Company extends React.Component<iCommonPageProps, iCommonPageState> {
   constructor(props) {
@@ -10,61 +11,34 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
   public render() {
 
     return (
+      <>
+
+      <div className={'chequer-logo'}>
+        <span className='chi-chequer-full' />
+      </div>
+
       <div data-page-content='company'>
 
-        <h1>DATABASE DRIVEN<br />
-            INNOVATION COMPANY</h1>
+        <div className={'circles'}>
+          <span className='chi-circle' />
+          <span className='chi-circle' />
+          <span className='chi-circle' />
+        </div>
+        <p className={'h1Label'}>
+          DATA MANAGEMENT SOLUTION
+        </p>
+        <h1>DATABASE DRIVEN
+            INNOVATION</h1>
 
         <article>
-          <p className='large'>
-            The world always goes on with data,
-            and CHEQUER allows to manage them fast and safely.
-          </p>
-
-          <p>
-            The first product, SQLGate, is an integrated data management solution
-            that supports all data-driven activities within the enterprise.
-          </p>
-        </article>
-
-        <article>
-          <p className='large'>
-            The world always goes on with data,
-            and CHEQUER allows to manage them fast and safely.
-          </p>
-
-          <p>
-            The first product, SQLGate, is an integrated data management solution
-            that supports all data-driven activities within the enterprise.
-          </p>
-        </article>
-
-        <article>
-          <p className='large'>
-            The world always goes on with data,
-            and CHEQUER allows to manage them fast and safely.
-          </p>
-
-          <p>
-            The first product, SQLGate, is an integrated data management solution
-            that supports all data-driven activities within the enterprise.
-          </p>
-        </article>
-
-        <article>
-          <p className='large'>
-            The world always goes on with data,
-            and CHEQUER allows to manage them fast and safely.
-          </p>
-
-          <p>
-            The first product, SQLGate, is an integrated data management solution
-            that supports all data-driven activities within the enterprise.
+          <p className={'large'}>
+            The world always goes on with data,<br />
+            and SQLGate allows to manage them fast and safely.
           </p>
         </article>
 
         <div className='btn-wrap'>
-          <Button size='big' color='violet' animated>
+          <Button size='big' color='red' animated>
             <Button.Content visible>Go to SQLGate Website</Button.Content>
             <Button.Content hidden>
               <span className='chi-right' /> www.sqlgate.com
@@ -73,6 +47,14 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
         </div>
 
       </div>
+
+      <div className={'footer'}>
+        <NavLink to={'/c/company-vision'}>
+          <span className='chi-mouse' />
+        </NavLink>
+      </div>
+
+      </>
     )
   }
 }
