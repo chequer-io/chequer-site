@@ -6,10 +6,10 @@
     background-image: url($assets-image-path + 'bg-companyVision.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: left center;
+    background-position: left bottom;
     background-size: contain;
 
-    padding: 0 150px;
+    padding: 0 130px;
   }
 
 
@@ -23,7 +23,10 @@
       justify-content: center;
 
       article{
-        width: 55%;
+        width: 50%;
+        max-width: 550px;
+        background: rgba(240, 240, 240, 0.54);
+        padding: 20px;
       }
     }
 

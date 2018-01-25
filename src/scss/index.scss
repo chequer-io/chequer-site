@@ -21,7 +21,7 @@ $secondary-font: #f2f2f2;
 
 //links Variables
 $a-font-color: #fff;
-$a-hover-font-color: #FF344D;
+$a-hover-font-color: #ff4546;
 
 //Primary
 $primary-color: #fff;
@@ -223,8 +223,8 @@ $inverted-grey: #DCDDDE;
 @import '../plugins/semantic-ui-scss/scss/elements/divider';
 // @import '../plugins/semantic-ui-scss/scss/elements/flag';
 @import '../plugins/semantic-ui-scss/scss/elements/header';
-// @import '../plugins/semantic-ui-scss/scss/elements/icon';
-// @import '../plugins/semantic-ui-scss/scss/elements/image';
+@import '../plugins/semantic-ui-scss/scss/elements/icon';
+@import '../plugins/semantic-ui-scss/scss/elements/image';
 @import '../plugins/semantic-ui-scss/scss/elements/input';
 @import '../plugins/semantic-ui-scss/scss/elements/label';
 // @import '../plugins/semantic-ui-scss/scss/elements/list';
@@ -242,7 +242,7 @@ $inverted-grey: #DCDDDE;
 @import '../plugins/semantic-ui-scss/scss/collections/table';
 
 // @import '../plugins/semantic-ui-scss/scss/views/ad';
-// @import '../plugins/semantic-ui-scss/scss/views/card';
+@import '../plugins/semantic-ui-scss/scss/views/card';
 // @import '../plugins/semantic-ui-scss/scss/views/comment';
 // @import '../plugins/semantic-ui-scss/scss/views/feed';
 // @import '../plugins/semantic-ui-scss/scss/views/item';

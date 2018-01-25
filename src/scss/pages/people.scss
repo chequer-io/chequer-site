@@ -1,13 +1,43 @@
 .page-people {
   &.fullpage {
     background-color: #222;
-    padding: 0;
+    padding: 100px 150px;
   }
 
   [data-page-content] {
-    .ui.container{
-      padding: 150px;
+    h1{
+      font-family: $heading-font-family;
+      font-size: 36px;
+      color: #FFFFFF;
+      letter-spacing: 3.67px;
+      line-height: 27px;
     }
 
+    .ui.card {
+      box-shadow: none;
+      border: 0 none;
+      background: #eee;
+      border-radius: 0;
+      padding: 20px;
+
+      margin-bottom: 2rem;
+
+      .content{
+        .header{
+          font-family: $heading-font-family;
+        }
+        .meta{
+          color: #cc1f1f;
+        }
+      }
+      .extra{
+        color: #444;
+
+        a{
+          font-size: 20px;
+          color: #111;
+        }
+      }
+    }
   }
 }

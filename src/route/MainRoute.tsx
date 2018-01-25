@@ -30,12 +30,12 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
     this.pages = [
       {id: 'company', label: 'CHEQUER', component: Page.Company},
-      {id: 'company-vision', label: 'Vision', component: Page.CompanyVision},
-      {id: 'company-SQLGate', label: 'SQLGate', component: Page.CompanySQLGate},
-      {id: 'people', label: 'People', component: Page.People},
-      {id: 'culture', label: 'Culture', component: Page.Culture},
-      {id: 'contact', label: 'Contact', component: Page.Contact},
-      {id: 'recruit', label: 'Recruit', component: Page.Recruit}
+      {id: 'company-vision', label: 'VISION', component: Page.CompanyVision},
+      {id: 'company-SQLGate', label: 'PRODUCT', component: Page.CompanySQLGate},
+      {id: 'people', label: 'PEOPLE', component: Page.People},
+      {id: 'culture', label: 'CULTURE', component: Page.Culture},
+      {id: 'recruit', label: 'RECRUIT', component: Page.Recruit},
+      {id: 'contact', label: 'CONTACT', component: Page.Contact}
     ];
 
     const {
@@ -140,9 +140,10 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
   private onDidMount(pageRefs) {
     this.pageRefs = pageRefs;
-    this.calcPagePositions();
 
-    // this.props.fnScrollTo(this.pagePositions[this.state.currentPageIndex].sy);
+    setTimeout(() => {
+      this.calcPagePositions();
+    }, 100);
   }
 
   private calcPagePositions() {

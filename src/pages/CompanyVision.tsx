@@ -12,9 +12,8 @@ export class CompanyVision extends React.Component<any, any> {
     return (
       <div data-page-content="company-vision">
         <Container style={{height: this.props.height}}>
-          <h1>VISION</h1>
-
           <article>
+            <h1>VISION</h1>
             <h2>
               PROFESSIONAL<br />
               INNOTATIVE<br />

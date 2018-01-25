@@ -58,7 +58,7 @@ a {
     padding: 10px 20px;
     background: #000;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(52, 52, 52, 0.9);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
 
@@ -74,9 +74,9 @@ a {
       }
     }
     &:hover {
-      padding: 20px 30px;
-      transform: translateX(-20px);
-      // border-radius: 0;
+      padding: 30px 50px 30px 30px;
+      // transform: translateX(-20px);
+      border-radius: 10px;
 
       .item {
         .label {
@@ -90,6 +90,7 @@ a {
 
   $item-height: 30px;
   $item-dot-size: 12px;
+  $item-key-color: #ff4546;
   .item {
     height: 40px;
     display: flex;
@@ -98,12 +99,13 @@ a {
     justify-content: flex-start;
 
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     border: 1px solid transparent;
     border-radius: 7px;
-    // font-family: $heading-font-family;
-    text-shadow: 1px 1px 3px #000000;
+    font-family: $heading-font-family;
+    //text-shadow: 1px 1px 3px #000000;
     line-height: 1em;
+    font-weight: 700;
 
     .dot {
       transition: all 0.3s ease-in-out;
@@ -122,22 +124,22 @@ a {
 
     &.active {
       .dot {
-        border: 2px solid #FF344D;
-        background: #FF344D;
+        border: 2px solid $item-key-color;
+        background: $item-key-color;
         transform: scale(1.2, 1.2);
       }
     }
     &.focused {
-      color: #FF344D;
+      color: $item-key-color;
       .dot {
-        background: #FF344D;
+        background: $item-key-color;
         transform: scale(1.2, 1.2);
       }
     }
     &:hover {
-      color: #FF344D;
+      color: $item-key-color;
       .dot {
-        border: 2px solid #FF344D;
+        border: 2px solid $item-key-color;
       }
     }
 
@@ -163,7 +165,7 @@ a {
     padding: 5px 10px;
     background: #000;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(52, 52, 52, 0.9);
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -184,7 +186,7 @@ a {
     &:hover {
       transform: translateX(20px);
       padding: 10px 20px;
-      // border-radius: 0;
+      border-radius: 10px;
 
       .item {
         .label {
@@ -245,6 +247,24 @@ a {
   background-size: cover;
 
   height: 490px;
+  padding: 100px 0 0 100px;
+
+
+  .logo{
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  h3{
+    margin-bottom: 5px;
+    font-family: $heading-font-family;
+  }
+  p{
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
 }
 
 

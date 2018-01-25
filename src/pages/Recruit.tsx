@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Container} from 'semantic-ui-react';
+import {Grid} from 'semantic-ui-react';
 
 export class Recruit extends React.Component<iCommonPageProps, iCommonPageState> {
   constructor(props) {
@@ -11,13 +11,16 @@ export class Recruit extends React.Component<iCommonPageProps, iCommonPageState>
 
     return (
       <div data-page-content="culture">
-        <Container>
-          <h1>RECRUIT</h1>
+        <Grid doubling container>
+          <Grid.Row>
+            <Grid.Column textAlign={'center'}>
+              <h1>
+                RECRUIT
+              </h1>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
 
-          <p>
-            사람이 가장중요한 회사.
-          </p>
-        </Container>
       </div>
     )
   }

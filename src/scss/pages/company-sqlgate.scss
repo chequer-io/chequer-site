@@ -2,27 +2,96 @@
   color: #444;
 
   &.fullpage {
-    background-color: #f6f6f6;
-    background-image: url($assets-image-path + 'bg-companySQLGate.png');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: right top;
+    background-color: #fff;
 
     padding: 0;
   }
 
   [data-page-content] {
-    .key-box{
-      padding: 150px;
+    .key-box {
+      background-color: #f3f3f3;
+      padding: 100px 150px 50px 150px;
       min-height: 500px;
+
+      h1 {
+        font-family: $heading-font-family;
+        font-size: 18px;
+        color: #FF344D;
+        letter-spacing: 1.84px;
+        line-height: 27px;
+      }
+      h2 {
+        font-size: 45px;
+        color: #000000;
+        letter-spacing: 3.67px;
+        line-height: 54px;
+        font-weight: 500;
+        margin-top: 9px;
+      }
+
+      p {
+        &.large {
+          color: #000;
+          font-weight: 500;
+        }
+      }
+
+      .ui.basic.buttons {
+        margin: 50px 0;
+        .button {
+          background: #fff !important;
+          color: #000 !important;
+          font-family: $heading-font-family;
+          font-size: 15px;
+          &:hover {
+            color: $a-hover-font-color !important;
+          }
+        }
+      }
+
     }
-    .features-box{
-      background: rgba(255, 255, 255, 0.5);
+    .features-box {
+      background: #fafafa;
       min-height: 500px;
+      padding: 50px 150px;
+
+      .ui.segment {
+        box-shadow: none;
+        border: 0 none;
+        background: #222;
+        color: #fff;
+        border-radius: 0;
+        padding: 20px;
+        p {
+          font-size: 13px;
+          color: #ccc;
+        }
+      }
     }
-    .client-box{
-      background: rgba(255, 255, 255, 0.7);
+    .client-box {
+      padding: 100px 150px;
       min-height: 500px;
+
+      background-color: #fff;
+      background-image: url($assets-image-path + 'bg-companySQLGate.jpg');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: left center;
+      background-size: cover;
+
+      h2 {
+        font-size: 22px;
+        font-family: $heading-font-family;
+        color: #565656;
+        margin-bottom: 20px;
+      }
+
+      .client-logo {
+        img {
+          width: 100%;
+        }
+        margin-bottom: 10px;
+      }
     }
   }
 }

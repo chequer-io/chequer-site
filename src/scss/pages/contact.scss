@@ -3,12 +3,28 @@
 
   &.fullpage {
     background-color: #FAFAFA;
-    padding: 0;
+    padding: 100px 150px;
   }
 
   [data-page-content] {
-    .ui.container {
-      padding: 150px;
+    h1{
+      font-family: $heading-font-family;
+      font-size: 36px;
+      letter-spacing: 3.67px;
+      line-height: 27px;
+    }
+
+    .ui.segment {
+      box-shadow: none;
+      border: 0 none;
+      background: #222;
+      color: #fff;
+      border-radius: 0;
+      padding: 20px;
+      p {
+        font-size: 13px;
+        color: #ccc;
+      }
     }
   }
 }
