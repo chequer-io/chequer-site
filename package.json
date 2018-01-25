@@ -6,6 +6,7 @@
   "repository": "https://github.com/chequer-io/chequer-site",
   "dependencies": {
     "classnames": "^2.2.5",
+    "google-map-react": "^0.29.0",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "lodash-es": "^4.17.4",

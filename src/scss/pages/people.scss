@@ -18,9 +18,11 @@
       border: 0 none;
       background: #eee;
       border-radius: 0;
-      padding: 20px;
-
       margin-bottom: 2rem;
+
+      :first-child{
+        border-radius: 0 !important;
+      }
 
       .content{
         .header{
