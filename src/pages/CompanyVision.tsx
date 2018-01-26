@@ -18,17 +18,12 @@ export class CompanyVision extends React.Component<any, any> {
                             innovate business work productivities with technologies
                         </h2>
 
-                        <p>
-                            MISSION :<br/>
-                            We make professional software development
-                            more productive and enjoyable experience.
+                        <p>MISSION<br/>
+                            Make data work safer<br/>
+                            Make data work faster<br/>
+                            Make data wore more enjoyable<br/>
                         </p>
-
                         <p>
-                            GOAL :<br/>
-                            We make professional software development more productive
-                            and enjoyable experience. We make professional software development
-                            more productive and enjoyable experience.
                         </p>
                     </article>
                 </Container>
