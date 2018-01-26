@@ -1,0 +1,30 @@
+.google-map-place {
+  $border-color: #222;
+  $border-width: 2px;
+
+  position: absolute;
+  left: -5px;
+  top: -32px;
+  border: $border-width solid $border-color;
+  background: #fff;
+  color: #222;
+  padding: 4px 5px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: $heading-font-family;
+  box-shadow: 0 0 3px #000;
+  white-space: nowrap;
+  border-radius: 5px;
+
+  &:before {
+    content: ' ';
+    display: block;
+    border-top: 6px solid $border-color;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 0 none;
+    position: absolute;
+    left: 5px;
+    bottom: -7px;
+  }
+}

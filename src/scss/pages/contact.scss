@@ -7,23 +7,41 @@
   }
 
   [data-page-content] {
-    h1{
+    h1 {
       font-family: $heading-font-family;
       font-size: 36px;
       letter-spacing: 3.67px;
       line-height: 27px;
     }
 
-    .ui.segment {
-      box-shadow: none;
+    .ui.card {
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.30);
+
       border: 0 none;
-      background: #222;
-      color: #fff;
+      background: #fff;
       border-radius: 0;
-      padding: 20px;
-      p {
-        font-size: 13px;
-        color: #ccc;
+      margin-bottom: 2rem;
+
+      :first-child {
+        border-radius: 0 !important;
+      }
+
+      .content {
+        padding: 20px;
+        .header {
+          font-family: $heading-font-family;
+          span {
+            color: #cc1f1f;
+          }
+        }
+      }
+      .extra {
+        color: #444;
+
+        a {
+          font-size: 20px;
+          color: #111;
+        }
       }
     }
   }

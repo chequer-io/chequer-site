@@ -9,6 +9,7 @@ interface iGoogleMapViewerProps {
     lat: number;
     lng: number;
   };
+  text: string;
 }
 
 export class GoogleMapViewer extends React.Component<iGoogleMapViewerProps, any> {
@@ -24,7 +25,6 @@ export class GoogleMapViewer extends React.Component<iGoogleMapViewerProps, any>
   }
 
   render() {
-
     const GOOGLE_MAP_API_KEY = 'AIzaSyCM2lfWR5sc1mjf56tRf-Gfnni09dApb_M';
 
     return (
@@ -32,7 +32,7 @@ export class GoogleMapViewer extends React.Component<iGoogleMapViewerProps, any>
         bootstrapURLKeys={{key:GOOGLE_MAP_API_KEY}}
         center={this.props.center}
         zoom={this.props.zoom}>
-        <GoogleMapPlace {...this.props.placeCoords} text={'B'} />
+        <GoogleMapPlace {...this.props.placeCoords} text={this.props.text} />
       </GoogleMap>
     );
   }
