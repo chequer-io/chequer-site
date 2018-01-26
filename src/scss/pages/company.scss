@@ -46,7 +46,7 @@
     .h1Label {
       font-size: 22px;
       color: #FF344D;
-      letter-spacing: 3.36px;
+      letter-spacing: 2px;
       line-height: 30px;
       text-shadow: 2px 2px 5px #000000;
       margin: 0;
@@ -55,14 +55,21 @@
     h1 {
       margin-top: 0;
       text-shadow: 2px 2px 5px #000000;
-      letter-spacing: 3.36px;
+      letter-spacing: 0;
+      margin-bottom: 0;
     }
     p {
+      font-size: 20px;
       font-weight: 300;
       text-shadow: 2px 2px 5px #000000;
+      color: #ccc;
+      letter-spacing: 1px;
     }
     article {
       max-width: 650px;
+      margin-bottom: 30px;
+      //font-family: $heading-font-family;
+
     }
     .btn-wrap {
       margin-top: 5em;

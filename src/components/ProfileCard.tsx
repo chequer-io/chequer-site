@@ -11,7 +11,7 @@ export class ProfileCard extends React.Component<any, any> {
 
   public render() {
     return (
-      <Card>
+      <Card fluid>
         <Image src={profileImg[this.props.id]} />
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>

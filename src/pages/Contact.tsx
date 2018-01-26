@@ -31,7 +31,7 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
                   <GoogleMapViewer
                     text={'SEOUL OFFICE'}
                     center={[37.5588997, 126.8621197]}
-                    zoom={10}
+                    zoom={11}
                     placeCoords={{
                       lat: 37.5588997, lng: 126.8621197
                     }} />
@@ -46,8 +46,8 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
                   <Card.Description>No.1401, 2F, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea</Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  TEL : 02-338-1876<br/>
-                  FAX : 02-6008-1876
+                  TEL : +82 2-2663-3039<br/>
+                  FAX : +82 2-6008-1876
                 </Card.Content>
 
               </Card>
@@ -59,7 +59,7 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
                   <GoogleMapViewer
                     text={'JEJU OFFICE'}
                     center={[33.3073909, 126.8031071]}
-                    zoom={10}
+                    zoom={9}
                     placeCoords={{
                       lat: 33.3073909, lng: 126.8031071
                     }} />

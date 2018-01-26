@@ -17,21 +17,17 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
       </div>
 
       <div data-page-content='company'>
-        <div className={'circles'}>
-          <span className='chi-circle' />
-          <span className='chi-circle' />
-          <span className='chi-circle' />
-        </div>
-        <h1>We lead technologies</h1>
+        <h1>WE LEAD TECHNOLOGIES</h1>
         <article>
-          <p className={'large'}>
-              We make high-quality software you've dreamed<br/>to work on with the newest technologies.
+          <p className={''}>
+            We believe that technologies change the world better and we put our efforts in it.&nbsp;&nbsp;
+            We make high-quality software you've dreamed to work on with the newest technologies.
+
           </p>
         </article>
-        <br/>
-          <p className={'h1Label'}>
-              Our product provoke your success business
-          </p>
+        <p className={'h1Label'}>
+          OUR PRODUCT PROVOKE YOUR SUCCESS BUSINESS
+        </p>
       </div>
 
       <div className={'footer'}>
