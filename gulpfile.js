@@ -54,11 +54,11 @@ gulp.task( 'default', [ 'scss-watch' ], function () {
  * npm publish
  */
 
-gulp.task( 'dev run!', [ 'scss-watch' ], shell.task( [
+gulp.task( 'dev run!', [ 'scss-src', 'scss-watch' ], shell.task( [
   'webpack-dev-server',
 ] ) );
 
-gulp.task( 'deploy to docs', shell.task( [
+gulp.task( 'deploy to docs', [ 'scss-src' ], shell.task( [
   'webpack -p --env=production --progress --profile --colors',
   'git add -A'
 ] ) );
