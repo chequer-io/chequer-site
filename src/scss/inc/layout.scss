@@ -1,5 +1,11 @@
 $menu-width: 200px;
 
+@mixin media-mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -38,15 +44,33 @@ a {
 }
 
 // 페이지의 메뉴 공통 스타일
-.nav-fixed-container{
+.mobile-nav {
+  display: none;
+  @include media-mobile {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.nav-fixed-container {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
-  .ui.container{
+  .ui.container {
     position: relative;
   }
+
+  @include media-mobile {
+    display: none;
+  }
 }
+
 .side-nav {
   z-index: 1000;
   position: absolute;
@@ -153,6 +177,10 @@ a {
     }
 
   }
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .aside-nav {
@@ -222,6 +250,9 @@ a {
     }
   }
 
+  @include media-mobile {
+    display: none;
+  }
 }
 
 // 페이지의 내용 공통 스타일

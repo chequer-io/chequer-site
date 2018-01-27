@@ -97,3 +97,35 @@
     }
   }
 }
+
+/**
+모바일 디자인
+ */
+@include media-mobile{
+  .page-company{
+    .chequer-logo{
+      display: none;
+    }
+
+    [data-page-content] {
+      .h1Label {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 35px;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 16px;
+      }
+      article {
+
+      }
+      .btn-wrap {
+        .ui.button {
+
+        }
+      }
+    }
+  }
+}

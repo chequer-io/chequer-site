@@ -1,18 +1,13 @@
 import * as React from 'react';
-import createHistory from 'history/createBrowserHistory';
 import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
 import {Container} from 'semantic-ui-react';
-import {AsideNav, Footer, FullPage, SideNav} from '../components';
+import {AsideNav, Footer, FullPage, MobileNav, SideNav} from '../components';
 import * as Page from '../pages';
 import * as ReactDOM from 'react-dom';
 import cx from 'classnames';
-
-const history = createHistory({
-  forceRefresh: false
-});
 
 export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
@@ -199,6 +194,9 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
             <AsideNav style={{height: this.props.height}} />
           </Container>
         </div>
+
+        <MobileNav />
+
       </div>
     )
   }
