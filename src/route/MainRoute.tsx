@@ -4,6 +4,7 @@ import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
+import {Container} from 'semantic-ui-react';
 import {AsideNav, Footer, FullPage, SideNav} from '../components';
 import * as Page from '../pages';
 import * as ReactDOM from 'react-dom';
@@ -190,11 +191,14 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
             <p.component height={this.props.height} />
           </FullPage>
         })}
-
-        <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
-        <AsideNav />
-
         <Footer />
+
+        <div className={'nav-fixed-container'}>
+          <Container>
+            <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} style={{height: this.props.height}} />
+            <AsideNav style={{height: this.props.height}} />
+          </Container>
+        </div>
       </div>
     )
   }

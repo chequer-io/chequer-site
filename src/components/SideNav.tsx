@@ -11,7 +11,7 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
   public render() {
     const {style} = this.props;
     return (
-        <div className="side-nav">
+        <div className="side-nav" style={style}>
           <div className={'nav-container'}>
           {this.props.pages.map((p, pi) => {
 

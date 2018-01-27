@@ -38,10 +38,19 @@ a {
 }
 
 // 페이지의 메뉴 공통 스타일
+.nav-fixed-container{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  .ui.container{
+    position: relative;
+  }
+}
 .side-nav {
   z-index: 1000;
-  position: fixed;
-  left: 30px;
+  position: absolute;
+  left: 20px;
   top: 0;
 
   //width: $menu-width;
@@ -55,7 +64,7 @@ a {
   justify-content: center;
 
   .nav-container {
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: #000;
     border-radius: 30px;
     background: rgba(52, 52, 52, 0.9);
@@ -148,8 +157,8 @@ a {
 
 .aside-nav {
   z-index: 1000;
-  position: fixed;
-  right: 30px;
+  position: absolute;
+  right: 20px;
   top: 0;
 
   height: 100%;
@@ -199,8 +208,8 @@ a {
   }
 
   .item {
-    font-size: 24px;
-    height: 50px;
+    font-size: 20px;
+    height: 40px;
 
     display: flex;
     flex-direction: row;
@@ -244,21 +253,19 @@ a {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  background-size: cover;
 
   height: 490px;
-  padding: 100px 0 0 100px;
+  padding: 100px 300px 0 300px;
 
-
-  .logo{
+  .logo {
     font-size: 40px;
     margin-bottom: 20px;
   }
-  h3{
+  h3 {
     margin-bottom: 5px;
     font-family: $heading-font-family;
   }
-  p{
+  p {
     font-size: 14px;
     color: #FFFFFF;
     line-height: 24px;

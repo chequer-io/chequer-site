@@ -21,7 +21,7 @@ export class Recruit extends React.Component<iCommonPageProps, iCommonPageState>
           </Grid.Row>
         </Grid>
 
-        <Grid container doubling columns={3}>
+        <Grid container doubling columns={2}>
           <Grid.Row stretched>
             <Grid.Column>
               <Card fluid>

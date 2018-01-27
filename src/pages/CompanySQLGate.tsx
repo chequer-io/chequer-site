@@ -36,8 +36,8 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
 
     return (
       <div data-page-content="company-sqlgate">
-        <div className={'key-box'}>
 
+        <div className={'key-box'}>
           <Grid container doubling columns={2}>
             <Grid.Row>
               <Grid.Column>
@@ -74,7 +74,6 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
               </Grid.Column>
             </Grid.Row>
           </Grid>
-
         </div>
 
         <div className={'features-box'}>

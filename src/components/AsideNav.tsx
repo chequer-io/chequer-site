@@ -9,7 +9,7 @@ export class AsideNav extends React.Component<any, any> {
   public render() {
     const {style} = this.props;
     return (
-      <div className="aside-nav">
+      <div className="aside-nav" style={style}>
         <div className={'nav-container'}>
           <a href={'https://www.facebook.com/SQLGate/'} target={'_blank'} className={'item'}>
             <span className={'label'}>facebook.com/SQLGate</span>

@@ -4,10 +4,22 @@
   &.fullpage {
     background-color: #fff;
 
-    padding: 0;
+    padding: 100px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   [data-page-content] {
+
+    width: 100%;
+
+    .ui.container{
+      padding: 0 100px;
+    }
+
     .key-box {
       background-color: #f3f3f3;
       padding: 100px 150px 50px 150px;
@@ -73,11 +85,6 @@
       min-height: 500px;
 
       background-color: #fff;
-      background-image: url($assets-image-path + 'bg-companySQLGate.jpg');
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: left center;
-      background-size: cover;
 
       h2 {
         font-size: 22px;

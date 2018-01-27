@@ -12,8 +12,10 @@ declare module '*.jpg' {
 }
 
 // Router
-interface iAppRouterProps{}
-interface iAppRouterState{
+interface iAppRouterProps {
+}
+
+interface iAppRouterState {
   width: number;
   height: number;
   scrollTop: number;
@@ -28,20 +30,28 @@ interface iSideNavProps {
     component: any,
     label: string
   }[];
+  width?: number;
+  height?: number;
 }
-interface iSideNavState {}
 
-interface iCommonPageProps{}
-interface iCommonPageState{}
+interface iSideNavState {
+}
+
+interface iCommonPageProps {
+}
+
+interface iCommonPageState {
+}
 
 // PageMain
-interface iPageMainProps{
+interface iPageMainProps {
   width: number;
   height: number;
   scrollTop: number;
   fnScrollTo: Function;
 }
-interface iPageMainState{
+
+interface iPageMainState {
   locationKey: string;
   contentId: string;
   currentPageIndex: number;
@@ -50,16 +60,20 @@ interface iPageMainState{
   nextPageUrl?: string;
 }
 
-interface iFullPageProps{
+interface iFullPageProps {
   pageIndex: number;
   width: number;
   height: number;
   className: any;
 }
-interface iFullPageState{}
 
-interface iPageControlProps{
+interface iFullPageState {
+}
+
+interface iPageControlProps {
   prevPageUrl?: string;
   nextPageUrl?: string;
 }
-interface iPageControlState{}
+
+interface iPageControlState {
+}
