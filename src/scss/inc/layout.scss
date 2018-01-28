@@ -382,11 +382,20 @@ a {
   }
 
   @include media-mobile {
-    padding: 30px 10px;
+
     background-position: left bottom;
+    padding: 0;
+
+    .ui.container{
+      padding: 30px 20px;
+    }
 
     .logo{
       font-size: 30px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 14px;
     }
     p{
       font-size: 12px;
