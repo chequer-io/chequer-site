@@ -49,10 +49,12 @@ a {
   @include media-mobile {
     display: block;
     position: fixed;
+    overflow: hidden;
     left: 0;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.5s ease-in-out;
 
     .nav-header {
       position: relative;
@@ -62,8 +64,9 @@ a {
       align-items: center;
       justify-content: center;
 
+
       .chequer-logo {
-        font-size: 20px;
+        font-size: 30px;
         margin: 0 auto;
       }
       .right-corner {
@@ -73,11 +76,57 @@ a {
         top: 0;
 
         [data-animate-icon="hamburger"]{
-          @include animate-icon-hambuger($width: 30px, $height: 24px, $margin: 13px auto);
+          @include animate-icon-hambuger($width: 30px, $height: 20px, $margin: 15px auto);
         }
       }
     }
 
+    .nav-body{
+      display: none;
+    }
+
+    &.open{
+      .nav-body{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        .content{
+          flex: 1;
+          padding: 15px;
+          overflow: auto;
+          // -webkit-overflow-scrolling: touch;
+
+          .item{
+            display: block;
+            font-size: 22px;
+            line-height: 1em;
+            padding: 10px;
+            text-align: center;
+
+            &.active{
+              color: #ff4546;
+            }
+          }
+        }
+        .footer{
+          flex: none;
+          height: 80px;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+
+          .item{
+            font-size: 20px;
+            padding: 10px;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
   }
 }
 

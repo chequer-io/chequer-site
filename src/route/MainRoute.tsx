@@ -195,7 +195,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
           </Container>
         </div>
 
-        <MobileNav height={this.props.height} />
+        <MobileNav height={this.props.height} focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
 
       </div>
     )

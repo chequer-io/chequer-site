@@ -54,3 +54,19 @@
     }
   }
 }
+
+
+/**
+모바일 디자인
+ */
+@include media-mobile{
+  .page-company-vision{
+    &.fullpage {
+      padding: 0;
+    }
+
+    [data-page-content] {
+
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {NavLink} from 'react-router-dom';
 import cx from 'classnames';
 
 export class MobileNav extends React.Component<any, any> {
@@ -7,7 +8,7 @@ export class MobileNav extends React.Component<any, any> {
 
     this.state = {
       active: false
-    }
+    };
 
     this.onClickMenu = this.onClickMenu.bind(this);
   }
@@ -16,6 +17,43 @@ export class MobileNav extends React.Component<any, any> {
     this.setState({
       active: !this.state.active
     });
+  }
+
+  private Pages(){
+    return <>
+      <div className={'content'}>
+        {this.props.pages.map((p, pi) => {
+
+          let additionalClass: any = {
+            'item': true
+          };
+          if(pi === this.props.focusedPageIndex){
+            additionalClass.focused = true;
+          }
+
+          return <NavLink
+            key={pi}
+            to={'/c/' + p.id}
+            activeClassName='active'
+            className={cx(additionalClass)}
+            onClick={this.onClickMenu}
+          >
+            <span className={'label'}>{p.label}</span>
+          </NavLink>
+        })}
+      </div>
+      <div className={'footer'}>
+        <a href={'https://www.facebook.com/SQLGate/'} target={'_blank'} className={'item'}>
+          <span className="chi-facebook-solid" />
+        </a>
+        <a href={'https://medium.com/chequer'} target={'_blank'} className={'item'}>
+          <span className="chi-medium-solid" />
+        </a>
+        <a href={'https://www.sqlgate.com/'} target={'_blank'} className={'item'}>
+          <span className="chi-sqlgate-solid" />
+        </a>
+      </div>
+    </>;
   }
 
   public render() {
@@ -29,13 +67,17 @@ export class MobileNav extends React.Component<any, any> {
       style.height = this.props.height;
     }
 
+    let navClassName = {
+      "mobile-nav": true,
+      "open": this.state.active
+    };
     let menuClassName = {
       open: this.state.active
     };
 
     return (
-      <div className="mobile-nav" style={style}>
-        <div className={'nav-header'}>
+      <div className={cx(navClassName)} style={style}>
+        <div className={'nav-header'} style={{height: '50px'}}>
           <div className={'chequer-logo'}>
             <span className='chi-chequer-full' />
           </div>
@@ -48,8 +90,8 @@ export class MobileNav extends React.Component<any, any> {
             </div>
           </div>
         </div>
-        <div className={'nav-body'}>
-
+        <div className={'nav-body'} style={{height: this.props.height - 50}}>
+          {this.state.active ?  this.Pages() : null}
         </div>
       </div>
     )
