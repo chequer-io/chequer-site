@@ -52,3 +52,27 @@
     }
   }
 }
+
+
+
+
+/**
+모바일 디자인
+ */
+@include media-mobile{
+  .page-recruit{
+    &.fullpage {
+      padding: 100px 0;
+    }
+
+    [data-page-content] {
+      .ui.container{
+        padding: 0;
+      }
+
+      .ui.card {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

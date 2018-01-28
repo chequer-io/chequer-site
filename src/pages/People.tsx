@@ -31,7 +31,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
     return (
       <div data-page-content="people">
 
-        <Grid doubling container>
+        <Grid stackable container>
           <Grid.Row>
             <Grid.Column textAlign={'center'}>
               <h1>
@@ -41,7 +41,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
           </Grid.Row>
         </Grid>
 
-        <Grid doubling container columns={3}>
+        <Grid stackable container columns={3}>
           <Grid.Row>
             {peoples.map((people, i) => {
               return <Grid.Column key={i}>
