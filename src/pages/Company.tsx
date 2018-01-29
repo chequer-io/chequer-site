@@ -20,9 +20,7 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
         <h1>WE LEAD TECHNOLOGIES</h1>
         <article>
           <p className={''}>
-            We believe that technologies change the world better and we put our efforts in it.&nbsp;&nbsp;
-            We make high-quality software you've dreamed to work on with the newest technologies.
-
+            We believe that technologies change the world better and we put our efforts in it. We make high-quality software you've dreamed to work on with the newest technologies.
           </p>
         </article>
         <p className={'h1Label'}>
