@@ -17,7 +17,6 @@
   }
 
   [data-page-content] {
-    text-align: right;
 
     .ui.container {
       padding: 0 100px;
@@ -51,6 +50,49 @@
     p {
       font-size: 22px;
       color: #ccc;
+    }
+  }
+}
+
+
+/**
+모바일 디자인
+ */
+@include media-mobile{
+  .page-company-vision{
+    &.fullpage {
+      padding: 50px 0;
+    }
+
+    [data-page-content] {
+
+      .ui.container {
+        padding: 0 10px;
+      }
+
+      article {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px 40px;
+        text-align: left;
+        box-shadow: 0 2px 20px 6px #ffc6c6;
+      }
+
+      h1 {
+        font-size: 18px;
+        color: #FF344D;
+        letter-spacing: 1.84px;
+        line-height: 20px;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   }
 }

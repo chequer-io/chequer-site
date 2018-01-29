@@ -13,7 +13,6 @@
   }
 
   [data-page-content] {
-
     width: 100%;
 
     .ui.container{
@@ -35,7 +34,7 @@
       h2 {
         font-size: 45px;
         color: #000000;
-        letter-spacing: 3.67px;
+        letter-spacing: 1px;
         line-height: 54px;
         font-weight: 500;
         margin-top: 9px;
@@ -98,6 +97,88 @@
           width: 100%;
         }
         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+/**
+모바일 디자인
+ */
+@include media-mobile{
+  .page-company-SQLGate{
+    &.fullpage {
+      padding: 0;
+    }
+
+    [data-page-content] {
+      .ui.container{
+        padding: 0;
+      }
+
+      .key-box {
+        background-color: #f3f3f3;
+        padding: 100px 10px 50px 10px;
+        min-height: 500px;
+
+        h1 {
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+        p {
+          font-size: 15px;
+          &.large {
+            font-size: 20px;
+          }
+        }
+
+        .ui.basic.buttons {
+          margin: 10px 0;
+          .button {
+            font-size: 13px;
+          }
+        }
+
+      }
+      .features-box {
+        min-height: 500px;
+        padding: 28px 0;
+
+        .ui.segment {
+          box-shadow: none;
+          border: 0 none;
+          background: #222;
+          color: #fff;
+          border-radius: 0;
+          padding: 20px;
+          p {
+            font-size: 13px;
+            color: #ccc;
+          }
+        }
+      }
+      .client-box {
+        padding: 28px 0;
+        min-height: 500px;
+
+        h2 {
+          font-size: 22px;
+          font-family: $heading-font-family;
+          color: #565656;
+          margin-bottom: 20px;
+        }
+
+        .client-logo {
+          img {
+            width: 100%;
+          }
+          margin-bottom: 10px;
+        }
       }
     }
   }
