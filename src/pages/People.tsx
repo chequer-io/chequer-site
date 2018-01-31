@@ -25,7 +25,8 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
       ]
       },
       {id: 'bill', name: 'Bill Lee', job: 'Manager', extra: []},
-      {id: 'cia', name: 'Cia Hong', job: 'Designer', extra: []}
+      {id: 'cia', name: 'Cia Hong', job: 'Designer', extra: []},
+      {id: 'may', name: 'May Jang', job: 'LM', extra: []}
     ];
 
     return (

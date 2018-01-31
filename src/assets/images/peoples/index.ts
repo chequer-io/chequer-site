@@ -4,6 +4,7 @@ import thomas from './thomas.jpg';
 import brant from './brant.jpg';
 import bill from './bill.jpg';
 import cia from './cia.jpg';
+import may from './may.png';
 
 
 export {
@@ -11,5 +12,6 @@ export {
   thomas,
   brant,
   bill,
-  cia
+  cia,
+  may
 }
