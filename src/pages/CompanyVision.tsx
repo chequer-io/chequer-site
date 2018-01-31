@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Container, Grid} from 'semantic-ui-react';
+import {Grid} from 'semantic-ui-react';
 
 export class CompanyVision extends React.Component<any, any> {
   constructor(props) {
@@ -19,7 +19,7 @@ export class CompanyVision extends React.Component<any, any> {
               <article>
                 <h1>VISION</h1>
                 <h2>
-                  Innovate business work productivities with technologies
+                  To Maximize Data Business Productivity
                 </h2>
 
                 <p>
