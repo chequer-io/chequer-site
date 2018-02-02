@@ -48,7 +48,7 @@ export class Footer extends React.Component<iPageControlProps, iPageControlState
 
                       <h3>CONTACT INFO</h3>
                       <p>
-                        <b>Address</b> : No.1401, 2F, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea
+                        <b>Address</b> : 1401 Hanhwa-BizMetro B-dong, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea
                       </p>
                       <p><b>TEL</b> : <a href="tel:02-338-1876">02-338-1876</a></p>
                       <p><b>FAX</b> : <a href="tel:02-6008-1876">02-6008-1876</a></p>

@@ -43,7 +43,7 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
                     &nbsp;
                     SEOUL OFFICE
                   </Card.Header>
-                  <Card.Description>1401 Hanhwan-BizMetro B-dong, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea</Card.Description>
+                  <Card.Description>1401 Hanhwa-BizMetro B-dong, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea</Card.Description>
                 </Card.Content>
                 <Card.Content extra>
                   TEL : +82 2-2663-3039<br/>
