@@ -45,19 +45,19 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
                 <h2>SQLGate</h2>
 
                 <p className={'large'}>
-                  The most intelligent IDE for database
+                    The Most Intelligent IDE for Database
                 </p>
 
                 <p>
                   Whichever database you use,
                   SQLGate is the best tool for your database.
-                  Enjoy productive database life!
+                  Enjoy Productive Database Work
                 </p>
 
                 <Button.Group basic size='big'>
                   <Button basic onClick={e => {
-                    window.open('https://www.sqlgate.com/whatsNew');
-                  }}>New Feature</Button>
+                    window.open('https://www.sqlgate.com/product');
+                  }}>Features</Button>
                   <Button basic onClick={e => {
                     window.open('https://www.sqlgate.com/download');
                   }}>Download</Button>
@@ -154,7 +154,7 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
             <Grid.Row>
               <Grid.Column width={16} textAlign={'center'}>
                 <h2>
-                  MAIN CLIENTS
+                  FEATURED CLIENTS
                 </h2>
               </Grid.Column>
             </Grid.Row>
