@@ -86,6 +86,12 @@ module.exports = {
       template: './src/404.html',
       hash: false,
     }),
+      new HtmlWebpackPlugin({
+          chunks: [],
+          filename: 'robots.txt',
+          template: './src/robots.txt',
+          hash: false,
+      }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
     }),
