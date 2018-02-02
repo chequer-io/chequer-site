@@ -28,7 +28,7 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
       </div>
 
       <div className={'footer'}>
-        <a>
+        <a onClick={e => this.props.goPage('company-vision')}>
           <span className='chi-mouse' />
         </a>
       </div>
