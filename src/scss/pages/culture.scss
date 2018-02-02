@@ -111,7 +111,7 @@
 @include media-mobile {
   .page-culture {
     &.fullpage {
-      padding: 100px 0;
+      padding: 0;
     }
 
     [data-page-content] {

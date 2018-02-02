@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {NavLink} from 'react-router-dom';
 
 export class Company extends React.Component<iCommonPageProps, iCommonPageState> {
   constructor(props) {
@@ -29,9 +28,9 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
       </div>
 
       <div className={'footer'}>
-        <NavLink to={'/c/company-vision'}>
+        <a>
           <span className='chi-mouse' />
-        </NavLink>
+        </a>
       </div>
 
       </>

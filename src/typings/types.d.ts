@@ -32,12 +32,14 @@ interface iSideNavProps {
   }[];
   width?: number;
   height?: number;
+  goPage: Function;
 }
 
 interface iSideNavState {
 }
 
 interface iCommonPageProps {
+  goPage: Function;
 }
 
 interface iCommonPageState {

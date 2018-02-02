@@ -18,6 +18,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
   }[];
   private pageRefs: any[];
   private pagePositions: any[];
+  private mounted: boolean;
 
   constructor(props) {
     super(props);
@@ -34,88 +35,46 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       {id: 'contact', label: 'CONTACT', component: Page.Contact}
     ];
 
-    const {
-      currentPageIndex,
-      prevPageUrl,
-      nextPageUrl
-    } = this.getControlPageInfo(contentId);
+    this.pageRefs = [];
+    this.pagePositions = [];
+    this.mounted = false;
+
+    const focusedPageIndex = this.getFocusPageIndexByScrollTop(this.props.scrollTop);
 
     this.state = {
       locationKey: '',
       contentId: contentId,
-      currentPageIndex: currentPageIndex || 0,
-      focusedPageIndex: currentPageIndex || 0,
-      prevPageUrl,
-      nextPageUrl
+      currentPageIndex: focusedPageIndex || 0,
+      focusedPageIndex: focusedPageIndex || 0
     };
 
-    this.pageRefs = [];
-    this.pagePositions = [];
+    this.goPage = this.goPage.bind(this);
+  }
+
+  private getFocusPageIndexByScrollTop(scrollTop: number) : number{
+    let focusedPageIndex = -1;
+    let mar = this.props.height / 5;
+
+    for (let i = 0, l = this.pagePositions.length; i < l; i++) {
+      if(this.pagePositions[i].sy - mar <= scrollTop && scrollTop < this.pagePositions[i].ey - mar){
+        focusedPageIndex = i;
+      }
+    }
+
+
+    return focusedPageIndex;
   }
 
   public componentWillReceiveProps(nextProps) {
-    const locationKey = get(nextProps, 'location.key');
-    const contentId = get(nextProps, 'match.params.contentId');
     let newState = {};
 
     if (this.props.scrollTop !== nextProps.scrollTop) {
-      let focusedPageIndex = 0;
-      let minv = this.props.height;
-      for (let i = 0, l = this.pagePositions.length; i < l; i++) {
-        if (minv > Math.abs(nextProps.scrollTop - this.pagePositions[i].sy)) {
-          minv = Math.abs(nextProps.scrollTop - this.pagePositions[i].sy);
-          focusedPageIndex = i;
-        }
-      }
-
       newState = assign(newState, {
-        focusedPageIndex: focusedPageIndex
+        focusedPageIndex: this.getFocusPageIndexByScrollTop(nextProps.scrollTop)
       });
     }
-    else if (this.props.width !== nextProps.width || this.props.height !== nextProps.height) {
-      // 아무것도 안하기.
-    }
-    else if (this.state.locationKey !== locationKey) {
-      const {
-        currentPageIndex,
-        prevPageUrl,
-        nextPageUrl
-      } = this.getControlPageInfo(contentId);
 
-      newState = assign(newState, {
-        locationKey: locationKey,
-        contentId: contentId,
-        currentPageIndex: currentPageIndex || 0,
-        focusedPageIndex: currentPageIndex || 0,
-        prevPageUrl,
-        nextPageUrl
-      });
-
-      this.props.fnScrollTo(this.pagePositions[currentPageIndex].sy);
-    }
-
-    this.calcPagePositions();
     this.setState(newState);
-  }
-
-  private getControlPageInfo(contentId: string) {
-    let currentPageIndex = findIndex(this.pages, p => {
-      return p.id === contentId;
-    });
-    let prevPageUrl, nextPageUrl;
-
-    if (currentPageIndex > 0) {
-      prevPageUrl = '/c/' + this.pages[currentPageIndex - 1].id;
-    }
-    if (currentPageIndex < this.pages.length - 1) {
-      nextPageUrl = '/c/' + this.pages[currentPageIndex + 1].id;
-    }
-
-    return {
-      currentPageIndex,
-      prevPageUrl,
-      nextPageUrl
-    }
   }
 
   public componentDidMount() {
@@ -131,6 +90,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       });
     });
 
+    this.mounted = true;
     this.onDidMount(pageRefs);
   }
 
@@ -139,6 +99,10 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
 
     setTimeout(() => {
       this.calcPagePositions();
+      this.setState({
+        focusedPageIndex: this.getFocusPageIndexByScrollTop(this.props.scrollTop)
+      });
+
     }, 100);
 
   }
@@ -154,6 +118,16 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
         ey: _y = _y + value.dom.getBoundingClientRect().height
       });
     });
+  }
+
+  private goPage(pId) {
+    this.calcPagePositions();
+    let currentPageIndex = findIndex(this.pages, p => {
+      return p.id === pId;
+    });
+
+    this.props.fnScrollTo(this.pagePositions[currentPageIndex].sy);
+    this.calcPagePositions();
   }
 
   public render() {
@@ -184,19 +158,19 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
                            className={cx(additionalClass)}
                            pageIndex={pi}
                            ref={'' + pi}>
-            <p.component height={this.props.height} />
+            <p.component height={this.props.height} goPage={this.goPage} />
           </FullPage>
         })}
         <Footer />
 
         <div className={'nav-fixed-container'}>
           <Container>
-            <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} style={{height: this.props.height}} />
+            <SideNav focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} style={{height: this.props.height}} goPage={this.goPage} />
             <AsideNav style={{height: this.props.height}} />
           </Container>
         </div>
 
-        <MobileNav height={this.props.height} focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} />
+        <MobileNav height={this.props.height} focusedPageIndex={this.state.focusedPageIndex} pages={this.pages} goPage={this.goPage} />
 
       </div>
     )

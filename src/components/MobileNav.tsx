@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {NavLink} from 'react-router-dom';
 import cx from 'classnames';
 
 export class MobileNav extends React.Component<any, any> {
@@ -13,10 +12,11 @@ export class MobileNav extends React.Component<any, any> {
     this.onClickMenu = this.onClickMenu.bind(this);
   }
 
-  private onClickMenu(e) {
+  private onClickMenu(pId) {
     this.setState({
       active: !this.state.active
     });
+    if(pId) this.props.goPage(pId);
   }
 
   private Pages(){
@@ -31,15 +31,13 @@ export class MobileNav extends React.Component<any, any> {
             additionalClass.focused = true;
           }
 
-          return <NavLink
+          return <a
             key={pi}
-            to={'/c/' + p.id}
-            activeClassName='active'
             className={cx(additionalClass)}
-            onClick={this.onClickMenu}
+            onClick={e => this.onClickMenu(p.id)}
           >
             <span className={'label'}>{p.label}</span>
-          </NavLink>
+          </a>
         })}
       </div>
       <div className={'footer'}>

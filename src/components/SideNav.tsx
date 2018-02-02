@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {NavLink} from 'react-router-dom';
 import cx from 'classnames';
 
 export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
@@ -10,6 +9,9 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
 
   public render() {
     const {style} = this.props;
+    
+    // console.log(this.props.focusedPageIndex);
+    
     return (
         <div className="side-nav" style={style}>
           <div className={'nav-container'}>
@@ -22,15 +24,10 @@ export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
               additionalClass.focused = true;
             }
 
-            return <NavLink
-              key={pi}
-              to={'/c/' + p.id}
-              activeClassName='active'
-              className={cx(additionalClass)}
-            >
+            return <a key={pi} className={cx(additionalClass)} onClick={e => this.props.goPage(p.id)}>
               <span className={'dot'} />
               <span className={'label'}>{p.label}</span>
-            </NavLink>
+            </a>
           })}
           </div>
         </div>

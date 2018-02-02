@@ -1,7 +1,5 @@
 import * as React from 'react';
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import throttle from 'lodash-es/throttle';
-import debounce from 'lodash-es/debounce';
 import {MainRoute} from './route';
 
 
@@ -39,9 +37,6 @@ function windowScrollY(to: number, duration: number) {
   };
   animateScroll();
 }
-
-
-const RedirectToMain = () => <Redirect to='/c/company' />;
 
 export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState> {
 
@@ -88,7 +83,7 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     });
   }
 
-  private onWindowScroll(e) {
+  private onWindowScroll() {
     const supportPageOffset = window.pageXOffset !== undefined;
     const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
     let scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
@@ -113,9 +108,12 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
 
   public componentDidMount() {
     this.innerState.mounted = true;
+    this.onWindowScroll();
+    /*
     this.innerState.onMountedCallBack.forEach((cb) => {
       cb.fn(...cb.arg);
     });
+     */
   }
 
   public render() {
@@ -127,16 +125,7 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     };
 
     return (
-      <BrowserRouter>
-
-        <Switch>
-          <Route exact path='/' render={RedirectToMain} />
-          <Route path='/c/:contentId' render={(props) => (
-            <MainRoute {...props} {...TossProps} fnScrollTo={this.scrollTo} />
-          )} />
-        </Switch>
-
-      </BrowserRouter>
+      <MainRoute {...TossProps} fnScrollTo={this.scrollTo} />
     );
   }
 }
