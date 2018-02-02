@@ -28,8 +28,8 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       {id: 'company', label: 'CHEQUER', component: Page.Company},
       {id: 'company-vision', label: 'VISION', component: Page.CompanyVision},
       {id: 'company-SQLGate', label: 'PRODUCT', component: Page.CompanySQLGate},
-      {id: 'people', label: 'PEOPLE', component: Page.People},
       {id: 'culture', label: 'CULTURE', component: Page.Culture},
+      {id: 'people', label: 'PEOPLE', component: Page.People},
       //{id: 'recruit', label: 'RECRUIT', component: Page.Recruit},
       {id: 'contact', label: 'CONTACT', component: Page.Contact}
     ];
