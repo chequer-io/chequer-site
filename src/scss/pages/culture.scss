@@ -122,6 +122,12 @@
       .ui.card {
         margin-bottom: 0;
       }
+
+      .ui.segment {
+        &.row-segment{
+          flex-direction: column;
+        }
+      }
     }
   }
 }
