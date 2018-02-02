@@ -71,7 +71,7 @@ module.exports = {
       dry:      false
     }),
     new CnameWebpackPlugin({
-      domain: 'chequer.io',
+      domain: 'www.chequer.io',
     }),
     //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
