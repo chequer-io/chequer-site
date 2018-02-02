@@ -20,7 +20,7 @@ export class AsideNav extends React.Component<any, any> {
             <span className="chi-medium-solid" />
           </a>
           <a href={'https://www.sqlgate.com/'} target={'_blank'} className={'item'}>
-            <span className={'label'}>sqlgate.com</span>
+            <span className={'label'}>SQLGate.com</span>
             <span className="chi-sqlgate-solid" />
           </a>
         </div>

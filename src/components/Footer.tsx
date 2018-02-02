@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Container, Grid} from 'semantic-ui-react';
+import {Grid} from 'semantic-ui-react';
 
 export class Footer extends React.Component<iPageControlProps, iPageControlState> {
   constructor(props) {
@@ -30,17 +30,17 @@ export class Footer extends React.Component<iPageControlProps, iPageControlState
 
                       <h3>RECRUIT</h3>
                       <p>
-                        <span className="chi-envelope"/> <a href="mailto:tom@chequer.io">tom@chequer.io</a>
+                        <span className="chi-envelope"/> <a href="mailto:join@chequer.io">join@chequer.io</a>
                       </p>
 
                       <h3>PARTNER</h3>
                       <p>
-                        <span className="chi-envelope"/> <a href="mailto:tom@chequer.io">tom@chequer.io</a>
+                        <span className="chi-envelope"/> <a href="mailto:bill@chequer.io">bill@chequer.io</a>
                       </p>
 
                       <h3>ETC</h3>
                       <p>
-                        <span className="chi-envelope"/> <a href="mailto:tom@chequer.io">tom@chequer.io</a>
+                        <span className="chi-envelope"/> <a href="mailto:brant@chequer.io">brant@chequer.io</a>
                       </p>
 
                     </Grid.Column>

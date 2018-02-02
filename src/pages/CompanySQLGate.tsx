@@ -58,9 +58,13 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
                   <Button basic onClick={e => {
                     window.open('https://www.sqlgate.com/product');
                   }}>Features</Button>
+                    <Button basic onClick={e => {
+                        window.open('http://bit.ly/2EyxI9W');
+                    }}>Brochure</Button>
                   <Button basic onClick={e => {
                     window.open('https://www.sqlgate.com/download');
                   }}>Download</Button>
+
                 </Button.Group>
 
               </Grid.Column>

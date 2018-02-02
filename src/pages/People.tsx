@@ -45,7 +45,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
             {
                 id: 'cia', name: 'Cia Hong', job: 'Designer', extra: [
                     {label: <Icon name='facebook'/>, url: 'https://www.facebook.com/profile.php?id=100009713476106'},
-                    {label: <Icon name='linkedin'/>, url: 'https://www.linkedin.com/in/jina-jang-771445130/'},
+                    {label: <Icon name='linkedin'/>, url: 'https://www.linkedin.com/in/sia-hong-659839158'},
                 ]
             },
             {
