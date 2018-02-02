@@ -41,7 +41,6 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                     {label: <Icon name='linkedin'/>, url: 'https://www.linkedin.com/in/%ED%95%98%EC%A2%85-%EC%9D%B4-705839158/'},
                 ]
             },
-
             {
                 id: 'cia', name: 'Cia Hong', job: 'Designer', extra: [
                     {label: <Icon name='facebook'/>, url: 'https://www.facebook.com/profile.php?id=100009713476106'},
@@ -79,8 +78,8 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                     </Grid.Row>
                 </Grid>
 
-                <Grid stackable container columns={3}>
-                    <Grid.Row>
+                <Grid doubling container columns={3}>
+                    <Grid.Row stretched>
                         {peoples.map((people, i) => {
                             return <Grid.Column key={i}>
                                 <ProfileCard {...people} />

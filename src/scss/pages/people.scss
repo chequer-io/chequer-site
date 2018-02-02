@@ -11,11 +11,11 @@
 
   [data-page-content] {
 
-    .ui.container{
+    .ui.container {
       padding: 0 100px;
     }
 
-    h1{
+    h1 {
       font-family: $heading-font-family;
       font-size: 36px;
       color: #FFFFFF;
@@ -30,23 +30,26 @@
       border-radius: 0;
       margin-bottom: 2rem;
 
-      :first-child{
+      :first-child {
         border-radius: 0 !important;
       }
 
-      .content{
-        .header{
+      .content {
+        .header {
           font-family: $heading-font-family;
         }
-        .meta{
+        .meta {
           color: #cc1f1f;
         }
       }
-      .extra{
+      .extra {
         color: #444;
 
-        a{
-          font-size: 20px;
+        a {
+          i{
+            font-size: 20px;
+          }
+          font-size: 14px;
           color: #111;
         }
       }
@@ -54,18 +57,17 @@
   }
 }
 
-
 /**
 모바일 디자인
  */
-@include media-mobile{
-  .page-people{
+@include media-mobile {
+  .page-people {
     &.fullpage {
       padding: 100px 0;
     }
 
     [data-page-content] {
-      .ui.container{
+      .ui.container {
         padding: 0;
       }
 

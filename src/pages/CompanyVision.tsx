@@ -23,8 +23,8 @@ export class CompanyVision extends React.Component<any, any> {
                     Data Business Productivity
                 </h2>
 
+                <h1>MISSION</h1>
                 <p>
-                    <h1>MISSION</h1>
                     make data work more faster<br />
                     make data work more safer<br />
                     make data wore more enjoyable<br />

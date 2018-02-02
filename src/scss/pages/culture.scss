@@ -1,7 +1,8 @@
 .page-culture {
+
   &.fullpage {
-    background-color: #000;
-    padding: 100px 0;
+    background-color: #EAEAEA;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
@@ -10,47 +11,111 @@
   }
 
   [data-page-content] {
+    width: 100%;
 
-    .ui.container{
+    .ui.container {
       padding: 0 100px;
     }
 
-    h1{
+    h1 {
       font-family: $heading-font-family;
       font-size: 36px;
-      color: #FFFFFF;
+      color: #181818;
       letter-spacing: 3.67px;
-      line-height: 27px;
+      line-height: 1.4em;
+    }
+
+    .core-value {
+      padding: 100px 0 50px 0;
+      background-color: #EAEAEA;
+      min-height: 500px;
+    }
+    .chequer-crew {
+      padding: 50px 0;
+      background-color: #FAFAFA;
+      min-height: 500px;
+    }
+    .how-we-work {
+      padding: 50px 0 100px 0;
+      background-color: #FFFFFF;
+      min-height: 500px;
     }
 
     .ui.segment {
-      box-shadow: none;
       border: 0 none;
-      background: #222;
-      color: #fff;
+      background: #fff;
+      color: #7E7E7E;
       border-radius: 0;
-      padding: 20px;
+      padding: 0;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.30);
+
+      display: flex;
+      flex-direction: column;
+      //justify-content: flex-start;
+      align-items: stretch;
+
+      h3 {
+        font-size: 26px;
+        color: #D0021B;
+        b {
+          color: #4A4A4A;
+        }
+      }
       p {
-        font-size: 13px;
-        color: #ccc;
+        font-size: 16px;
+        color: #7E7E7E;
+
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .segment-wrapper {
+        padding: 20px 20px 10px 20px;
+        flex: 1;
+      }
+      .segment-img {
+
+      }
+
+      &.row-segment{
+        flex-direction: row;
+      }
+      &.title-card {
+        background: #000;
+        padding: 40px 20px;
+        min-height: 400px;
+        h1 {
+          color: #fff;
+          font-size: 40px;
+          letter-spacing: 1px;
+        }
+        &:before {
+          content: '';
+          display: block;
+          background: #D0021B;
+          height: 7px;
+          width: 45px;
+          position: absolute;
+          left: 20px;
+          top: 0;
+        }
       }
     }
   }
 }
 
-
-
 /**
 모바일 디자인
  */
-@include media-mobile{
-  .page-culture{
+@include media-mobile {
+  .page-culture {
     &.fullpage {
       padding: 100px 0;
     }
 
     [data-page-content] {
-      .ui.container{
+      .ui.container {
         padding: 0;
       }
 
