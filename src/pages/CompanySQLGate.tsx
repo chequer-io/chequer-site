@@ -30,8 +30,7 @@ export class CompanySQLGate extends React.Component<iCommonPageProps, iCommonPag
       {name: '', src: img.jpg_hyundaicard},
       {name: '', src: img.jpg_dongbu},
       {name: '', src: img.jpg_wemakeprice},
-      {name: '', src: img.jpg_samsungSds},
-      {name: '', src: img.jpg_samsungService},
+      {name: '', src: img.jpg_samsungSds}
     ];
 
     return (

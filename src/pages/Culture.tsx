@@ -150,9 +150,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                    <h3><b>자기 분야에 누구보다</b> 뛰어난 전문성<b>을 가지고 있습니다</b></h3>
+                      <h3><b>THE CREW ARE</b> EXPERT</h3>
                     <p>
-                      체커크루는 자신의 분야에 뛰어난 전문성을 가지고 있으며 본인이 탁월한 만큼 상대방 또한 존중할줄 아는 사람입니다.
+                        CHEQUER Crew has a great deal of expertise in his field and is a person who respects others as well as his own.
                     </p>
                   </div>
                   <div className={'segment-img'}>
@@ -266,8 +266,7 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                    <h3>FLEXIBLE
-                      <b>WORK HOURS</b></h3>
+                    <h3>FLEXIBLE <b>WORK HOURS</b></h3>
                     <p>
                       Done with the rush hour! You won’t find yourself squeezing into overcrowded subway cars.
                       We have passion and competence over our work, so we grant the freedom to come and leave work at your preferred time.
@@ -316,9 +315,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                    <h3>모든 선택과 결정에는 스스로의 책임이 따릅니다.</h3>
+                      <h3>DECISION <b>AND</b> RESPONSIBILITY</h3>
                     <p>
-                      출/퇴근 및 근무시간, 휴가의 자유로움에 책임이 따릅니다. 좋은 문화와 시스템을 악용하거나 이기적인 행동을 한다면 모든 크루가 눈살을 찌푸리게 될 것이고 결국 회사에서 퇴출당하게 됩니다. 자유로움과 동시에 스스로 가져야 할 책임감이 매우 큽니다.
+                        You will be responsible for coming / leaving work, working hours, and freedom of vacation. If you exploit good culture and systems or selfish behavior, all crew will frown and eventually be forced out of the company. Freedom is a very big responsibility to have on your own.
                     </p>
                   </div>
                   <div className={'segment-img'}>
@@ -329,10 +328,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                    <h3>일의 범위를 나누지 않습니다</h3>
+                      <h3>DON'T DIVIDE <b>THE</b> SCOPE OF WORK</h3>
                     <p>
-                      스타트업은 하루에도 예측하지 못하는 다양한 이벤트가 발생하고 갑작스럽게 진행되는 일들이 많이 생겨납니다. 당장 벌어진 문제를 해결하기 위해 모두가 힘을 합쳐야 할 때도 있고,
-                      자신의 비전문분야에 도움을 주어야 할 때도 있고, 가끔은 아무도 없는 사무실에 고객의 전화가 걸려올 때 전화를 받아야 하는 경우도 생깁니다. “난 OO니까 OO만 할래” 같은 생각을 가졌다면 우리 회사에서 일하기 무척 어려운 사람입니다.
+                        Start-up has many unexpected events that happen every day, and suddenly many things happen. Sometimes you have to work together to solve problems that are happening right now, you have to help yourself in your nonprofessional work, and sometimes you need to get a phone call when your phone is in an office where there is no one. If you have the same idea as "I'm OO because I want to be OO", it is very difficult to work in our company.
                     </p>
                   </div>
                   <div className={'segment-img'}>
