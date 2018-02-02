@@ -25,9 +25,9 @@ export class CompanyVision extends React.Component<any, any> {
 
                 <h1>MISSION</h1>
                 <p>
-                    make data work more faster<br />
-                    make data work more safer<br />
-                    make data wore more enjoyable<br />
+                    make data work faster<br />
+                    make data work safer<br />
+                    make data work enjoyable<br />
                 </p>
                 <p>
                 </p>
