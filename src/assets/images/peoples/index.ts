@@ -3,7 +3,7 @@ import thomas from './thomas.jpg';
 import brant from './brant.jpg';
 import bill from './bill.jpg';
 import cia from './cia.jpg';
-import may from './may.png';
+import may from './may.jpg';
 import john from './john.jpg';
 import join from './join.jpg';
 
