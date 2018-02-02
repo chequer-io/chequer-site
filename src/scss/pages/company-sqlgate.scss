@@ -20,7 +20,7 @@
 
     .key-box {
       background-color: #f3f3f3;
-      padding: 100px 150px 50px 150px;
+      padding: 100px 0 50px 0;
       min-height: 500px;
 
       h1 {
@@ -63,7 +63,7 @@
     .features-box {
       background: #fafafa;
       min-height: 500px;
-      padding: 50px 150px;
+      padding: 50px 0;
 
       .ui.segment {
         box-shadow: none;
@@ -79,7 +79,7 @@
       }
     }
     .client-box {
-      padding: 100px 150px;
+      padding: 100px 0;
       min-height: 500px;
 
       background-color: #fff;
