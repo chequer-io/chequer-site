@@ -16,12 +16,12 @@ export class ProfileCard extends React.Component<any, any> {
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
           <Card.Meta>{this.props.job}</Card.Meta>
-          <Card.Description>Daniel is a comedian living in Nashville.</Card.Description>
+          <Card.Description>{this.props.introduction}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           {this.props.extra.map((n, ni) => {
             return <a href={n.url} target='_blank' key={ni}>
-              {n.label}
+              {n.label} {n.desc}
             </a>
           }) }
         </Card.Content>
