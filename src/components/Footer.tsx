@@ -50,8 +50,8 @@ export class Footer extends React.Component<iPageControlProps, iPageControlState
                       <p>
                         <b>Address</b> : 1401 Hanhwa-BizMetro B-dong, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea
                       </p>
-                      <p><b>TEL</b> : <a href="tel:02-338-1876">02-338-1876</a></p>
-                      <p><b>FAX</b> : <a href="tel:02-6008-1876">02-6008-1876</a></p>
+                      <p><b>TEL</b> : <a href="tel:82-02-338-1876">+82 2-2663-3039</a></p>
+                      <p><b>FAX</b> : <a href="tel:02-6008-1876">+82 2-6008-1876</a></p>
 
                     </Grid.Column>
                   </Grid.Row>

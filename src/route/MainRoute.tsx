@@ -140,6 +140,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     setTimeout(() => {
       this.calcPagePositions();
     }, 100);
+
   }
 
   private calcPagePositions() {

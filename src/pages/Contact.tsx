@@ -46,8 +46,8 @@ export class Contact extends React.Component<iCommonPageProps, iCommonPageState>
                   <Card.Description>1401 Hanhwa-BizMetro B-dong, 551-24, Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea</Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  TEL : +82 2-2663-3039<br/>
-                  FAX : +82 2-6008-1876
+                  TEL : <a href='tel:82-02-2663-3039'>+82 2-2663-3039</a><br/>
+                  FAX : <a href='tel:82-02-6008-1876'>+82 2-6008-1876</a>
                 </Card.Content>
 
               </Card>

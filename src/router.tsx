@@ -102,10 +102,12 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     if (this.innerState.mounted) {
       windowScrollY(y, 600);
     } else {
+      /*
       this.innerState.onMountedCallBack.push({
         fn: this.scrollTo,
         arg: [y]
       });
+      */
     }
   }
 
