@@ -363,7 +363,11 @@ a {
   background-position: center center;
 
   height: 490px;
-  padding: 100px 100px 0 100px;
+  padding: 100px 0 0 0;
+
+  .ui.container{
+    //padding: 0 150px;
+  }
 
   .logo {
     font-size: 40px;
@@ -379,6 +383,24 @@ a {
     line-height: 24px;
     font-weight: 300;
     margin-bottom: 0.5em;
+  }
+
+  /* Large Monitor */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ui {
+      &.container {
+        padding: 0;
+      }
+    }
+  }
+
+  /* Large Monitor */
+  @media only screen and (min-width: 991px) {
+    .ui {
+      &.container {
+        padding: 0 100px;
+      }
+    }
   }
 
   @include media-mobile {
