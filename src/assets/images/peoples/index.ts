@@ -6,6 +6,7 @@ import cia from './cia.jpg';
 import may from './may.jpg';
 import john from './john.jpg';
 import join from './join.jpg';
+import hong from './hong.jpg';
 
 
 export {
@@ -16,5 +17,6 @@ export {
     cia,
     may,
     john,
-    join
+    join,
+    hong
 }
