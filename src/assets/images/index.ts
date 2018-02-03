@@ -21,9 +21,7 @@ import jpg_wemakeprice from './client/wemakeprice.jpg';
 import jpg_samsungSds from './client/samsung-sds.jpg';
 import jpg_samsungService from './client/samsung-service.jpg';
 
-import png_monitor from './monitor.png';
-
-import png_sqlgate_main from './features/sqlgate-main.png';
+import png_monitor from './monitor.jpg';
 
 export {
   jpg_samsung,
@@ -47,6 +45,5 @@ export {
   jpg_wemakeprice,
   jpg_samsungSds,
   jpg_samsungService,
-  png_monitor,
-  png_sqlgate_main
+  png_monitor
 }
