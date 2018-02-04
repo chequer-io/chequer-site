@@ -1,18 +1,18 @@
-const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CnameWebpackPlugin = require('cname-webpack-plugin');
-const webpack = require('webpack');
+const path = require( 'path' );
+const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const CnameWebpackPlugin = require( 'cname-webpack-plugin' );
+const webpack = require( 'webpack' );
 const basePath = __dirname;
 
 webpack.logLevel = 'NONE';
 
 module.exports = {
-  context: path.join(basePath, '.'),
+  context: path.join( basePath, '.' ),
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: [ '.js', '.ts', '.tsx' ],
     alias: {
-      '@root': path.resolve(__dirname, '')
+      '@root': path.resolve( __dirname, '' )
     }
   },
   entry: {
@@ -24,7 +24,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(basePath, './docs'),
+    path: path.join( basePath, './docs' ),
     filename: '[name].[hash].js',
     publicPath: '/'
   },
@@ -41,10 +41,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader', options: {
-
-          } }
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader', options: {}
+          }
         ]
       },
       {
@@ -57,43 +57,43 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
+    new webpack.LoaderOptionsPlugin( {
       minimize: true,
       debug: false
-    }),
-    new webpack.optimize.UglifyJsPlugin({
+    } ),
+    new webpack.optimize.UglifyJsPlugin( {
       sourceMap: false,
       comments: false,
       warnings: false
-    }),
-    new CleanWebpackPlugin(['docs'], {
-      verbose:  true,
-      dry:      false
-    }),
-    new CnameWebpackPlugin({
+    } ),
+    new CleanWebpackPlugin( [ 'docs' ], {
+      verbose: true,
+      dry: false
+    } ),
+    new CnameWebpackPlugin( {
       domain: 'www.chequer.io',
-    }),
+    } ),
     //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin( {
       filename: 'index.html', //Name of file in ./dist/
       template: './src/index.html', //Name of template in ./src
       favicon: './src/assets/favicon.ico',
       hash: true
-    }),
-    new HtmlWebpackPlugin({
+    } ),
+    new HtmlWebpackPlugin( {
       chunks: [],
       filename: '404.html',
       template: './src/404.html',
       hash: false,
-    }),
-      new HtmlWebpackPlugin({
-          chunks: [],
-          filename: 'robots.txt',
-          template: './src/robots.txt',
-          hash: false,
-      }),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest'],
-    }),
+    } ),
+    new HtmlWebpackPlugin( {
+      chunks: [],
+      filename: 'robots.txt',
+      template: './src/robots.txt',
+      hash: false,
+    } ),
+    new webpack.optimize.CommonsChunkPlugin( {
+      names: [ 'vendor', 'manifest' ],
+    } ),
   ]
 };
