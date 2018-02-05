@@ -87,7 +87,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                     </Grid.Row>
                 </Grid>
 
-                <Grid doubling container columns={3}>
+                <Grid doubling container columns={4}>
                     <Grid.Row stretched>
                         {peoples.map((people, i) => {
                             return <Grid.Column key={i}>
