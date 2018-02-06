@@ -53,7 +53,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                 ]
             },
             {
-                id: 'hong', name: 'SangHoon Hong', job: 'Legal Advisor (Lawyer)', extra: [
+                id: 'hong', name: 'SangHun Hong', job: 'Legal Advisor (Lawyer)', extra: [
                     {label: <Icon name='linkedin'/>, url: 'http://people.joins.com/search/profile.aspx?pn=396804'}
                 ]
             },
