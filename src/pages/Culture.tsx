@@ -150,9 +150,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                      <h3><b>THE CREW ARE</b> EXPERT</h3>
+                      <h3><b>THE CREW ARE</b> EXPERTS<b> IN THEIR FIELD</b></h3>
                     <p>
-                        CHEQUER Crew has a great deal of expertise in his field and is a person who respects others as well as his own.
+                        They have professional skills and knowledge in their fields with respect for others who work with them.
                     </p>
                   </div>
                   <div className={'segment-img'}>
@@ -315,9 +315,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                      <h3>DECISION <b>AND</b> RESPONSIBILITY</h3>
+                      <h3><b>CHOICE WITH</b> RESPONSIBILITY</h3>
                     <p>
-                        You will be responsible for coming / leaving work, working hours, and freedom of vacation. If you exploit good culture and systems or selfish behavior, all crew will frown and eventually be forced out of the company. Freedom is a very big responsibility to have on your own.
+                        You can choose when to work and when to rest, but these choices must be made with responsibility. Making ill use of autonomous corporate culture will not be tolerated. Freedom is yours with responsibility.
                     </p>
                   </div>
                   <div className={'segment-img'}>
@@ -328,9 +328,9 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
               <Grid.Column>
                 <Segment>
                   <div className={'segment-wrapper'}>
-                      <h3>DON'T DIVIDE <b>THE</b> SCOPE OF WORK</h3>
+                      <h3><b>WORK AS A</b> TEAM PLAYER</h3>
                     <p>
-                        Start-up has many unexpected events that happen every day, and suddenly many things happen. Sometimes you have to work together to solve problems that are happening right now, you have to help yourself in your nonprofessional work, and sometimes you need to get a phone call when your phone is in an office where there is no one. If you have the same idea as "I'm OO because I want to be OO", it is very difficult to work in our company.
+                        Start-ups face all sorts of situations, and they are hardly predictable. It might require its members to come together to solve problems, to help out in unfamiliar tasks, and maybe even to answer phone calls if no one else is there to pick up the phone. Person who is not up for being a team member and creates borders in terms of tasks does not fit Chequer’s work environment.
                     </p>
                   </div>
                   <div className={'segment-img'}>
