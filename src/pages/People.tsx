@@ -24,8 +24,9 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                 ]
             },
             {
-                id: 'benjamin', name: 'Benjamin Yang', job: 'Chief Product Developer', extra: [
-                    {label: <Icon name='facebook'/>, url: 'https://www.facebook.com/ysyang99'}
+                id: 'benjamin', name: 'Benjamin Yang', job: 'Product Director', extra: [
+                    {label: <Icon name='facebook'/>, url: 'https://www.facebook.com/ysyang99'},
+                    {label: <Icon name='linkedin'/>, url: 'https://www.linkedin.com/in/benjamin-yang-4b0609159/'}
                 ]
             },
             {
