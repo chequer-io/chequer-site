@@ -5,6 +5,7 @@
   "main": "",
   "repository": "https://github.com/chequer-io/chequer-site",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",
     "google-map-react": "^0.29.0",
     "history": "^4.7.2",
