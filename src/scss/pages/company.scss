@@ -19,6 +19,8 @@
     font-size: 35px;
     position: absolute;
     top: 40px;
+    left: 50%;
+    margin-left: - (163.97px / 2);
     text-shadow: 2px 2px 5px #000000;
 
     @include fadeInDown($duration: 1s, $delay: 0.5s);
@@ -27,7 +29,7 @@
   [data-page-content] {
     // @include fadeIn($duration: 2s, $delay: 0s);
     max-width: 650px;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
