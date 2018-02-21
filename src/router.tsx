@@ -1,7 +1,7 @@
+import {hot} from 'react-hot-loader';
 import * as React from 'react';
 import throttle from 'lodash-es/throttle';
 import {MainRoute} from './route';
-
 
 const supportPageOffset = window.pageXOffset !== undefined;
 const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
@@ -38,7 +38,7 @@ function windowScrollY(to: number, duration: number) {
   animateScroll();
 }
 
-export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState> {
+class AppRouter extends React.Component<iAppRouterProps, iAppRouterState> {
 
   private throttled_updateDimensions: any;
   private throttled_windowScroll: any;
@@ -60,11 +60,6 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
       onMountedCallBack: [],
       willScrollTop: 0
     };
-
-    this.throttled_updateDimensions = throttle(this.updateDimensions.bind(this), 100);
-    window.addEventListener('resize', this.throttled_updateDimensions);
-    this.throttled_windowScroll = throttle(this.onWindowScroll.bind(this), 100);
-    window.addEventListener('scroll', this.throttled_windowScroll);
 
     this.scrollTo = this.scrollTo.bind(this);
   }
@@ -108,12 +103,14 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
 
   public componentDidMount() {
     this.innerState.mounted = true;
+
+
+    this.throttled_updateDimensions = throttle(this.updateDimensions.bind(this), 100);
+    window.addEventListener('resize', this.throttled_updateDimensions);
+    this.throttled_windowScroll = throttle(this.onWindowScroll.bind(this), 300);
+    window.addEventListener('scroll', this.throttled_windowScroll);
+
     this.onWindowScroll();
-    /*
-    this.innerState.onMountedCallBack.forEach((cb) => {
-      cb.fn(...cb.arg);
-    });
-     */
   }
 
   public render() {
@@ -129,3 +126,5 @@ export class AppRouter extends React.Component<iAppRouterProps, iAppRouterState>
     );
   }
 }
+
+export default hot(module)(AppRouter);

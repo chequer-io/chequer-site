@@ -31,74 +31,59 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.FREEDOM + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>FREEDOM</h3>
                     <p>
                       In software industry, human resource is the core value. We believe that every member of CHEQUER should think freely, work freely, and act freely.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.FREEDOM} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.RESPONSIBILITY + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>RESPONSIBILITY</h3>
                     <p>
-                      Software is the fruit of creative and highly sophisticated knowledge. 
+                      Software is the fruit of creative and highly sophisticated knowledge.
                       The responsibility of the creator reaches beyond the individual, flows into the whole company, and makes its way to the client. We believe that the company should be held accountable for the work of each individual.
                     </p>
-                  </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.RESPONSIBILITY} />
                   </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row stretched columns={3}>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.COMMUNICATION + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>COMMUNICATION</h3>
                     <p>
-                      The basis of all relationships is communication. 
+                      The basis of all relationships is communication.
                       To promote horizontal and active communication, we are aiming to make Chequer a company that grants privileges but no corporate ladder and a company with responsibilities and titles but no boundaries between the executives and employees.
                     </p>
-                  </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.COMMUNICATION} />
                   </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.PRIVILEGE + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>PRIVILEGE</h3>
                     <p>
                       Certain amount of privilege expedites decision-making in companies and motivates its members to be more passionate and responsible for the privileges given. Thus, we grant privileges and responsibilities to each member of the crew on all their assignments.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.PRIVILEGE} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.REWARD + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>REWARD</h3>
                     <p>
-                      Company is made up of members. 
-                      Each member should unceasingly contemplate how his or her dream, vision, and goal fits those of the company. 
-                      If the goals of the members and the company agree, the outcome will be tremendous. 
+                      Company is made up of members.
+                      Each member should unceasingly contemplate how his or her dream, vision, and goal fits those of the company.
+                      If the goals of the members and the company agree, the outcome will be tremendous.
                       We are trying to create a system that assesses members through both an objective and subjective index and appropriately compensate the member.
                     </p>
-                  </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.REWARD} />
                   </div>
                 </Segment>
               </Grid.Column>
@@ -117,7 +102,7 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew0 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3><b>THE CREW ARE</b> DETERMINED PEOPLE</h3>
                     <p>
@@ -125,13 +110,10 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       They have an unwavering belief that Chequer will become the world’s leading IT company.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew0} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew1 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>HONOR ONE ANOTHER <b>FOR THE SUCCESSFUL RESULT</b></h3>
                     <p>
@@ -140,41 +122,32 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       and dream of success.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew1} />
-                  </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row stretched columns={3}>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew2 + ')'}}>
                   <div className={'segment-wrapper'}>
                       <h3><b>THE CREW ARE</b> EXPERTS<b> IN THEIR FIELD</b></h3>
                     <p>
                         They have professional skills and knowledge in their fields with respect for others who work with them.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew2} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew3 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3><b>STEEP</b> LEARNING <b>CURVE</b></h3>
                     <p>
                       They are willing to learn and grow, and they quickly obtain knowledge.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew3} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew4 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>ENCOURAGE <b>ONE ANOTHER</b></h3>
                     <p>
@@ -183,15 +156,12 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       If the goals of the members and the company agree, the outcome will be tremendous. We are trying to create a system that assesses members through both an objective and subjective index and appropriately compensate the member.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew4} />
-                  </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row stretched columns={3}>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew5 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>CONSIDER DEADLINES <b>SERIOUSLY</b></h3>
                     <p>
@@ -201,41 +171,32 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       one another at work.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew5} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew6 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>RESULT-ORIENTED <b>PEOPLE</b></h3>
                     <p>
                       They take in, study, and learn from their mistakes. This makes them possible to succeed.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew6} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew7 + ')', paddingBottom: '100%'}}>
                   <div className={'segment-wrapper'}>
                     <h3>HONEST <b>PEOPLE</b></h3>
                     <p>
                       They boldly share ideas and opinions and enjoy active communication.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew7} />
-                  </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
-            <Grid.Row stretched columns={1}>
+            <Grid.Row stretched columns={3}>
               <Grid.Column>
-                <Segment className={'row-segment'}>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew8 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3><b>THE CREW ARE</b> RELIABLE</h3>
                     <p>
@@ -243,9 +204,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       and the quality of their product is consistent.
                       They let others know of what they are doing and are reliable for any task to be given.
                     </p>
-                  </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.crew8} />
                   </div>
                 </Segment>
               </Grid.Column>
@@ -264,7 +222,7 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.howWeWork0 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>FLEXIBLE <b>WORK HOURS</b></h3>
                     <p>
@@ -273,13 +231,10 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       As long as you work 40 hours a week, you can be flexible with your work hours.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.howWeWork0} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.howWeWork1 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3><b>WORK</b> HARD <b>PLAY</b> HARD</h3>
                     <p>
@@ -289,15 +244,12 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       be mindful to not cause any inconveniences to others who are working with you.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.howWeWork1} />
-                  </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row stretched columns={3}>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.howWeWork2 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>DYNAMIC <b>YET</b> ORGANIZED</h3>
                     <p>
@@ -307,40 +259,29 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                       Though we do not have leaders that give orders, leaders can temporarily be formed when one leads a special project.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.howWeWork2} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.howWeWork3 + ')'}}>
                   <div className={'segment-wrapper'}>
                       <h3><b>CHOICE WITH</b> RESPONSIBILITY</h3>
                     <p>
                         You can choose when to work and when to rest, but these choices must be made with responsibility. Making ill use of autonomous corporate culture will not be tolerated. Freedom is yours with responsibility.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.howWeWork3} />
-                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment>
+                <Segment style={{backgroundImage: 'URL(' + cultureImg.howWeWork4 + ')'}}>
                   <div className={'segment-wrapper'}>
                       <h3><b>WORK AS A</b> TEAM PLAYER</h3>
                     <p>
                         Start-ups face all sorts of situations, and they are hardly predictable. It might require its members to come together to solve problems, to help out in unfamiliar tasks, and maybe even to answer phone calls if no one else is there to pick up the phone. Person who is not up for being a team member and creates borders in terms of tasks does not fit Chequer’s work environment.
                     </p>
                   </div>
-                  <div className={'segment-img'}>
-                    <img src={cultureImg.howWeWork4} />
-                  </div>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
-
-
           </Grid>
 
         </div>

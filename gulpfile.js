@@ -55,7 +55,7 @@ gulp.task( 'default', [ 'scss-watch' ], function () {
  */
 
 gulp.task( 'dev run!', [ 'scss-src', 'scss-watch' ], shell.task( [
-  'webpack-dev-server',
+  'webpack-dev-server --hotOnly'
 ] ) );
 
 gulp.task( 'deploy to docs', [ 'scss-src' ], shell.task( [
