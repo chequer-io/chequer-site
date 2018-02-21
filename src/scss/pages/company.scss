@@ -32,6 +32,8 @@
 
   [data-page-content] {
 
+    padding: 100px 0;
+
     .circles {
       color: #FF344D;
       font-size: 12px;
@@ -83,8 +85,10 @@
 
   .footer {
     font-size: 35px;
-    //position: absolute;
-    //bottom: 40px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -17.5px;
     margin-top: 2em;
     text-shadow: 2px 2px 5px #000000;
     cursor: pointer;
@@ -126,6 +130,12 @@
 
         }
       }
+    }
+
+    .footer {
+      position: static;
+      left: auto;
+      bottom: auto;
     }
   }
 }

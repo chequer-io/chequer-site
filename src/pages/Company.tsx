@@ -35,11 +35,18 @@ export class Company extends React.Component<any, any> {
               <p className={'h1Label'}>
                 OUR PRODUCT PROVOKE YOUR SUCCESS BUSINESS
               </p>
+
             </div>
           </td>
         </tr>
         </tbody>
       </table>
+
+      <div className={'footer'}>
+        <a onClick={e => this.props.goPage('company-vision')}>
+          <span className='chi-mouse' />
+        </a>
+      </div>
 
       </>
     )
