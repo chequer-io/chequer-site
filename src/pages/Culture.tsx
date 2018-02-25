@@ -113,8 +113,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew2 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -125,6 +123,8 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
+            </Grid.Row>
+              <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew3 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -147,8 +147,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew5 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -162,6 +160,8 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
+              </Grid.Row>
+              <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew6 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -182,8 +182,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew8 + ')'}}>
                   <div className={'segment-wrapper'}>
