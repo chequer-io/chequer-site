@@ -1,12 +1,17 @@
 import * as React from 'react';
 
-export class Company extends React.Component<iCommonPageProps, iCommonPageState> {
+export class Company extends React.Component<any, any> {
   constructor(props) {
     super(props);
 
   }
 
   public render() {
+
+    let pageMinHeight = this.props.height;
+    if (pageMinHeight < 600) {
+      pageMinHeight = 600;
+    }
 
     return (
       <>
@@ -15,17 +20,27 @@ export class Company extends React.Component<iCommonPageProps, iCommonPageState>
         <span className='chi-chequer-full' />
       </div>
 
-      <div data-page-content='company'>
-        <h1>WE LEAD TECHNOLOGIES</h1>
-        <article>
-          <p className={''}>
-            We believe that technologies change the world better and we put our efforts in it. We make high-quality software you've dreamed to work on with the newest technologies.
-          </p>
-        </article>
-        <p className={'h1Label'}>
-          OUR PRODUCT PROVOKE YOUR SUCCESS BUSINESS
-        </p>
-      </div>
+      <table style={{height: pageMinHeight -100}}>
+        <tbody>
+        <tr>
+          <td>
+            <div data-page-content='company'>
+              <h1>WE LEAD TECHNOLOGIES</h1>
+              <article>
+                <p className={''}>
+                  We believe that technologies change the world better and we put our efforts in it.
+                  We make high-quality software you've dreamed to work on with the newest technologies.
+                </p>
+              </article>
+              <p className={'h1Label'}>
+                OUR PRODUCT PROVOKE YOUR SUCCESS BUSINESS
+              </p>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
 
       <div className={'footer'}>
         <a onClick={e => this.props.goPage('company-vision')}>

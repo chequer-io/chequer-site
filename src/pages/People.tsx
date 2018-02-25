@@ -74,7 +74,7 @@ export class People extends React.Component<iCommonPageProps, iCommonPageState> 
                 </Grid>
 
                 <Grid doubling container columns={4}>
-                    <Grid.Row stretched>
+                    <Grid.Row>
                         {peoples.map((people, i) => {
                             return <Grid.Column key={i}>
                                 <ProfileCard {...people} />

@@ -5,7 +5,11 @@ $menu-width: 200px;
     @content;
   }
 }
-
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -28,7 +32,7 @@ a {
 }
 
 .fullpage {
-  padding: 50px;
+  padding: 50px 0;
 
   [data-page-content] {
     //transition: all 0.5s ease-in-out;

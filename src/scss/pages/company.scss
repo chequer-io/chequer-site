@@ -1,8 +1,4 @@
 .page-company {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   overflow: hidden;
 
@@ -19,20 +15,24 @@
     font-size: 35px;
     position: absolute;
     top: 40px;
+    left: 50%;
+    margin-left: - (163.97px / 2);
     text-shadow: 2px 2px 5px #000000;
 
     @include fadeInDown($duration: 1s, $delay: 0.5s);
   }
 
-  [data-page-content] {
-    // @include fadeIn($duration: 2s, $delay: 0s);
-    max-width: 650px;
+  table{
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    td{
+      vertical-align: middle;
+    }
+  }
+
+  [data-page-content] {
+
+    padding: 100px 0;
 
     .circles {
       color: #FF344D;
@@ -65,11 +65,12 @@
       color: #ccc;
       letter-spacing: 1px;
     }
+
+
     article {
       max-width: 650px;
-      margin-bottom: 30px;
+      margin: 10px auto;
       //font-family: $heading-font-family;
-
     }
     .btn-wrap {
       margin-top: 5em;
@@ -84,8 +85,10 @@
 
   .footer {
     font-size: 35px;
-    //position: absolute;
-    //bottom: 40px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -17.5px;
     margin-top: 2em;
     text-shadow: 2px 2px 5px #000000;
     cursor: pointer;
@@ -127,6 +130,12 @@
 
         }
       }
+    }
+
+    .footer {
+      position: static;
+      left: auto;
+      bottom: auto;
     }
   }
 }
