@@ -102,17 +102,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
-                <Segment style={{backgroundImage: 'URL(' + cultureImg.crew0 + ')'}}>
-                  <div className={'segment-wrapper'}>
-                    <h3><b>THE CREW ARE</b> DETERMINED PEOPLE</h3>
-                    <p>
-                      They do not compare themselves with those who work at companies that are bigger or overseas.
-                      They have an unwavering belief that Chequer will become the world’s leading IT company.
-                    </p>
-                  </div>
-                </Segment>
-              </Grid.Column>
-              <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew1 + ')'}}>
                   <div className={'segment-wrapper'}>
                     <h3>HONOR ONE ANOTHER <b>FOR THE SUCCESSFUL RESULT</b></h3>
@@ -124,8 +113,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew2 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -136,6 +123,8 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
+            </Grid.Row>
+              <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew3 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -158,8 +147,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew5 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -173,6 +160,8 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
+              </Grid.Row>
+              <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew6 + ')'}}>
                   <div className={'segment-wrapper'}>
@@ -193,8 +182,6 @@ export class Culture extends React.Component<iCommonPageProps, iCommonPageState>
                   </div>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment style={{backgroundImage: 'URL(' + cultureImg.crew8 + ')'}}>
                   <div className={'segment-wrapper'}>
