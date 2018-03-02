@@ -2,6 +2,7 @@ const path = require( 'path' );
 const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CnameWebpackPlugin = require( 'cname-webpack-plugin' );
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require( 'webpack' );
 const basePath = __dirname;
 
@@ -40,12 +41,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader', options: {}
-          }
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|otf)$/,
@@ -57,6 +56,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ExtractTextPlugin("styles.css"),
     new webpack.LoaderOptionsPlugin( {
       minimize: true,
       debug: false
