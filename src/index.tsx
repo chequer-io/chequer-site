@@ -3,8 +3,16 @@ import * as ReactDOM from 'react-dom';
 import "babel-polyfill";
 import AppRouter from './router';
 import './scss/index.css';
+import {AppContainer} from "react-hot-loader";
 
-ReactDOM.render(
-  <AppRouter />,
-  document.getElementById('root')
-);
+
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
+
+render(AppRouter);
