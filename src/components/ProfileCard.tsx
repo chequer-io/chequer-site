@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 import * as profileImg from 'assets/images/peoples';
 
-export class ProfileCard extends React.Component<any, any> {
+export default class ProfileCard extends React.Component<any, any> {
   constructor(props) {
     super(props);
   }

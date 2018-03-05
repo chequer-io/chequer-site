@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class AsideNav extends React.Component<any, any> {
+export default class AsideNav extends React.Component<any, any> {
   constructor(props) {
     super(props);
   }

@@ -1,7 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 
-export class SideNav extends React.Component<iSideNavProps, iSideNavState> {
+export default class SideNav extends React.Component<
+  iSideNavProps,
+  iSideNavState
+> {
   constructor(props) {
     super(props);
   }

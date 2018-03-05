@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 
-export class Footer extends React.Component<
+export default class Footer extends React.Component<
   iPageControlProps,
   iPageControlState
 > {

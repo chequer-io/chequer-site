@@ -1,7 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export class FullPage extends React.Component<iFullPageProps, iFullPageState> {
+export default class FullPage extends React.Component<
+  iFullPageProps,
+  iFullPageState
+> {
   constructor(props) {
     super(props);
   }

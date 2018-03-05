@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-export class MobileNav extends React.Component<any, any> {
+export default class MobileNav extends React.Component<any, any> {
   constructor(props) {
     super(props);
 

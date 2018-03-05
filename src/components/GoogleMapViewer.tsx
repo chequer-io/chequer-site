@@ -12,7 +12,7 @@ interface iGoogleMapViewerProps {
   text: string;
 }
 
-export class GoogleMapViewer extends React.Component<
+export default class GoogleMapViewer extends React.Component<
   iGoogleMapViewerProps,
   any
 > {
