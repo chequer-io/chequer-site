@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, Grid } from 'semantic-ui-react';
 
-export class Recruit extends React.Component<
+export default class Recruit extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {

@@ -3,13 +3,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const basePath = __dirname;
 
+const babelOptions = {
+  plugins: ['react-hot-loader/babel'],
+  presets: [
+    [
+      'env',
+      {
+        targets: {
+          browsers: ['last 2 versions', '> 1% in KR'],
+        },
+      },
+    ],
+    'react',
+    'stage-0',
+  ],
+};
+
 module.exports = {
   context: path.join(basePath, '.'),
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
-    alias: {
-      '@root': path.resolve(__dirname, ''),
-    },
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    modules: ['src', 'node_modules'],
   },
   entry: {
     app: './src/index.tsx',
@@ -22,16 +36,22 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { ...babelOptions, cacheDirectory: true },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              babelrc: true,
-              plugins: ['react-hot-loader/babel'],
-              cacheDirectory: true,
-            },
+            options: { ...babelOptions, cacheDirectory: true },
           },
           { loader: 'awesome-typescript-loader' },
         ],
@@ -68,17 +88,22 @@ module.exports = {
     },
   },
   plugins: [
+    // async import
+    new webpack.NormalModuleReplacementPlugin(
+      /^pages$/,
+      'pages/index.async.js',
+    ),
+    // chunk
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
+    }),
     //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/
       template: './src/index.html', //Name of template in ./src
       favicon: './src/assets/favicon.ico',
       hash: true,
-    }),
-    // chunk
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),

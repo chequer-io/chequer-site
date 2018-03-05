@@ -15,6 +15,7 @@
     "react-addons-update": "^15.6.2",
     "react-dom": "^16.1.1",
     "react-hot-loader": "^4.0.0",
+    "react-loadable": "^5.3.1",
     "react-redux": "^5.0.7"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@types/react-redux": "^5.0.15",
     "@types/react-router": "^4.0.22",
     "@types/react-router-dom": "^4.2.4",
+    "@types/webpack-env": "^1.13.5",
     "awesome-typescript-loader": "^3.5.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

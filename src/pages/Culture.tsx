@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
-import * as cultureImg from '../assets/images/culture';
+import * as cultureImg from 'assets/images/culture';
 
-export class Culture extends React.Component<
+export default class Culture extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {

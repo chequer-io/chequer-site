@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "baseUrl": "./",
     "paths": {
-      "@root/*": ["/*"]
+      "*": ["src/*"]
     },
     "typeRoots": ["./node_modules/@types", "./src/typings"],
     "lib": ["dom", "esnext"],
@@ -21,5 +21,6 @@
   "exclude": ["node_modules"],
   "awesomeTypescriptLoaderOptions": {
     "useCache": true
-  }
+  },
+  "include": ["src"]
 }

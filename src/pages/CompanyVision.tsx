@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 
-export class CompanyVision extends React.Component<any, any> {
+export default class CompanyVision extends React.Component<any, any> {
   constructor(props) {
     super(props);
   }

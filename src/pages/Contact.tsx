@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
-import { GoogleMapViewer } from '../components/index';
+import { GoogleMapViewer } from 'components/index';
 
-export class Contact extends React.Component<
+export default class Contact extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {

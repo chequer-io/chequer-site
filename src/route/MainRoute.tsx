@@ -4,8 +4,8 @@ import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
 import { Container } from 'semantic-ui-react';
-import { AsideNav, Footer, FullPage, MobileNav, SideNav } from '../components';
-import * as Page from '../pages';
+import { AsideNav, Footer, FullPage, MobileNav, SideNav } from 'components';
+import * as Page from 'pages';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
 

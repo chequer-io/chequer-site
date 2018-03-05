@@ -8,13 +8,27 @@ const basePath = __dirname;
 
 webpack.logLevel = 'NONE';
 
+const babelOptions = {
+  plugins: ['react-hot-loader/babel'],
+  presets: [
+    [
+      'env',
+      {
+        targets: {
+          browsers: ['last 2 versions', '> 1% in KR'],
+        },
+      },
+    ],
+    'react',
+    'stage-0',
+  ],
+};
+
 module.exports = {
   context: path.join(basePath, '.'),
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
-    alias: {
-      '@root': path.resolve(__dirname, ''),
-    },
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    modules: ['src', 'node_modules'],
   },
   entry: {
     app: './src/index.tsx',
@@ -24,37 +38,28 @@ module.exports = {
     filename: '[name].[hash].js',
     publicPath: '/',
   },
-  optimization: {
-    minimize: false,
-    splitChunks: {
-      chunks: 'async',
-      minSize: 30000,
-      minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3,
-      name: true,
-      cacheGroups: {
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-        },
-      },
-    },
-  },
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { ...babelOptions },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          useBabel: true,
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { ...babelOptions },
+          },
+          { loader: 'awesome-typescript-loader' },
+        ],
       },
       {
         test: /\.s?css$/,
@@ -77,6 +82,16 @@ module.exports = {
     ],
   },
   plugins: [
+    // async import
+    new webpack.NormalModuleReplacementPlugin(
+      /^pages$/,
+      'pages/index.async.js',
+    ),
+    // chunk
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
+    }),
     new ExtractTextPlugin('styles.css'),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
@@ -86,6 +101,7 @@ module.exports = {
       sourceMap: false,
       comments: false,
       warnings: false,
+      drop_console: true,
     }),
     new CleanWebpackPlugin(['docs'], {
       verbose: true,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Grid, Segment } from 'semantic-ui-react';
-import * as img from '../assets/images';
+import * as img from 'assets/images';
 
-export class CompanySQLGate extends React.Component<
+export default class CompanySQLGate extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {

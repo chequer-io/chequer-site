@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Icon } from 'semantic-ui-react';
-import { ProfileCard } from '../components/index';
+import { ProfileCard } from 'components/index';
 
-export class People extends React.Component<
+export default class People extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {
