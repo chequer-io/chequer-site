@@ -1,4 +1,3 @@
-
 import jpg_samsung from './client/samsung.jpg';
 import jpg_kt from './client/kt.jpg';
 import jpg_cj from './client/cj.jpg';
@@ -45,5 +44,5 @@ export {
   jpg_wemakeprice,
   jpg_samsungSds,
   jpg_samsungService,
-  png_monitor
-}
+  png_monitor,
+};

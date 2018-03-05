@@ -12,8 +12,7 @@ declare module '*.jpg' {
 }
 
 // Router
-interface iAppRouterProps {
-}
+interface iAppRouterProps {}
 
 interface iAppRouterState {
   width: number;
@@ -26,24 +25,22 @@ interface iSideNavProps {
   style?: any;
   focusedPageIndex: number;
   pages: {
-    id: string,
-    component: any,
-    label: string
+    id: string;
+    component: any;
+    label: string;
   }[];
   width?: number;
   height?: number;
   goPage: Function;
 }
 
-interface iSideNavState {
-}
+interface iSideNavState {}
 
 interface iCommonPageProps {
   goPage: Function;
 }
 
-interface iCommonPageState {
-}
+interface iCommonPageState {}
 
 // PageMain
 interface iPageMainProps {
@@ -69,13 +66,11 @@ interface iFullPageProps {
   className: any;
 }
 
-interface iFullPageState {
-}
+interface iFullPageState {}
 
 interface iPageControlProps {
   prevPageUrl?: string;
   nextPageUrl?: string;
 }
 
-interface iPageControlState {
-}
+interface iPageControlState {}

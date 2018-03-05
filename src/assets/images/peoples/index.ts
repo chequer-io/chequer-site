@@ -8,15 +8,4 @@ import john from './john.jpg';
 import join from './join.jpg';
 import hong from './hong.jpg';
 
-
-export {
-    benjamin,
-    thomas,
-    brant,
-    bill,
-    cia,
-    may,
-    john,
-    join,
-    hong
-}
+export { benjamin, thomas, brant, bill, cia, may, john, join, hong };

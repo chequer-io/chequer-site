@@ -27,6 +27,19 @@ export {
   PRIVILEGE,
   RESPONSIBILITY,
   REWARD,
-  crew0, crew1, crew2, crew3, crew4, crew5, crew6, crew7, crew8,
-  howWeWork0, howWeWork1, howWeWork2, howWeWork3, howWeWork4, howWeWork5
-}
+  crew0,
+  crew1,
+  crew2,
+  crew3,
+  crew4,
+  crew5,
+  crew6,
+  crew7,
+  crew8,
+  howWeWork0,
+  howWeWork1,
+  howWeWork2,
+  howWeWork3,
+  howWeWork4,
+  howWeWork5,
+};

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import GoogleMap from 'google-map-react';
 import GoogleMapPlace from './GoogleMapPlace';
 
@@ -12,12 +12,14 @@ interface iGoogleMapViewerProps {
   text: string;
 }
 
-export class GoogleMapViewer extends React.Component<iGoogleMapViewerProps, any> {
-
+export class GoogleMapViewer extends React.Component<
+  iGoogleMapViewerProps,
+  any
+> {
   static defaultProps = {
     center: [59.938043, 30.337157],
     zoom: 9,
-    placeCoords: {lat: 59.724465, lng: 30.080121}
+    placeCoords: { lat: 59.724465, lng: 30.080121 },
   };
 
   constructor(props) {
@@ -29,9 +31,10 @@ export class GoogleMapViewer extends React.Component<iGoogleMapViewerProps, any>
 
     return (
       <GoogleMap
-        bootstrapURLKeys={{key:GOOGLE_MAP_API_KEY}}
+        bootstrapURLKeys={{ key: GOOGLE_MAP_API_KEY }}
         center={this.props.center}
-        zoom={this.props.zoom}>
+        zoom={this.props.zoom}
+      >
         <GoogleMapPlace {...this.props.placeCoords} text={this.props.text} />
       </GoogleMap>
     );

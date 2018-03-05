@@ -1,12 +1,10 @@
-import * as React from 'react'
-import {Card, Image} from 'semantic-ui-react'
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
 import * as profileImg from '../assets/images/peoples';
 
 export class ProfileCard extends React.Component<any, any> {
   constructor(props) {
     super(props);
-
-
   }
 
   public render() {
@@ -20,13 +18,14 @@ export class ProfileCard extends React.Component<any, any> {
         </Card.Content>
         <Card.Content extra>
           {this.props.extra.map((n, ni) => {
-            return <a href={n.url} target='_blank' key={ni}>
-              {n.label} {n.desc}
-            </a>
-          }) }
+            return (
+              <a href={n.url} target="_blank" key={ni}>
+                {n.label} {n.desc}
+              </a>
+            );
+          })}
         </Card.Content>
       </Card>
-    )
+    );
   }
 }
-
