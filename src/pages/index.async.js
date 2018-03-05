@@ -1,9 +1,6 @@
 import React from 'react';
 import Loadable from 'react-loadable';
-
-function Loading() {
-  return <div>Loading...</div>;
-}
+import { Loading } from 'components';
 
 export const Company = Loadable({
   loader: () => import('./Company'),

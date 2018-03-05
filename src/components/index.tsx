@@ -5,3 +5,4 @@ export * from './Footer';
 export * from './ProfileCard';
 export * from './GoogleMapViewer';
 export * from './MobileNav';
+export * from './Loading';
