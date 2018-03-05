@@ -8,48 +8,52 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
     alias: {
-      '@root': path.resolve(__dirname, '')
-    }
+      '@root': path.resolve(__dirname, ''),
+    },
   },
   entry: {
     app: './src/index.tsx',
-    vendor: [
-      'react',
-      'react-dom',
-      'react-router',
-    ]
   },
   output: {
     path: path.join(basePath, './docs'),
     filename: '[name].[hash].js',
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          useBabel: true,
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: true,
+              plugins: ['react-hot-loader/babel'],
+              cacheDirectory: true,
+            },
+          },
+          { loader: 'awesome-typescript-loader' },
+        ],
       },
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader', options: {
-
-          } }
-        ]
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {},
+          },
+          { loader: 'sass-loader' },
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|otf)$/,
         loader: 'url-loader',
         options: {
-          limit: 10000
-        }
-      }
+          limit: 10000,
+        },
+      },
     ],
   },
   // For development https://webpack.js.org/configuration/devtool/#for-development
@@ -60,10 +64,8 @@ module.exports = {
     noInfo: true,
     hot: true,
     historyApiFallback: {
-      rewrites: [
-        {from: /./, to: '/'}
-      ]
-    }
+      rewrites: [{ from: /./, to: '/' }],
+    },
   },
   plugins: [
     //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
@@ -71,12 +73,14 @@ module.exports = {
       filename: 'index.html', //Name of file in ./dist/
       template: './src/index.html', //Name of template in ./src
       favicon: './src/assets/favicon.ico',
-      hash: true
+      hash: true,
     }),
+    // chunk
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest'],
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-  ]
+  ],
 };

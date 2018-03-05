@@ -1,4 +1,6 @@
 // module.exports
-module.exports = function (env = 'dev') {
-  return require(`./webpack.${env}.js`);
+module.exports = function() {
+  return require(`./webpack.${
+    process.env.NODE_ENV === 'production' ? 'production' : 'dev'
+  }.js`);
 };
