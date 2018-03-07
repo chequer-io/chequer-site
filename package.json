@@ -94,6 +94,7 @@
   },
   "scripts": {
     "webpack": "NODE_ENV=production webpack --progress --colors",
+    "build": "npm test && npm run webpack",
     "start": "NODE_ENV=development webpack-dev-server --hotOnly",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "test": "NODE_ENV=test jest",
