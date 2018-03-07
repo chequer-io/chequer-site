@@ -77,6 +77,36 @@ export default class People extends React.Component<
         ],
       },
       {
+        id: 'su',
+        name: 'Suyeong Kim',
+        job: 'Chief Marketing Officer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/suyeong-kim-191b4997/',
+          },
+        ],
+      },
+      {
+        id: 'woo',
+        name: 'DongWoo Kim',
+        job: 'Lead Software Developer',
+        extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/engross.gim',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/dongwoo-gim-3b5b82111/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/gimdongwoo',
+          },
+        ],
+      },
+      {
         id: 'bill',
         name: 'Bill Lee',
         job: 'Accounting Assistant',
@@ -118,10 +148,11 @@ export default class People extends React.Component<
           },
         ],
       },
+
       {
         id: 'hong',
         name: 'SangHun Hong',
-        job: 'Legal Advisor (Lawyer)',
+        job: 'Legal Director (Lawyer)',
         extra: [
           {
             label: <Icon name="linkedin" />,
