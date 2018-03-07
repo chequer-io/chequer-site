@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const basePath = __dirname;
 
 module.exports = {
@@ -80,7 +79,6 @@ module.exports = {
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
-    new LodashModuleReplacementPlugin(),
     //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/

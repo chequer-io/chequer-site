@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CnameWebpackPlugin = require('cname-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const basePath = __dirname;
 
 webpack.logLevel = 'NONE';
@@ -60,7 +59,6 @@ module.exports = {
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
-    new LodashModuleReplacementPlugin(),
     new ExtractTextPlugin('styles.css'),
     new webpack.LoaderOptionsPlugin({
       minimize: true,

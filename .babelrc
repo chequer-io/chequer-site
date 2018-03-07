@@ -11,13 +11,13 @@
     "production": {
       "plugins": [
         "add-module-exports",
-        "lodash"
+        ["lodash", {"id": ["lodash", "semantic-ui-react"]}]
       ]
     },
     "development": {
       "plugins": [
         "add-module-exports",
-        "lodash",
+        ["lodash", {"id": ["lodash", "semantic-ui-react"]}],
         "react-hot-loader/babel"
       ]
     },
@@ -29,7 +29,7 @@
       }], "react", "stage-0"],
       "plugins": [
         "add-module-exports",
-        "lodash"
+        ["lodash", {"id": ["lodash", "semantic-ui-react"]}]
       ]
     }
   }
