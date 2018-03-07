@@ -15,7 +15,6 @@
       ]
     },
     "development": {
-      "cacheDirectory": true,
       "plugins": [
         "add-module-exports",
         "lodash",
