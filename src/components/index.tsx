@@ -6,3 +6,6 @@ export { default as ProfileCard } from './ProfileCard';
 export { default as GoogleMapViewer } from './GoogleMapViewer';
 export { default as MobileNav } from './MobileNav';
 export { default as Loading } from './Loading';
+
+// Test component
+export const Hello = require('./Hello');

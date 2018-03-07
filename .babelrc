@@ -1,0 +1,37 @@
+{
+  "presets": [["env", {
+    "targets": {
+      "browsers": ["last 2 versions", "> 1% in KR"]
+    }
+  }], "react", "stage-0"],
+
+  "sourceMaps": true,
+
+  "env": {
+    "production": {
+      "plugins": [
+        "add-module-exports",
+        "lodash"
+      ]
+    },
+    "development": {
+      "cacheDirectory": true,
+      "plugins": [
+        "add-module-exports",
+        "lodash",
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "presets": [["env", {
+        "targets": {
+          "node": "current"
+        }
+      }], "react", "stage-0"],
+      "plugins": [
+        "add-module-exports",
+        "lodash"
+      ]
+    }
+  }
+}

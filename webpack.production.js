@@ -4,25 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CnameWebpackPlugin = require('cname-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const basePath = __dirname;
 
 webpack.logLevel = 'NONE';
-
-const babelOptions = {
-  plugins: ['react-hot-loader/babel'],
-  presets: [
-    [
-      'env',
-      {
-        targets: {
-          browsers: ['last 2 versions', '> 1% in KR'],
-        },
-      },
-    ],
-    'react',
-    'stage-0',
-  ],
-};
 
 module.exports = {
   context: path.join(basePath, '.'),
@@ -43,34 +28,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: { ...babelOptions },
-          },
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: { ...babelOptions },
-          },
-          { loader: 'awesome-typescript-loader' },
-        ],
+        use: ['babel-loader', 'awesome-typescript-loader'],
       },
       {
         test: /\.s?css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {},
-          },
-          { loader: 'sass-loader' },
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|otf)$/,
@@ -81,6 +48,7 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map',
   plugins: [
     // async import
     new webpack.NormalModuleReplacementPlugin(
@@ -92,6 +60,7 @@ module.exports = {
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
+    new LodashModuleReplacementPlugin(),
     new ExtractTextPlugin('styles.css'),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
