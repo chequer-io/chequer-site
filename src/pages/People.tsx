@@ -37,8 +37,8 @@ export default class People extends React.Component<
         job: 'Chief Strategy Officer',
         extra: [
           {
-            label: <Icon name="facebook" />,
-            url: 'https://www.facebook.com/yoheon.song',
+            label: <Icon name="linkedin" />,
+            url: 'http://cdb.chosun.com/search/db-people/i_service/people_DisAllXml_review.jsp?uci=02112010122700472795',
           },
         ],
       },
