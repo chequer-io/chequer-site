@@ -60,14 +60,14 @@ gulp.task('default', ['scss-watch'], function() {
 gulp.task(
   'dev run!',
   ['scss-src', 'scss-watch'],
-  shell.task(['webpack-dev-server --hotOnly']),
+  shell.task(['NODE_ENV=development webpack-dev-server --hotOnly']),
 );
 
 gulp.task(
   'deploy to docs',
   ['scss-src'],
   shell.task([
-    'webpack -p --env=production --progress --profile --colors',
+    'NODE_ENV=production webpack --progress --colors',
     'git add -A',
   ]),
 );

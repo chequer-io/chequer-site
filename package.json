@@ -135,6 +135,8 @@
     "testMatch": [
       "**/__tests__/*.(ts|tsx|js|jsx)"
     ],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
