@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsideNav matches snapshot 1`] = `
+<div
+  className="aside-nav"
+>
+  <div
+    className="nav-container"
+  >
+    <a
+      className="item"
+      href="https://www.facebook.com/SQLGate/"
+      target="_blank"
+    >
+      <span
+        className="label"
+      >
+        facebook.com/SQLGate
+      </span>
+      <span
+        className="chi-facebook-solid"
+      />
+    </a>
+    <a
+      className="item"
+      href="https://medium.com/chequer"
+      target="_blank"
+    >
+      <span
+        className="label"
+      >
+        medium.com/chequer
+      </span>
+      <span
+        className="chi-medium-solid"
+      />
+    </a>
+    <a
+      className="item"
+      href="https://www.sqlgate.com/"
+      target="_blank"
+    >
+      <span
+        className="label"
+      >
+        SQLGate.com
+      </span>
+      <span
+        className="chi-sqlgate-solid"
+      />
+    </a>
+  </div>
+</div>
+`;
