@@ -31,6 +31,7 @@ export default class People extends React.Component<
           },
         ],
       },
+      /*
       {
         id: 'john',
         name: 'John Song',
@@ -42,6 +43,7 @@ export default class People extends React.Component<
           },
         ],
       },
+      */
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
