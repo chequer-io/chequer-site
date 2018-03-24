@@ -79,17 +79,6 @@ export default class People extends React.Component<
         ],
       },
       {
-        id: 'su',
-        name: 'Suyeong Kim',
-        job: 'Chief Marketing Officer',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/suyeong-kim-191b4997/',
-          },
-        ],
-      },
-      {
         id: 'woo',
         name: 'DongWoo Kim',
         job: 'Lead Software Developer',
