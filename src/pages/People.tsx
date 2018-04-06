@@ -31,19 +31,6 @@ export default class People extends React.Component<
           },
         ],
       },
-      /*
-      {
-        id: 'john',
-        name: 'John Song',
-        job: 'Chief Strategy Officer',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'http://cdb.chosun.com/search/db-people/i_service/people_DisAllXml_review.jsp?uci=02112010122700472795',
-          },
-        ],
-      },
-      */
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
@@ -74,7 +61,7 @@ export default class People extends React.Component<
           },
           {
             label: <Icon name="github" />,
-            url: 'http://github.com/thomasJang',
+            url: 'https://github.com/thomasJang',
           },
         ],
       },
@@ -139,6 +126,17 @@ export default class People extends React.Component<
           },
         ],
       },
+      {
+        id: 'kelly',
+        name: 'Kelly Kim',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/aeei',
+          },
+        ],
+      },
 
       {
         id: 'hong',
@@ -152,12 +150,12 @@ export default class People extends React.Component<
         ],
       },
     ];
-    
+
     peoples.sort((a, b) => {
-      if(a.name > b.name){
+      if (a.name > b.name) {
         return 1;
       }
-      if(a.name < b.name){
+      if (a.name < b.name) {
         return -1;
       }
       return 0;
