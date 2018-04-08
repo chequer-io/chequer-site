@@ -15,9 +15,9 @@ import woo_hover from './woo-hover.jpg';
 import kelly from './kelly.jpg';
 import kelly_hover from './kelly-hover.jpg';
 
-import john from './john.jpg';
 import join from './join.jpg';
 import hong from './hong.jpg';
+import hong_hover from './hong-hover.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -52,7 +52,7 @@ const kelly_img = {
   hover: kelly_hover,
 };
 const join_img = { img: join };
-const hong_img = { img: hong };
+const hong_img = { img: hong, hover: hong_hover };
 
 export {
   benjamin_img,
