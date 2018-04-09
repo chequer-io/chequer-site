@@ -140,7 +140,7 @@ export default class People extends React.Component<
 
       {
         id: 'hong',
-        name: 'SangHun Hong',
+        name: 'Paul Hong',
         job: 'Legal Director (Lawyer)',
         extra: [
           {
