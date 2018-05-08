@@ -111,7 +111,7 @@ export default class People extends React.Component<
           },
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/sia-hong-659839158',
+            url: 'https://www.linkedin.com/in/sia-hong-699838158/',
           },
         ],
       },
