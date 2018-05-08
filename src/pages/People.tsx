@@ -152,7 +152,7 @@ export default class People extends React.Component<
       {
         id: 'alain',
         name: 'Alain Kim',
-        job: 'Business Director',
+        job: 'Strategy Director',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -163,7 +163,7 @@ export default class People extends React.Component<
       {
         id: 'robb',
         name: 'Robb Lee',
-        job: 'Business Manager',
+        job: 'Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
