@@ -19,6 +19,13 @@ import join from './join.jpg';
 import hong from './hong.jpg';
 import hong_hover from './hong-hover.jpg';
 
+import alain from './alain.jpg';
+import alain_hover from './alain-hover.jpg';
+import ellie from './ellie.jpg';
+import ellie_hover from './ellie-hover.jpg';
+import robb from './robb.jpg';
+import robb_hover from './robb-hover.jpg';
+
 const benjamin_img = {
   img: benjamin,
   hover: benjamin_hover,
@@ -54,6 +61,10 @@ const kelly_img = {
 const join_img = { img: join };
 const hong_img = { img: hong, hover: hong_hover };
 
+const alain_img = { img: alain, hover: alain_hover };
+const robb_img = { img: robb, hover: robb_hover };
+const ellie_img = { img: ellie, hover: ellie_hover };
+
 export {
   benjamin_img,
   thomas_img,
@@ -65,4 +76,7 @@ export {
   kelly_img,
   join_img,
   hong_img,
+  alain_img,
+  robb_img,
+  ellie_img,
 };

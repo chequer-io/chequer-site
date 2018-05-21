@@ -111,7 +111,7 @@ export default class People extends React.Component<
           },
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/sia-hong-659839158',
+            url: 'https://www.linkedin.com/in/sia-hong-699838158/',
           },
         ],
       },
@@ -146,6 +146,39 @@ export default class People extends React.Component<
           {
             label: <Icon name="linkedin" />,
             url: 'http://people.joins.com/search/profile.aspx?pn=396804',
+          },
+        ],
+      },
+      {
+        id: 'alain',
+        name: 'Alain Kim',
+        job: 'Strategy Director',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/jongho-alain-kim/',
+          },
+        ],
+      },
+      {
+        id: 'robb',
+        name: 'Robb Lee',
+        job: 'Product Manager',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/robb-lee-285089164/',
+          },
+        ],
+      },
+      {
+        id: 'ellie',
+        name: 'Ellie Hyeon',
+        job: 'Designer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/visualdesigner-hyeon',
           },
         ],
       },
