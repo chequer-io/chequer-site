@@ -48,12 +48,12 @@ export default class Footer extends React.Component<
                   <Grid.Column width={10}>
                     <h3>CONTACT INFO</h3>
                     <p>
-                      <b>Address</b> : 1401 Hanhwa-BizMetro B-dong, 551-24,
-                      Yangcheon-ro, Gangseo-gu, Seoul, Republic of Korea
+                      <b>Address</b> : #1116 B QueensPark10, 66, MagokJungang
+                      6-ro, Gangseo-gu, Seoul, Republic of Korea(07803)
                     </p>
                     <p>
                       <b>TEL</b> :{' '}
-                      <a href="tel:82-02-338-1876">+82 2-2663-3039</a>
+                      <a href="tel:82-02-338-1876">+82 2-338-1876</a>
                     </p>
                     <p>
                       <b>FAX</b> :{' '}

@@ -48,7 +48,7 @@ export default class Contact extends React.Component<
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                  TEL : <a href="tel:82-02-2663-3039">+82 2-2663-3039</a>
+                  TEL : <a href="tel:82-02-2663-3039">+82 2-338-1876</a>
                   <br />
                   FAX : <a href="tel:82-02-6008-1876">+82 2-6008-1876</a>
                 </Card.Content>
