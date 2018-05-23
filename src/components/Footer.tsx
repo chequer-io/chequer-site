@@ -53,7 +53,7 @@ export default class Footer extends React.Component<
                     </p>
                     <p>
                       <b>TEL</b> :{' '}
-                      <a href="tel:82-02-338-1876">+82 2-2663-3039</a>
+                      <a href="tel:82-02-338-1876">+82 2-338-1876</a>
                     </p>
                     <p>
                       <b>FAX</b> :{' '}
