@@ -81,6 +81,31 @@
         box-shadow: 0 2px 30px 0 #000000;
       }
     }
+
+    .hiring {
+      margin-bottom: 80px;
+      cursor: pointer;
+      img {
+        max-width: 150px;
+        width:100%;
+      }
+
+      a {
+        display: block;
+        font-size: 26px;
+        text-decoration: underline;
+        -webkit-transition: color 0.1s ease;
+        transition: color 0.1s ease;
+      }
+
+      &:hover {
+        a {
+          color: #FF344D;
+          -webkit-transition: color 0.1s ease;
+          transition: color 0.1s ease;
+        }
+      }
+    }
   }
 
   .footer {
