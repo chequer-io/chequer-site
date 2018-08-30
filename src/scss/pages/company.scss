@@ -22,10 +22,10 @@
     @include fadeInDown($duration: 1s, $delay: 0.5s);
   }
 
-  table{
+  table {
     width: 100%;
     height: 100%;
-    td{
+    td {
       vertical-align: middle;
     }
   }
@@ -66,7 +66,6 @@
       letter-spacing: 1px;
     }
 
-
     article {
       max-width: 650px;
       margin: 10px auto;
@@ -79,6 +78,100 @@
         /* btn-shape: */
         background-image: linear-gradient(90deg, #FF344D 0%, #881919 100%);
         box-shadow: 0 2px 30px 0 #000000;
+      }
+    }
+
+    .hiring {
+      max-width: 630px;
+      width: 100%;
+      margin: 0 auto 80px;
+      cursor: pointer;
+
+      img {
+        max-width: 150px;
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        font-size: 26px;
+        text-decoration: underline;
+        -webkit-transition: color 0.1s ease;
+        transition: color 0.1s ease;
+      }
+
+      &:hover {
+        a {
+          color: #FF344D;
+          -webkit-transition: color 0.1s ease;
+          transition: color 0.1s ease;
+        }
+      }
+    }
+
+    #whr_embed_hook {
+      padding-bottom: 100px;
+      position: relative;
+
+      ul {
+        -webkit-padding-start: 0px;
+      }
+      ul, li {
+        list-style: none;
+      }
+      .whr-group {
+        display: inline-block;
+        padding: 0 15px;
+        font-size: 18px;
+        font-weight: 300;
+
+        &.whr-active {
+          color: #ffffff;
+          font-weight: 700;
+        }
+      }
+      .whr-items {
+        position: absolute;
+        left:0;
+        right:0;
+        bottom: 15px;
+        margin: 0 15px;
+      }
+      .whr-item {
+        display: inline-block;
+        background-color: #232323;
+        padding: 10px;
+        max-width: 630px;
+        width: 100%;
+        border-radius: 3px;
+
+        .whr-title {
+          line-height: 1.92;
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        li {
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 1.92;
+          text-align: center;
+          color: #ffffff;
+
+          &.whr-date {
+            display: none;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .whr-title {
+        a {
+          //color: #FF344D;
+        }
       }
     }
   }
@@ -105,9 +198,9 @@
 /**
 모바일 디자인
  */
-@include media-mobile{
-  .page-company{
-    .chequer-logo{
+@include media-mobile {
+  .page-company {
+    .chequer-logo {
       display: none;
     }
 
