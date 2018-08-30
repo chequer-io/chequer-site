@@ -41,8 +41,9 @@ export default class Footer extends React.Component<
 
                     <h3>ETC</h3>
                     <p>
-                      <span className="chi-envelope" />{' '}
-                      <a href="mailto:brant@chequer.io">brant@chequer.io</a>
+                      <a href="https://chequer.workable.com" target={'_blank'}>
+                        chequer.workable.com
+                      </a>
                     </p>
                   </Grid.Column>
                   <Grid.Column width={10}>
