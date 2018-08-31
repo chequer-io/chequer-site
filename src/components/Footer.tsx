@@ -29,8 +29,9 @@ export default class Footer extends React.Component<
                   <Grid.Column width={6}>
                     <h3>RECRUIT</h3>
                     <p>
-                      <span className="chi-envelope" />{' '}
-                      <a href="mailto:join@chequer.io">join@chequer.io</a>
+                      <a href="https://chequer.workable.com" target={'_blank'}>
+                        chequer.workable.com
+                      </a>
                     </p>
 
                     <h3>PARTNER</h3>
@@ -41,9 +42,8 @@ export default class Footer extends React.Component<
 
                     <h3>ETC</h3>
                     <p>
-                      <a href="https://chequer.workable.com" target={'_blank'}>
-                        chequer.workable.com
-                      </a>
+                      <span className="chi-envelope" />{' '}
+                      <a href="mailto:brant@chequer.io">brant@chequer.io</a>
                     </p>
                   </Grid.Column>
                   <Grid.Column width={10}>
