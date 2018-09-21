@@ -8,8 +8,6 @@ import bill from './bill.jpg';
 import bill_hover from './bill-hover.jpg';
 import cia from './cia.jpg';
 import cia_hover from './cia-hover.jpg';
-import may from './may.jpg';
-import may_hover from './may-hover.jpg';
 import woo from './woo.jpg';
 import woo_hover from './woo-hover.jpg';
 import kelly from './kelly.jpg';
@@ -25,6 +23,19 @@ import ellie from './ellie.jpg';
 import ellie_hover from './ellie-hover.jpg';
 import robb from './robb.jpg';
 import robb_hover from './robb-hover.jpg';
+
+import issac from './issac.jpg';
+import issac_hover from './issac-hover.jpg';
+import celine from './celine.jpg';
+import celine_hover from './celine-hover.jpg';
+import andrew from './andrew.jpg';
+import andrew_hover from './andrew-hover.jpg';
+import ella from './ella.jpg';
+import ella_hover from './ella-hover.jpg';
+import mahsa from './mahsa.jpg';
+import mahsa_hover from './mahsa-hover.jpg';
+import dylan from './dylan.jpg';
+import dylan_hover from './dylan-hover.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -46,10 +57,6 @@ const cia_img = {
   img: cia,
   hover: cia_hover,
 };
-const may_img = {
-  img: may,
-  hover: may_hover,
-};
 const woo_img = {
   img: woo,
   hover: woo_hover,
@@ -64,6 +71,12 @@ const hong_img = { img: hong, hover: hong_hover };
 const alain_img = { img: alain, hover: alain_hover };
 const robb_img = { img: robb, hover: robb_hover };
 const ellie_img = { img: ellie, hover: ellie_hover };
+const issac_img = { img: issac, hover: issac_hover };
+const celine_img = { img: celine, hover: celine_hover };
+const andrew_img = { img: andrew, hover: andrew_hover };
+const ella_img = { img: ella, hover: ella_hover };
+const mahsa_img = { img: mahsa, hover: mahsa_hover };
+const dylan_img = { img: dylan, hover: dylan_hover };
 
 export {
   benjamin_img,
@@ -71,7 +84,6 @@ export {
   brant_img,
   bill_img,
   cia_img,
-  may_img,
   woo_img,
   kelly_img,
   join_img,
@@ -79,4 +91,10 @@ export {
   alain_img,
   robb_img,
   ellie_img,
+  issac_img,
+  celine_img,
+  andrew_img,
+  ella_img,
+  mahsa_img,
+  dylan_img,
 };

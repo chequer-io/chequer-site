@@ -34,7 +34,7 @@ export default class People extends React.Component<
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
-        job: 'Product Director',
+        job: 'Principal Software Developer',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -67,8 +67,8 @@ export default class People extends React.Component<
       },
       {
         id: 'woo',
-        name: 'DongWoo Kim',
-        job: 'Lead Software Developer',
+        name: 'Woo Gim',
+        job: 'Head of Software Department',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -87,7 +87,7 @@ export default class People extends React.Component<
       {
         id: 'bill',
         name: 'Bill Lee',
-        job: 'Accounting Assistant',
+        job: 'Manager',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -111,18 +111,7 @@ export default class People extends React.Component<
           },
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/sia-hong-699838158/',
-          },
-        ],
-      },
-      {
-        id: 'may',
-        name: 'May Jang',
-        job: 'Localization Manager',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/jina-jang-771445130/',
+            url: 'https://www.linkedin.com/in/sia-h-699838158/',
           },
         ],
       },
@@ -131,17 +120,21 @@ export default class People extends React.Component<
         name: 'Kelly Kim',
         job: 'Software Developer',
         extra: [
+          { label: <Icon name="github" />, url: 'https://github.com/aeei' },
           {
-            label: <Icon name="github" />,
-            url: 'https://github.com/aeei',
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/aeeighty',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/aeeighty/',
           },
         ],
       },
-
       {
         id: 'hong',
         name: 'Paul Hong',
-        job: 'Legal Director (Lawyer)',
+        job: 'Legal Director / Laywer',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -152,7 +145,7 @@ export default class People extends React.Component<
       {
         id: 'alain',
         name: 'Alain Kim',
-        job: 'Strategy Director',
+        job: 'Head of Business/Strategy',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -163,7 +156,7 @@ export default class People extends React.Component<
       {
         id: 'robb',
         name: 'Robb Lee',
-        job: 'Product Manager',
+        job: 'Senior Business Planner',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -174,11 +167,90 @@ export default class People extends React.Component<
       {
         id: 'ellie',
         name: 'Ellie Hyeon',
-        job: 'Designer',
+        job: 'Head of Design',
         extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/jisook.hyeon',
+          },
           {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/visualdesigner-hyeon',
+          },
+        ],
+      },
+      {
+        id: 'issac',
+        name: 'Issac Ko',
+        job: 'Head of SQLGate Team',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/jaecheol-ko-8016b116a/',
+          },
+        ],
+      },
+      {
+        id: 'celine',
+        name: 'Celine Lee',
+        job: 'Marketer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/sunminlee02/',
+          },
+        ],
+      },
+      {
+        id: 'andrew',
+        name: 'Andrew Han',
+        job: 'Software Developer',
+        extra: [
+          { label: <Icon name="github" />, url: 'https://github.com/umanking' },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/andrew-han-b67856a9/',
+          },
+        ],
+      },
+      {
+        id: 'ella',
+        name: 'Ella Lee',
+        job: 'Marketer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/umbr-ella/',
+          },
+        ],
+      },
+      {
+        id: 'mahsa',
+        name: 'Mahsa Monirabbasi',
+        job: 'Designer & Marketer',
+        extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/mahsabbasi',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/mahsa-abbasi-36529463/',
+          },
+        ],
+      },
+      {
+        id: 'dylan',
+        name: 'Dylan Kim',
+        job: 'Head of Marketing / Global Business',
+        extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/allinyou',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/minsoo-kim-314904102/',
           },
         ],
       },
@@ -219,4 +291,3 @@ export default class People extends React.Component<
     );
   }
 }
-
