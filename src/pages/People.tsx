@@ -208,6 +208,10 @@ export default class People extends React.Component<
         extra: [
           { label: <Icon name="github" />, url: 'https://github.com/umanking' },
           {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/umanking.87',
+          },
+          {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/andrew-han-b67856a9/',
           },
