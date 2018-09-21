@@ -120,7 +120,6 @@ export default class People extends React.Component<
         name: 'Kelly Kim',
         job: 'Software Developer',
         extra: [
-          { label: <Icon name="github" />, url: 'https://github.com/aeei' },
           {
             label: <Icon name="facebook" />,
             url: 'https://www.facebook.com/aeeighty',
@@ -129,6 +128,7 @@ export default class People extends React.Component<
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/aeeighty/',
           },
+          { label: <Icon name="github" />, url: 'https://github.com/aeei' },
         ],
       },
       {
@@ -206,7 +206,6 @@ export default class People extends React.Component<
         name: 'Andrew Han',
         job: 'Software Developer',
         extra: [
-          { label: <Icon name="github" />, url: 'https://github.com/umanking' },
           {
             label: <Icon name="facebook" />,
             url: 'https://www.facebook.com/umanking.87',
@@ -215,6 +214,7 @@ export default class People extends React.Component<
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/andrew-han-b67856a9/',
           },
+          { label: <Icon name="github" />, url: 'https://github.com/umanking' },
         ],
       },
       {
