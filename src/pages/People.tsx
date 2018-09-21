@@ -226,7 +226,7 @@ export default class People extends React.Component<
       },
       {
         id: 'mahsa',
-        name: 'Mahsa Monirabbasi',
+        name: 'Mahsa Abbasi',
         job: 'Designer & Marketer',
         extra: [
           {
