@@ -34,16 +34,16 @@ export default class Company extends React.Component<any, any> {
                       We Are Hiring >
                     </a>
                   </div>
-                  <h1>WE LEAD TECHNOLOGIES</h1>
+                  <h1>WE TAKE THE LEAD ON TECHNOLOGY</h1>
                   <article>
                     <p className={''}>
-                      We believe that technologies change the world better and
-                      we put our efforts in it. We make high-quality software
-                      you've dreamed to work on with the newest technologies.
+                      We believe that technology can change the world for the better! 
+                      So we put our best effort towards making high-quality software 
+                      you’ve dreamed of working with using the newest technology.
                     </p>
                   </article>
                   <p className={'h1Label'}>
-                    OUR PRODUCT PROVOKE YOUR SUCCESS BUSINESS
+                    OUR PRODUCT FOSTERS SUCCESS FOR YOUR BUSINESS
                   </p>
                 </div>
               </td>
