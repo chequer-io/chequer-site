@@ -36,8 +36,8 @@ export default class Culture extends React.Component<
                   <div className={'segment-wrapper'}>
                     <h3>FREEDOM</h3>
                     <p>
-                      In software industry, human resource is the core value. We
-                      believe that every member of CHEQUER should think freely,
+                      In the software industry, human resource is a core value. We
+                      believe that every member of CHEQUER should be able to think freely,
                       work freely, and act freely.
                     </p>
                   </div>
@@ -73,10 +73,10 @@ export default class Culture extends React.Component<
                   <div className={'segment-wrapper'}>
                     <h3>COMMUNICATION</h3>
                     <p>
-                      The basis of all relationships is communication. To
-                      promote horizontal and active communication, we are aiming
-                      to make Chequer a company that grants privileges but no
-                      corporate ladder and a company with responsibilities and
+                      The foundation of all relationships is communication. To
+                      promote horizontal and active communication, we strive
+                      to make Chequer a company that grants privileges without a
+                      corporate ladder. We want to be a company with set responsibilities and
                       titles but no boundaries between the executives and
                       employees.
                     </p>
@@ -92,10 +92,10 @@ export default class Culture extends React.Component<
                   <div className={'segment-wrapper'}>
                     <h3>PRIVILEGE</h3>
                     <p>
-                      Certain amount of privilege expedites decision-making in
+                      Certain amounts of privilege expedites decision-making in
                       companies and motivates its members to be more passionate
                       and responsible for the privileges given. Thus, we grant
-                      privileges and responsibilities to each member of the crew
+                      privileges and responsibilities to each member of our crew
                       on all their assignments.
                     </p>
                   </div>
@@ -108,11 +108,11 @@ export default class Culture extends React.Component<
                   <div className={'segment-wrapper'}>
                     <h3>REWARD</h3>
                     <p>
-                      Company is made up of members. Each member should
+                      A company is made up of members. Each member should
                       unceasingly contemplate how his or her dream, vision, and
                       goal fits those of the company. If the goals of the
-                      members and the company agree, the outcome will be
-                      tremendous. We are trying to create a system that assesses
+                      members and the company complement each other, the outcome will be
+                      excellence. We want to create a system that assesses
                       members through both an objective and subjective index and
                       appropriately compensate the member.
                     </p>
@@ -128,7 +128,7 @@ export default class Culture extends React.Component<
             <Grid.Row stretched columns={3}>
               <Grid.Column>
                 <Segment className={'title-card'}>
-                  <h1>CHEQUER CREW</h1>
+                  <h1>THE CHEQUER CREW</h1>
                 </Segment>
               </Grid.Column>
               <Grid.Column>
@@ -137,9 +137,9 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      HONOR ONE ANOTHER <b>FOR THE SUCCESSFUL RESULT</b>
+                      HONOR AND RESPECT <b>EACH OTHER</b>
                     </h3>
-                    <p>Together they work, sympathize, and dream of success.</p>
+                    <p>They work together, empathize with each other, and dream of success.</p>
                   </div>
                 </Segment>
               </Grid.Column>
@@ -149,11 +149,11 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      <b>THE CREW ARE</b> EXPERTS<b> IN THEIR FIELD</b>
+                      <b>ARE</b> EXPERTS<b> IN THEIR FIELDS</b>
                     </h3>
                     <p>
                       They have professional skills and knowledge in their
-                      fields with respect for others who work with them.
+                      fields with respect for all coworkers.
                     </p>
                   </div>
                 </Segment>
@@ -166,11 +166,11 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      <b>STEEP</b> LEARNING <b>CURVE</b>
+                      <b>HAVE</b> HUNGRY MINDS
                     </h3>
                     <p>
-                      They are willing to learn and grow, and they quickly
-                      obtain knowledge.
+                      They are willing to learn and grow, and are eager to
+                      obtain more knowledge.
                     </p>
                   </div>
                 </Segment>
@@ -184,13 +184,8 @@ export default class Culture extends React.Component<
                       ENCOURAGE <b>ONE ANOTHER</b>
                     </h3>
                     <p>
-                      Company is made up of members. Each member should
-                      unceasingly contemplate how his or her dream, vision, and
-                      goal fits those of the company. If the goals of the
-                      members and the company agree, the outcome will be
-                      tremendous. We are trying to create a system that assesses
-                      members through both an objective and subjective index and
-                      appropriately compensate the member.
+                      They support each other and provide great feedback to
+                      help each member flourish.
                     </p>
                   </div>
                 </Segment>
@@ -204,7 +199,7 @@ export default class Culture extends React.Component<
                       CONSIDER DEADLINES <b>SERIOUSLY</b>
                     </h3>
                     <p>
-                      They fully understand autonomy and responsibility given to
+                      They fully understand autonomy and the responsibility given to
                       them and trust one another at work.
                     </p>
                   </div>
@@ -221,8 +216,8 @@ export default class Culture extends React.Component<
                       RESULT-ORIENTED <b>PEOPLE</b>
                     </h3>
                     <p>
-                      They take in, study, and learn from their mistakes. This
-                      makes them possible to succeed.
+                      They take in, study, and learn from their mistakes
+                      so they can succeed and provide better results.
                     </p>
                   </div>
                 </Segment>
@@ -236,11 +231,11 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      HONEST <b>PEOPLE</b>
+                      <b>ARE</b> HONEST <b>PEOPLE</b>
                     </h3>
                     <p>
-                      They boldly share ideas and opinions and enjoy active
-                      communication.
+                      They boldly share ideas and opinions without beating around the bush,
+                      and participate in active communication.
                     </p>
                   </div>
                 </Segment>
@@ -251,12 +246,12 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      <b>THE CREW ARE</b> RELIABLE
+                      <b>ARE</b> RELIABLE
                     </h3>
                     <p>
-                      They work at a certain time of a day and the quality of
-                      their product is consistent. They let others know of what
-                      they are doing and are reliable for any task to be given.
+                      They keep to their schedule and the quality of
+                      their product is consistent. They communicate with others the
+                      the process of their work and are reliable for any task given to them.
                     </p>
                   </div>
                 </Segment>
@@ -284,11 +279,11 @@ export default class Culture extends React.Component<
                       FLEXIBLE <b>WORK HOURS</b>
                     </h3>
                     <p>
-                      Done with the rush hour! You won’t find yourself squeezing
-                      into overcrowded subway cars. We have passion and
-                      competence over our work, so we grant the freedom to come
-                      and leave work at your preferred time. As long as you work
-                      40 hours a week, you can be flexible with your work hours.
+                      No more dealing with rush hour! You won’t find yourself squeezing
+                      into overcrowded subway cars or busy buses. We have passion and
+                      competence about our work, so we grant the freedom to come
+                      and leave work at your leisure. As long as you work
+                      40 hours a week, you can choose your own work hours.
                     </p>
                   </div>
                 </Segment>
@@ -330,12 +325,12 @@ export default class Culture extends React.Component<
                     <p>
                       Externally, we do have representatives and decision-makers
                       of the company as board members, but internally, all
-                      members are considered equally important under the name
+                      members are considered equally important under the title of
                       ‘Crew’. For the members to feel free in giving opinions,
-                      we don’t call each other by titles but call by English
+                      we don’t call each other by titles but instead use English
                       nicknames. We believe the key to stay on track is
                       communication. Though we do not have leaders that give
-                      orders, leaders can temporarily be formed when one leads a
+                      orders, they can be asigned temporarily when one leads a
                       special project.
                     </p>
                   </div>
@@ -349,13 +344,13 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      <b>CHOICE WITH</b> RESPONSIBILITY
+                      <b>FREEDOM AND</b> RESPONSIBILITY
                     </h3>
                     <p>
                       You can choose when to work and when to rest, but these
                       choices must be made with responsibility. Making ill use
                       of autonomous corporate culture will not be tolerated.
-                      Freedom is yours with responsibility.
+                      Freedom comes with responsibility.
                     </p>
                   </div>
                 </Segment>
@@ -368,16 +363,16 @@ export default class Culture extends React.Component<
                 >
                   <div className={'segment-wrapper'}>
                     <h3>
-                      <b>WORK AS A</b> TEAM PLAYER
+                      <b>BE A</b> TEAM PLAYER
                     </h3>
                     <p>
-                      Start-ups face all sorts of situations, and they are
-                      hardly predictable. It might require its members to come
-                      together to solve problems, to help out in unfamiliar
-                      tasks, and maybe even to answer phone calls if no one else
-                      is there to pick up the phone. Person who is not up for
-                      being a team member and creates borders in terms of tasks
-                      does not fit Chequer’s work environment.
+                      Start-ups face all sorts of unpredictable situations.
+                      There will be times when everyone has to work together 
+                      to solve a problem, help with a field that is not
+                      their specialty, or answer a call when no one else 
+                      is available to pick up the phone. Someone who is not up for
+                      being a team player and creates borders in terms of tasks
+                      will not fit Chequer’s work environment.
                     </p>
                   </div>
                 </Segment>
