@@ -258,6 +258,21 @@ export default class People extends React.Component<
           },
         ],
       },
+      {
+        id: 'jayden',
+        name: 'Jayden Lee',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/gwanggi-lee-a4a368169/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/jayden-lee',
+          },
+        ],
+      },
     ];
 
     peoples.sort((a, b) => {
