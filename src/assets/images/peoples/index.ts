@@ -38,6 +38,8 @@ import dylan from './dylan.jpg';
 import dylan_hover from './dylan-hover.jpg';
 import jayden from './jayden.jpg';
 import jayden_hover from './jayden-hover.jpg';
+import david from './david.jpg';
+import david_hover from './david-hover.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -80,6 +82,7 @@ const ella_img = { img: ella, hover: ella_hover };
 const mahsa_img = { img: mahsa, hover: mahsa_hover };
 const dylan_img = { img: dylan, hover: dylan_hover };
 const jayden_img = { img: jayden, hover: jayden_hover };
+const david_img = { img: david, hover: david_hover };
 
 export {
   benjamin_img,
@@ -101,4 +104,5 @@ export {
   mahsa_img,
   dylan_img,
   jayden_img,
+  david_img,
 };
