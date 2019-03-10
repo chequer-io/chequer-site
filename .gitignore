@@ -2,3 +2,5 @@
 .awcache/
 node_modules/
 src/scss/index.css
+src/assets/images/culture/.DS_Store
+.DS_Store
