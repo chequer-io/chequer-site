@@ -22,6 +22,7 @@ import jpg_samsungService from './client/samsung-service.jpg';
 
 import png_monitor from './monitor.jpg';
 import png_hiring from './hiring.png';
+import jpg_notice from './notice.jpg';
 
 export {
   jpg_samsung,
@@ -47,4 +48,5 @@ export {
   jpg_samsungService,
   png_monitor,
   png_hiring,
+  jpg_notice,
 };

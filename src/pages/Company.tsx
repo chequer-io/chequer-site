@@ -4,6 +4,10 @@ import * as img from 'assets/images';
 export default class Company extends React.Component<any, any> {
   constructor(props) {
     super(props);
+
+    this.state = {
+      popupView: true,
+    };
   }
 
   public render() {
@@ -14,6 +18,31 @@ export default class Company extends React.Component<any, any> {
 
     return (
       <>
+        {this.state.popupView && (
+          <div
+            style={{
+              position: 'absolute',
+              zIndex: 10,
+              right: 50,
+              top: 100,
+              maxWidth: '500px',
+              textAlign: 'right',
+            }}
+          >
+            <img src={img.jpg_notice} style={{ width: '100%' }} />
+            <button
+              style={{
+                marginTop: '5px',
+                padding: '5px 10px',
+                border: '0 none',
+                borderRadius: '5px',
+              }}
+              onClick={() => this.setState({ popupView: false })}
+            >
+              Close
+            </button>
+          </div>
+        )}
         <div className={'chequer-logo'}>
           <span className="chi-chequer-full" />
         </div>
@@ -37,9 +66,10 @@ export default class Company extends React.Component<any, any> {
                   <h1>WE TAKE THE LEAD ON TECHNOLOGY</h1>
                   <article>
                     <p className={''}>
-                      We believe that technology can change the world for the better! 
-                      So we put our best effort towards making high-quality software 
-                      you’ve dreamed of working with using the newest technology.
+                      We believe that technology can change the world for the
+                      better! So we put our best effort towards making
+                      high-quality software you’ve dreamed of working with using
+                      the newest technology.
                     </p>
                   </article>
                   <p className={'h1Label'}>
