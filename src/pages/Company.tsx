@@ -18,7 +18,7 @@ export default class Company extends React.Component<any, any> {
 
     return (
       <>
-        {this.state.popupView && (
+        {/* {this.state.popupView && (
           <div
             style={{
               position: 'absolute',
@@ -42,7 +42,7 @@ export default class Company extends React.Component<any, any> {
               Close
             </button>
           </div>
-        )}
+        )} */}
         <div className={'chequer-logo'}>
           <span className="chi-chequer-full" />
         </div>
