@@ -19,7 +19,7 @@ export default class Footer extends React.Component<
                 <span className="chi-chequer-full" />
               </div>
               <p>
-                Copyright © 2018 CHEQUER Inc.<br />
+                Copyright © 2019 CHEQUER Inc.<br />
                 All rights reserved.
               </p>
             </Grid.Column>
@@ -49,8 +49,8 @@ export default class Footer extends React.Component<
                   <Grid.Column width={10}>
                     <h3>CONTACT INFO</h3>
                     <p>
-                      <b>Address</b> : #1116 B QueensPark10, 66, MagokJungang
-                      6-ro, Gangseo-gu, Seoul, Republic of Korea(07803)
+                      <b>Address</b> : #917, 21, Magokjungang 6-ro, Gangseo-gu,
+                      Seoul, 07801, Republic of Korea
                     </p>
                     <p>
                       <b>TEL</b> :{' '}
