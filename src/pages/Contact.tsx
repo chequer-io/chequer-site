@@ -28,11 +28,11 @@ export default class Contact extends React.Component<
                 <div style={{ height: '300px' }}>
                   <GoogleMapViewer
                     text={'SEOUL OFFICE'}
-                    center={[37.5672838, 126.7883053]}
+                    center={[37.562279, 126.830072]}
                     zoom={11}
                     placeCoords={{
-                      lat: 37.5672838,
-                      lng: 126.7883053,
+                      lat: 37.562279,
+                      lng: 126.830072,
                     }}
                   />
                 </div>
