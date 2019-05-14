@@ -132,6 +132,22 @@ export default class People extends React.Component<
         ],
       },
       {
+        id: 'kevin',
+        name: 'kevin So',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/sohyeonseop',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/sohyeonseop/',
+          },
+          { label: <Icon name="github" />, url: 'https://github.com/iodes' },
+        ],
+      },
+      {
         id: 'hong',
         name: 'Paul Hong',
         job: 'Legal Director / Laywer',
