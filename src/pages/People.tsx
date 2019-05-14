@@ -122,18 +122,18 @@ export default class People extends React.Component<
         extra: [
           {
             label: <Icon name="facebook" />,
-            url: 'https://www.facebook.com/aeeighty',
+            url: 'https://www.facebook.com/hyemeei',
           },
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/aeeighty/',
+            url: 'https://www.linkedin.com/in/hyemeei/',
           },
           { label: <Icon name="github" />, url: 'https://github.com/aeei' },
         ],
       },
       {
         id: 'kevin',
-        name: 'kevin So',
+        name: 'Kevin So',
         job: 'Software Developer',
         extra: [
           {
