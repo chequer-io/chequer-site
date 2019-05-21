@@ -6,7 +6,7 @@ export default class Company extends React.Component<any, any> {
     super(props);
 
     this.state = {
-      popupView: true,
+      popupView: false,
     };
   }
 
