@@ -34,7 +34,7 @@ export default class People extends React.Component<
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
-        job: 'Principal Software Developer',
+        job: 'Head of SQLGate Development',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -49,7 +49,7 @@ export default class People extends React.Component<
       {
         id: 'thomas',
         name: 'Thomas Jang',
-        job: 'Front-end Technical Director',
+        job: 'Head of Software Development',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -68,7 +68,7 @@ export default class People extends React.Component<
       {
         id: 'woo',
         name: 'Woo Gim',
-        job: 'Head of Software Department',
+        job: 'Head of QueryPie Development',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -172,7 +172,7 @@ export default class People extends React.Component<
       {
         id: 'robb',
         name: 'Robb Lee',
-        job: 'Senior Business Planner',
+        job: 'SQLGate Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -198,7 +198,7 @@ export default class People extends React.Component<
       {
         id: 'issac',
         name: 'Issac Ko',
-        job: 'Head of SQLGate Team',
+        job: 'Software Developer',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -209,7 +209,7 @@ export default class People extends React.Component<
       {
         id: 'celine',
         name: 'Celine Lee',
-        job: 'Marketer',
+        job: 'Global Business',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -218,25 +218,9 @@ export default class People extends React.Component<
         ],
       },
       {
-        id: 'andrew',
-        name: 'Andrew Han',
-        job: 'Software Developer',
-        extra: [
-          {
-            label: <Icon name="facebook" />,
-            url: 'https://www.facebook.com/umanking.87',
-          },
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/umanking/',
-          },
-          { label: <Icon name="github" />, url: 'https://github.com/umanking' },
-        ],
-      },
-      {
         id: 'ella',
         name: 'Ella Lee',
-        job: 'Marketer',
+        job: 'QueryPie Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -247,7 +231,7 @@ export default class People extends React.Component<
       {
         id: 'mahsa',
         name: 'Mahsa Abbasi',
-        job: 'Designer & Marketer',
+        job: 'Global Business',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -256,21 +240,6 @@ export default class People extends React.Component<
           {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/mahsa-abbasi-36529463/',
-          },
-        ],
-      },
-      {
-        id: 'dylan',
-        name: 'Dylan Kim',
-        job: 'Head of Marketing / Global Business',
-        extra: [
-          {
-            label: <Icon name="facebook" />,
-            url: 'https://www.facebook.com/allinyou',
-          },
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/minsoo-kim-314904102/',
           },
         ],
       },
@@ -301,6 +270,28 @@ export default class People extends React.Component<
           {
             label: <Icon name="github" />,
             url: 'https://github.com/jshyoung90',
+          },
+        ],
+      },
+      {
+        id: 'peter',
+        name: 'Peter Shin',
+        job: 'Head of Global Business',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/shndon0220/',
+          },
+        ],
+      },
+      {
+        id: 'yan',
+        name: 'Yan Kwon',
+        job: 'QueryPie Studio Product Manager',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/soyeonkwonux/',
           },
         ],
       },

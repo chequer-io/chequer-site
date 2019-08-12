@@ -42,6 +42,10 @@ import david from './david.jpg';
 import david_hover from './david-hover.jpg';
 import kevin from './kevin.jpg';
 import kevin_hover from './kevin-hover.jpg';
+import peter from './peter.jpg';
+import peter_hover from './peter-hover.jpg';
+import yan from './yan.jpg';
+import yan_hover from './yan-hover.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -86,6 +90,8 @@ const dylan_img = { img: dylan, hover: dylan_hover };
 const jayden_img = { img: jayden, hover: jayden_hover };
 const david_img = { img: david, hover: david_hover };
 const kevin_img = { img: kevin, hover: kevin_hover };
+const peter_img = { img: peter, hover: peter_hover };
+const yan_img = { img: yan, hover: yan_hover };
 
 export {
   benjamin_img,
@@ -109,4 +115,6 @@ export {
   jayden_img,
   david_img,
   kevin_img,
+  peter_img,
+  yan_img,
 };
