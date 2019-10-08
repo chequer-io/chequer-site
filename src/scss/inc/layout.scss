@@ -406,6 +406,20 @@ a {
     font-weight: 300;
     margin-bottom: 0.5em;
   }
+  .item{
+    display: inline-block;
+    background: #fff;
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .item + .item{
+    margin-left: 15px;
+  }
 
   /* Large Monitor */
   @media only screen and (min-width: 768px) and (max-width: 991px) {

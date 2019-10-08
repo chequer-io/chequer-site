@@ -108,7 +108,7 @@ export default class Company extends React.Component<any, any> {
                       href={'https://www.sqlgate.com'}
                       target={'_blank'}
                     >
-                      <i className="icon chi-sqlgate" />
+                      <i className="icon chi-sqlgate-solid" />
                       Go to SQLGate
                     </Button>
                   </div>
