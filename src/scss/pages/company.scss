@@ -67,7 +67,7 @@
 
     article {
       max-width: 650px;
-      margin: 22px auto 60px;
+      margin: 1.2em auto 4em;
       //font-family: $heading-font-family;
     }
 
@@ -120,7 +120,7 @@
     .hiring {
       max-width: 630px;
       width: 100%;
-      margin: 0 auto 60px;
+      margin: 0 auto 4em;
       cursor: pointer;
 
       img {
@@ -259,30 +259,45 @@
     }
 
     [data-page-content] {
+      padding: 20px 10px;
       .h1Label {
-        font-size: 20px;
+        font-size: 14px;
       }
       h1 {
-        font-size: 35px;
+        font-size: 25px;
         margin-bottom: 0.5em;
       }
       p {
-        font-size: 16px;
+        font-size: 14px;
+        margin-left: 1em;
+        margin-right: 1em;
       }
-      article {
 
-      }
       .btn-wrap {
         .ui.button {
-
+            width: 80%;
+            margin: 10px 0;
         }
       }
+
+
+    .hiring {
+      margin: 0 auto 3em;
+      cursor: pointer;
+
+      img {
+        max-width: 100px;
+        width: 100%;
+      }
+    }
+
     }
 
     .footer {
       position: static;
       left: auto;
       bottom: auto;
+      padding: 10px 0;
     }
   }
 }

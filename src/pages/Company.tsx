@@ -83,7 +83,7 @@ export default class Company extends React.Component<any, any> {
                     </p>
                   </article>
                   <p className={'h1Label'}>
-                    OUR PRODUCT PROVOKE YOUR<br />SUCCESS BUSINESS
+                    OUR PRODUCT FOSTERS SUCCESS<br /> FOR YOUR BUSINESS
                   </p>
 
                   <div className="btn-wrap">
@@ -110,6 +110,7 @@ export default class Company extends React.Component<any, any> {
                     >
                       <i className="icon chi-sqlgate-solid" />
                       Go to SQLGate
+                      <span className="chi-right" />
                     </Button>
                   </div>
                 </div>
