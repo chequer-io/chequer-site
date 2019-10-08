@@ -6,17 +6,20 @@
     background-color: #000;
     background-image: url($assets-image-path + 'bg-company.jpg');
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    padding: 0;
   }
 
   .chequer-logo {
-    font-size: 35px;
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    margin-left: - (163.97px / 2);
+    font-size: 30px;
+    // position: absolute;
+    // top: 40px;
+    // left: 50%;
+    // margin-left: - (163.97px / 2);
+    margin: 0 auto;
+    padding: 40px 0;
     text-shadow: 2px 2px 5px #000000;
 
     @include fadeInDown($duration: 1s, $delay: 0.5s);
@@ -31,8 +34,7 @@
   }
 
   [data-page-content] {
-
-    padding: 100px 0;
+    padding: 50px 0;
 
     .circles {
       color: #FF344D;
@@ -43,20 +45,17 @@
         margin: 5px;
       }
     }
-    .h1Label {
-      font-size: 22px;
-      color: #FF344D;
-      letter-spacing: 2px;
-      line-height: 30px;
-      text-shadow: 2px 2px 5px #000000;
-      margin: 0;
-      font-weight: 600;
-    }
+
     h1 {
       margin-top: 0;
-      text-shadow: 2px 2px 5px #000000;
-      letter-spacing: 0;
+      letter-spacing: 1.5px;
       margin-bottom: 0;
+      color: #ffffff;
+      font-size: 50px;
+      b{
+        display: block;
+        color: #FF344D;
+      }
     }
     p {
       font-size: 20px;
@@ -68,23 +67,60 @@
 
     article {
       max-width: 650px;
-      margin: 10px auto;
+      margin: 22px auto 60px;
       //font-family: $heading-font-family;
     }
+
+    .h1Label {
+      font-size: 16px;
+      color: #FF344D;
+      letter-spacing: 1.5px;
+      line-height: 24px;
+      margin: 0;
+      font-weight: 600;
+    }
+
     .btn-wrap {
-      margin-top: 5em;
-      .ui.button {
-        border-radius: 25px;
-        /* btn-shape: */
-        background-image: linear-gradient(90deg, #FF344D 0%, #881919 100%);
-        box-shadow: 0 2px 30px 0 #000000;
+      margin-top: 25px;
+      .ui.labeled.icon.buttons .button, .ui.labeled.icon.button{
+        padding-left: 4.5em !important;
+        padding-right: 1.2em !important;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-weight: 500;
+        .chi-right{
+          margin-left: 20px;
+        }
+      }
+
+      .btn1{
+        background: #5959f0;
+        color: #fff;
+        > .icon{
+          box-shadow: none;
+          background-color: transparent;
+          border-right: 1px solid #4847C0;
+          font-size: 1.3em;
+        }
+      }
+      .btn2{
+        margin-left: 1em;
+        background: #2bbb9b;
+        color: #fff;
+        > .icon{
+          box-shadow: none;
+          background-color: transparent;
+          border-right: 1px solid #20957C;
+          font-size: 1.3em;
+        }
+        
       }
     }
 
     .hiring {
       max-width: 630px;
       width: 100%;
-      margin: 0 auto 80px;
+      margin: 0 auto 60px;
       cursor: pointer;
 
       img {
@@ -94,10 +130,17 @@
 
       a {
         display: block;
-        font-size: 26px;
-        text-decoration: underline;
+        font-size: 18px;
+        text-decoration: none;
+        font-style: italic;
         -webkit-transition: color 0.1s ease;
         transition: color 0.1s ease;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+      }
+
+      span.chi-right{
+        color: #FF344D;
       }
 
       &:hover {
@@ -178,11 +221,13 @@
 
   .footer {
     font-size: 35px;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -17.5px;
-    margin-top: 2em;
+    // position: absolute;
+    // bottom: 40px;
+    // left: 50%;
+    // margin-left: -17.5px;
+    // margin-top: 2em;
+    margin: 0 auto;
+    padding: 40px 0;
     text-shadow: 2px 2px 5px #000000;
     cursor: pointer;
 
@@ -200,6 +245,15 @@
  */
 @include media-mobile {
   .page-company {
+
+    table {
+      thead{
+        td {
+          height: 50px;
+        }
+      }
+    }
+
     .chequer-logo {
       display: none;
     }

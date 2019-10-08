@@ -21,6 +21,8 @@ import jpg_samsungSds from './client/samsung-sds.jpg';
 import jpg_samsungService from './client/samsung-service.jpg';
 
 import png_monitor from './monitor.jpg';
+import png_monitor_querypie from './monitor-querypie.png';
+import png_monitor_sqlgate from './monitor-sqlgate.png';
 import png_hiring from './hiring.png';
 import jpg_notice from './notice.jpg';
 
@@ -47,6 +49,8 @@ export {
   jpg_samsungSds,
   jpg_samsungService,
   png_monitor,
+  png_monitor_querypie,
+  png_monitor_sqlgate,
   png_hiring,
   jpg_notice,
 };

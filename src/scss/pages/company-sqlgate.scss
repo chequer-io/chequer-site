@@ -18,7 +18,7 @@
       padding: 0 100px;
     }
 
-    .key-box {
+    .key-box, .sqlgate-box {
       background-color: #f3f3f3;
       padding: 100px 0 50px 0;
       min-height: 500px;
@@ -40,6 +40,7 @@
       }
 
       p {
+        color: #7e7e7e;
         &.large {
           color: #000;
           font-weight: 500;
@@ -60,24 +61,11 @@
       }
 
     }
-    .features-box {
-      background: #fafafa;
-      min-height: 500px;
-      padding: 50px 0;
 
-      .ui.segment {
-        box-shadow: none;
-        border: 0 none;
-        background: #222;
-        color: #fff;
-        border-radius: 0;
-        padding: 20px;
-        p {
-          font-size: 13px;
-          color: #ccc;
-        }
-      }
+    .sqlgate-box {
+      background-color: #fafafa;
     }
+
     .client-box {
       padding: 100px 0;
       min-height: 500px;

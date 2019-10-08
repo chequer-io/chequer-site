@@ -1,5 +1,9 @@
 $menu-width: 200px;
 
+$item-height: 30px;
+$item-dot-size: 6px;
+$item-key-color: #ff4546;
+
 @mixin media-mobile {
   @media only screen and (max-width: 767px) {
     @content;
@@ -170,9 +174,8 @@ a {
 
   .nav-container {
     padding: 10px 15px;
-    background: #000;
     border-radius: 30px;
-    background: rgba(52, 52, 52, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
 
@@ -193,20 +196,37 @@ a {
       border-radius: 10px;
 
       .item {
+        height: 40px;
+        margin: 0;
         .label {
           display: block;
           transform: translateX(0px);
           opacity: 1;
         }
+        .dot {
+          width: $item-dot-size * 2;
+          height: $item-dot-size * 2;
+          border-radius: $item-dot-size;
+        }
+        &.active {
+          .dot {
+            background: $item-key-color;
+            height: $item-dot-size * 2;
+          }
+        }
+        &.focused {
+          color: $item-key-color;
+          .dot {
+            background: $item-key-color;
+            height: $item-dot-size * 2;
+          }
+        }
       }
     }
   }
 
-  $item-height: 30px;
-  $item-dot-size: 12px;
-  $item-key-color: #ff4546;
   .item {
-    height: 40px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -220,16 +240,15 @@ a {
     //text-shadow: 1px 1px 3px #000000;
     line-height: 1em;
     font-weight: 700;
-
+    margin: 5px 0;
     .dot {
       transition: all 0.3s ease-in-out;
       content: ' ';
       display: block;
       width: $item-dot-size;
       height: $item-dot-size;
-      background: transparent;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      background: #fff;
+      border-radius: $item-dot-size / 2;
       float: left;
     }
     .label {
@@ -238,22 +257,21 @@ a {
 
     &.active {
       .dot {
-        border: 2px solid $item-key-color;
         background: $item-key-color;
-        transform: scale(1.2, 1.2);
+        height: $item-dot-size * 5;
       }
     }
     &.focused {
       color: $item-key-color;
       .dot {
         background: $item-key-color;
-        transform: scale(1.2, 1.2);
+        height: $item-dot-size * 5;
       }
     }
     &:hover {
       color: $item-key-color;
       .dot {
-        border: 2px solid $item-key-color;
+        // border: 2px solid $item-key-color;
       }
     }
 

@@ -3,8 +3,8 @@ import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
-import {Container} from 'semantic-ui-react';
-import {AsideNav, Footer, FullPage, MobileNav, SideNav} from 'components';
+import { Container } from 'semantic-ui-react';
+import { AsideNav, Footer, FullPage, MobileNav, SideNav } from 'components';
 import * as Page from 'pages';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
@@ -25,17 +25,17 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     const contentId = get(props, 'match.params.contentId');
 
     this.pages = [
-      {id: 'company', label: 'CHEQUER', component: Page.Company},
-      {id: 'company-vision', label: 'VISION', component: Page.CompanyVision},
+      { id: 'company', label: 'CHEQUER', component: Page.Company },
+      { id: 'company-vision', label: 'VISION', component: Page.CompanyVision },
       {
         id: 'company-SQLGate',
         label: 'PRODUCT',
         component: Page.CompanySQLGate,
       },
-      {id: 'culture', label: 'CULTURE', component: Page.Culture},
-      {id: 'people', label: 'PEOPLE', component: Page.People},
+      { id: 'culture', label: 'CULTURE', component: Page.Culture },
+      { id: 'people', label: 'PEOPLE', component: Page.People },
       //{id: 'recruit', label: 'RECRUIT', component: Page.Recruit},
-      {id: 'contact', label: 'CONTACT', component: Page.Contact},
+      { id: 'contact', label: 'CONTACT', component: Page.Contact },
     ];
 
     this.pageRefs = [];
@@ -112,7 +112,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
     });
     */
 
-    window.addEventListener("load", e => {
+    window.addEventListener('load', e => {
       // console.log("All resources finished loading!");
       this.calcPagePositions();
 
@@ -145,7 +145,11 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       return p.id === pId;
     });
 
-    window.history.pushState({}, this.pages[currentPageIndex].id, '#' + this.pages[currentPageIndex].id);
+    window.history.pushState(
+      {},
+      this.pages[currentPageIndex].id,
+      '#' + this.pages[currentPageIndex].id,
+    );
     this.props.fnScrollTo(this.pagePositions[currentPageIndex].sy);
   }
 
@@ -188,10 +192,10 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
             <SideNav
               focusedPageIndex={this.state.focusedPageIndex}
               pages={this.pages}
-              style={{height: this.props.height}}
+              style={{ height: this.props.height }}
               goPage={this.goPage}
             />
-            <AsideNav style={{height: this.props.height}} />
+            <AsideNav style={{ height: this.props.height }} />
           </Container>
         </div>
 

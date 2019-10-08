@@ -1,5 +1,6 @@
 import React from 'react';
 import * as img from 'assets/images';
+import { Button, Icon } from 'semantic-ui-react';
 
 export default class Company extends React.Component<any, any> {
   constructor(props) {
@@ -43,11 +44,17 @@ export default class Company extends React.Component<any, any> {
             </button>
           </div>
         )}
-        <div className={'chequer-logo'}>
-          <span className="chi-chequer-full" />
-        </div>
 
-        <table style={{ height: pageMinHeight - 100 }}>
+        <table style={{ height: pageMinHeight }}>
+          <thead>
+            <tr>
+              <td>
+                <div className={'chequer-logo'}>
+                  <span className="chi-chequer-full" />
+                </div>
+              </td>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <td>
@@ -60,10 +67,13 @@ export default class Company extends React.Component<any, any> {
                       }}
                     />
                     <a href={'https://chequer.workable.com/'} target={'_blank'}>
-                      We Are Hiring >
+                      WE ARE HIRING &nbsp;
+                      <span className="chi-right" />
                     </a>
                   </div>
-                  <h1>WE TAKE THE LEAD ON TECHNOLOGY</h1>
+                  <h1>
+                    <b>WE TAKE THE LEAD</b> ON TECHNOLOGY
+                  </h1>
                   <article>
                     <p className={''}>
                       We believe that technology can change the world for the
@@ -73,19 +83,51 @@ export default class Company extends React.Component<any, any> {
                     </p>
                   </article>
                   <p className={'h1Label'}>
-                    OUR PRODUCT FOSTERS SUCCESS FOR YOUR BUSINESS
+                    OUR PRODUCT PROVOKE YOUR<br />SUCCESS BUSINESS
                   </p>
+
+                  <div className="btn-wrap">
+                    <Button
+                      icon
+                      labelPosition="left"
+                      size="large"
+                      className="btn1"
+                      href={'https://www.querypie.com/'}
+                      target={'_blank'}
+                    >
+                      <i className="icon chi-querypie-logo" />
+                      Go to QueryPie
+                      <span className="chi-right" />
+                    </Button>
+
+                    <Button
+                      icon
+                      labelPosition="left"
+                      size="large"
+                      className="btn2"
+                      href={'https://www.sqlgate.com'}
+                      target={'_blank'}
+                    >
+                      <i className="icon chi-sqlgate" />
+                      Go to SQLGate
+                    </Button>
+                  </div>
                 </div>
               </td>
             </tr>
           </tbody>
+          <tfoot>
+            <tr>
+              <td>
+                <div className={'footer'}>
+                  <a onClick={e => this.props.goPage('company-vision')}>
+                    <span className="chi-mouse" />
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
         </table>
-
-        <div className={'footer'}>
-          <a onClick={e => this.props.goPage('company-vision')}>
-            <span className="chi-mouse" />
-          </a>
-        </div>
       </>
     );
   }
