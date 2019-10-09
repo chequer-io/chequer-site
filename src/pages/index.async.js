@@ -10,8 +10,8 @@ export const CompanyVision = Loadable({
   loader: () => import('./CompanyVision'),
   loading: Loading,
 });
-export const CompanySQLGate = Loadable({
-  loader: () => import('./CompanySQLGate'),
+export const CompanyProduct = Loadable({
+  loader: () => import('./CompanyProduct'),
   loading: Loading,
 });
 export const People = Loadable({

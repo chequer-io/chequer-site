@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Grid, Segment } from 'semantic-ui-react';
 import * as img from 'assets/images';
 
-export default class CompanySQLGate extends React.Component<
+export default class CompanyProduct extends React.Component<
   iCommonPageProps,
   iCommonPageState
 > {
@@ -35,7 +35,7 @@ export default class CompanySQLGate extends React.Component<
     ];
 
     return (
-      <div data-page-content="company-sqlgate">
+      <div data-page-content="company-product">
         <div className={'key-box'}>
           <Grid container doubling columns={2}>
             <Grid.Row>

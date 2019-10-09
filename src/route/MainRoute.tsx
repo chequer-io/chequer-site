@@ -28,9 +28,9 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
       { id: 'company', label: 'CHEQUER', component: Page.Company },
       { id: 'company-vision', label: 'VISION', component: Page.CompanyVision },
       {
-        id: 'company-SQLGate',
+        id: 'company-product',
         label: 'PRODUCT',
-        component: Page.CompanySQLGate,
+        component: Page.CompanyProduct,
       },
       { id: 'culture', label: 'CULTURE', component: Page.Culture },
       { id: 'people', label: 'PEOPLE', component: Page.People },
