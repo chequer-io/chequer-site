@@ -33,7 +33,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
         component: Page.CompanyProduct,
       },
       { id: 'culture', label: 'CULTURE', component: Page.Culture },
-      { id: 'people', label: 'PEOPLE', component: Page.People },
+      // { id: 'people', label: 'PEOPLE', component: Page.People },
       //{id: 'recruit', label: 'RECRUIT', component: Page.Recruit},
       { id: 'contact', label: 'CONTACT', component: Page.Contact },
     ];
