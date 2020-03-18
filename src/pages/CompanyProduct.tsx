@@ -55,7 +55,7 @@ export default class CompanyProduct extends React.Component<
                 <p className={'large'}>Integrated Data Analytics Environment</p>
 
                 <p>
-                  QueryPie integrates data analysis workflows into a single Integrated Data Analytics Environment that allows data analysts and data scientists to collect, analyze, and share all resources in one place, ensuring increased efficiency and productivity.
+                  QueryPie integrates data analysis workflows into a single Integrated Data Analytics Environment that allows data analysts to collect, analyze, and share all resources in one place, ensuring increased efficiency and productivity.
                 </p>
 
                 <Button.Group basic size="big">
