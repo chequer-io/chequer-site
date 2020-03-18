@@ -58,12 +58,12 @@ export default class Contact extends React.Component<
               <Card fluid>
                 <div style={{ height: '300px' }}>
                   <GoogleMapViewer
-                    text={'JEJU OFFICE'}
-                    center={[33.3073909, 126.8031071]}
+                    text={'U.S OFFICE'}
+                    center={[37.3922714, -121.9358533]}
                     zoom={9}
                     placeCoords={{
-                      lat: 33.3073909,
-                      lng: 126.8031071,
+                      lat: 37.3922714,
+                      lng: -121.9358533,
                     }}
                   />
                 </div>
@@ -71,11 +71,11 @@ export default class Contact extends React.Component<
                 <Card.Content>
                   <Card.Header>
                     <span className="chi-location" />
-                    &nbsp; JEJU OFFICE
+                    &nbsp; U.S OFFICE
                   </Card.Header>
                   <Card.Description>
-                    2F, 8, Gamabyeongpung-ro, Pyoseon-myeon, Seogwipo-si,
-                    Jeju-do, Republic of Korea
+                    3003 North 1st Street, Suite 221, San Jose
+                    CA, United States
                   </Card.Description>
                 </Card.Content>
               </Card>
