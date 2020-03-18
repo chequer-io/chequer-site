@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Segment } from 'semantic-ui-react';
+import {Button, Grid} from 'semantic-ui-react';
 import * as img from 'assets/images';
 
 export default class CompanyProduct extends React.Component<
@@ -52,12 +52,10 @@ export default class CompanyProduct extends React.Component<
                 <h1>PRODUCT</h1>
                 <h2>QueryPie</h2>
 
-                <p className={'large'}>End-to-End Data Pipeline Solution</p>
+                <p className={'large'}>Integrated Data Analytics Environment</p>
 
                 <p>
-                  QuerPie is an integrated data solution with management, access
-                  control and SQL based analysis & visualization. Make your data
-                  work as easy as pie.
+                  QueryPie integrates data analysis workflows into a single Integrated Data Analytics Environment that allows data analysts and data scientists to collect, analyze, and share all resources in one place, ensuring increased efficiency and productivity.
                 </p>
 
                 <Button.Group basic size="big">
@@ -107,14 +105,6 @@ export default class CompanyProduct extends React.Component<
                     }}
                   >
                     Features
-                  </Button>
-                  <Button
-                    basic
-                    onClick={e => {
-                      window.open('http://bit.ly/2EyxI9W');
-                    }}
-                  >
-                    Brochure
                   </Button>
                   <Button
                     basic

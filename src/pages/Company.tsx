@@ -1,6 +1,6 @@
 import React from 'react';
 import * as img from 'assets/images';
-import { Button, Icon } from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 export default class Company extends React.Component<any, any> {
   constructor(props) {
@@ -72,20 +72,13 @@ export default class Company extends React.Component<any, any> {
                     </a>
                   </div>
                   <h1>
-                    <b>WE TAKE THE LEAD</b> ON TECHNOLOGY
+                    <b>Data Management & Analytics</b>Done Right
                   </h1>
                   <article>
                     <p className={''}>
-                      We believe that technology can change the world for the
-                      better! So we put our best effort towards making
-                      high-quality software you’ve dreamed of working with using
-                      the newest technology.
+                      Be the leading provider of advanced Integrated Data Analytics Environment to help data analysts collect data insights faster.
                     </p>
                   </article>
-                  <p className={'h1Label'}>
-                    OUR PRODUCT FOSTERS SUCCESS<br /> FOR YOUR BUSINESS
-                  </p>
-
                   <div className="btn-wrap">
                     <Button
                       icon

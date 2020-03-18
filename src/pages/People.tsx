@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Icon } from 'semantic-ui-react';
-import { ProfileCard } from 'components/index';
+import {Grid, Icon} from 'semantic-ui-react';
+import {ProfileCard} from 'components/index';
 
 export default class People extends React.Component<
   iCommonPageProps,
@@ -150,22 +150,11 @@ export default class People extends React.Component<
       {
         id: 'hong',
         name: 'Paul Hong',
-        job: 'Legal Director / Laywer',
+        job: 'Legal Director / Lawyer',
         extra: [
           {
             label: <Icon name="linkedin" />,
             url: 'http://people.joins.com/search/profile.aspx?pn=396804',
-          },
-        ],
-      },
-      {
-        id: 'alain',
-        name: 'Alain Kim',
-        job: 'Head of Business/Strategy',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/jongho-alain-kim/',
           },
         ],
       },
@@ -209,7 +198,7 @@ export default class People extends React.Component<
       {
         id: 'celine',
         name: 'Celine Lee',
-        job: 'Global Business',
+        job: 'Growth Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -231,7 +220,7 @@ export default class People extends React.Component<
       {
         id: 'mahsa',
         name: 'Mahsa Abbasi',
-        job: 'Global Business',
+        job: 'Designer',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -240,21 +229,6 @@ export default class People extends React.Component<
           {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/mahsa-abbasi-36529463/',
-          },
-        ],
-      },
-      {
-        id: 'jayden',
-        name: 'Jayden Lee',
-        job: 'Software Developer',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/gwanggi-lee-a4a368169/',
-          },
-          {
-            label: <Icon name="github" />,
-            url: 'https://github.com/jayden-lee',
           },
         ],
       },

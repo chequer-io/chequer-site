@@ -3,8 +3,8 @@ import get from 'lodash-es/get';
 import forEach from 'lodash-es/forEach';
 import findIndex from 'lodash/findIndex';
 import assign from 'lodash-es/assign';
-import { Container } from 'semantic-ui-react';
-import { AsideNav, Footer, FullPage, MobileNav, SideNav } from 'components';
+import {Container} from 'semantic-ui-react';
+import {AsideNav, Footer, FullPage, MobileNav, SideNav} from 'components';
 import * as Page from 'pages';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
@@ -33,7 +33,7 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
         component: Page.CompanyProduct,
       },
       { id: 'culture', label: 'CULTURE', component: Page.Culture },
-      // { id: 'people', label: 'PEOPLE', component: Page.People },
+      { id: 'people', label: 'PEOPLE', component: Page.People },
       //{id: 'recruit', label: 'RECRUIT', component: Page.Recruit},
       { id: 'contact', label: 'CONTACT', component: Page.Contact },
     ];
