@@ -72,11 +72,11 @@ export default class Company extends React.Component<any, any> {
                     </a>
                   </div>
                   <h1>
-                    <b>Data Management & Analytics</b>Done Right
+                    <b>Data Management & Analysis</b>Done Right
                   </h1>
                   <article>
                     <p className={''}>
-                      Be the leading provider of advanced Integrated Data Analytics Environment to help data analysts collect data insights faster.
+                      We help data analysts gather data insights faster with our advanced Integrated Data Analytics Environment, QueryPie.
                     </p>
                   </article>
                   <div className="btn-wrap">
