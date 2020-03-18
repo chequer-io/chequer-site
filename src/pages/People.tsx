@@ -34,7 +34,7 @@ export default class People extends React.Component<
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
-        job: 'Head of SQLGate Development',
+        job: 'Head of SQLGate Dev',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -49,7 +49,7 @@ export default class People extends React.Component<
       {
         id: 'thomas',
         name: 'Thomas Jang',
-        job: 'Head of Software Development',
+        job: 'Head of Software Dev',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -68,7 +68,7 @@ export default class People extends React.Component<
       {
         id: 'woo',
         name: 'Woo Gim',
-        job: 'Head of QueryPie Development',
+        job: 'Head of QueryPie Dev',
         extra: [
           {
             label: <Icon name="facebook" />,
