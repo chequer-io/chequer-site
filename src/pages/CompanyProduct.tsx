@@ -81,54 +81,6 @@ export default class CompanyProduct extends React.Component<
           </Grid>
         </div>
 
-        <div className={'sqlgate-box'}>
-          <Grid container doubling columns={2}>
-            <Grid.Row>
-              <Grid.Column>
-                <h1>PRODUCT</h1>
-                <h2>SQLGate</h2>
-
-                <p className={'large'}>
-                  The Most Intelligent IDE for Databases
-                </p>
-
-                <p>
-                  Whichever database you use, SQLGate is the best tool for your
-                  database. Enjoy productive Database work!
-                </p>
-
-                <Button.Group basic size="big">
-                  <Button
-                    basic
-                    onClick={e => {
-                      window.open('https://www.sqlgate.com/product');
-                    }}
-                  >
-                    Features
-                  </Button>
-                  <Button
-                    basic
-                    onClick={e => {
-                      window.open('https://www.sqlgate.com/download');
-                    }}
-                  >
-                    Download
-                  </Button>
-                </Button.Group>
-              </Grid.Column>
-
-              <Grid.Column>
-                <img
-                  src={img.png_monitor_sqlgate}
-                  onClick={e => {
-                    window.open('https://www.sqlgate.com/product');
-                  }}
-                />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </div>
-
         <div className={'client-box'}>
           <Grid doubling container>
             <Grid.Row>

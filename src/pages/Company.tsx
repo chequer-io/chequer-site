@@ -79,33 +79,6 @@ export default class Company extends React.Component<any, any> {
                       We help data analysis gather data insights faster with our advanced Integrated Data Analytics Environment, QueryPie.
                     </p>
                   </article>
-                  <div className="btn-wrap">
-                    <Button
-                      icon
-                      labelPosition="left"
-                      size="large"
-                      className="btn1"
-                      href={'https://www.querypie.com/'}
-                      target={'_blank'}
-                    >
-                      <i className="icon chi-querypie-logo" />
-                      Go to QueryPie
-                      <span className="chi-right" />
-                    </Button>
-
-                    <Button
-                      icon
-                      labelPosition="left"
-                      size="large"
-                      className="btn2"
-                      href={'https://www.sqlgate.com'}
-                      target={'_blank'}
-                    >
-                      <i className="icon chi-sqlgate-solid" />
-                      Go to SQLGate
-                      <span className="chi-right" />
-                    </Button>
-                  </div>
                 </div>
               </td>
             </tr>
