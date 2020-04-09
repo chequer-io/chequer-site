@@ -34,7 +34,7 @@ export default class People extends React.Component<
       {
         id: 'benjamin',
         name: 'Benjamin Yang',
-        job: 'Head of SQLGate Dev',
+        job: 'Technical Director',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -49,7 +49,7 @@ export default class People extends React.Component<
       {
         id: 'thomas',
         name: 'Thomas Jang',
-        job: 'Head of Software Dev',
+        job: 'Technical Director',
         extra: [
           {
             label: <Icon name="facebook" />,
@@ -132,6 +132,17 @@ export default class People extends React.Component<
         ],
       },
       {
+        id: 'keis',
+        name: 'Keis Uhm',
+        job: 'Chief Technology Officer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/%EA%B4%91%ED%98%84-%EC%97%84-a1bb1674/',
+          }
+        ],
+      },
+      {
         id: 'kevin',
         name: 'Kevin So',
         job: 'Software Developer',
@@ -148,7 +159,7 @@ export default class People extends React.Component<
         ],
       },
       {
-        id: 'hong',
+        id: 'paul',
         name: 'Paul Hong',
         job: 'Legal Director / Lawyer',
         extra: [
@@ -161,7 +172,7 @@ export default class People extends React.Component<
       {
         id: 'robb',
         name: 'Robb Lee',
-        job: 'SQLGate Product Manager',
+        job: 'Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -209,7 +220,7 @@ export default class People extends React.Component<
       {
         id: 'ella',
         name: 'Ella Lee',
-        job: 'QueryPie Product Manager',
+        job: 'Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
@@ -261,7 +272,7 @@ export default class People extends React.Component<
       {
         id: 'yan',
         name: 'Yan Kwon',
-        job: 'QueryPie Studio Product Manager',
+        job: 'Product Manager',
         extra: [
           {
             label: <Icon name="linkedin" />,
