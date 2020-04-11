@@ -15,8 +15,6 @@ export default class ProfileCard extends React.Component<any, any> {
         />
         <Card.Content>
           <Card.Header>{this.props.name}</Card.Header>
-          <Card.Meta>{this.props.job}</Card.Meta>
-          <Card.Description>{this.props.introduction}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           {this.props.extra.map((n, ni) => {
