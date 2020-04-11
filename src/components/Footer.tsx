@@ -19,12 +19,12 @@ export default class Footer extends React.Component<
                 <span className="chi-chequer-full" />
               </div>
               <p>
-                Copyright © 2019 CHEQUER Inc.<br />
+                Copyright © 2020 CHEQUER Inc.<br />
                 All rights reserved.
               </p>
               <div style={{ marginTop: 20 }}>
                 <a
-                  href={'https://medium.com/chequer'}
+                  href={'https://blog.querypie.com'}
                   target={'_blank'}
                   className={'item'}
                 >
@@ -37,55 +37,10 @@ export default class Footer extends React.Component<
                 >
                   <span className="chi-querypie-logo" />
                 </a>
-                <a
-                  href={'https://www.sqlgate.com/'}
-                  target={'_blank'}
-                  className={'item'}
-                >
-                  <span className="chi-sqlgate-solid" />
-                </a>
               </div>
             </Grid.Column>
             <Grid.Column width={8}>
-              <Grid stackable>
-                <Grid.Row>
-                  <Grid.Column width={6}>
-                    <h3>RECRUIT</h3>
-                    <p>
-                      <a href="https://chequer.workable.com" target={'_blank'}>
-                        chequer.workable.com
-                      </a>
-                    </p>
 
-                    <h3>PARTNER</h3>
-                    <p>
-                      <span className="chi-envelope" />{' '}
-                      <a href="mailto:bill@chequer.io">bill@chequer.io</a>
-                    </p>
-
-                    <h3>ETC</h3>
-                    <p>
-                      <span className="chi-envelope" />{' '}
-                      <a href="mailto:brant@chequer.io">brant@chequer.io</a>
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column width={10}>
-                    <h3>CONTACT INFO</h3>
-                    <p>
-                      <b>Address</b> : #917, 21, Magokjungang 6-ro, Gangseo-gu,
-                      Seoul, 07801, Republic of Korea
-                    </p>
-                    <p>
-                      <b>TEL</b> :{' '}
-                      <a href="tel:82-02-338-1876">+82 2-338-1876</a>
-                    </p>
-                    <p>
-                      <b>FAX</b> :{' '}
-                      <a href="tel:02-6008-1876">+82 2-6008-1876</a>
-                    </p>
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
             </Grid.Column>
           </Grid.Row>
         </Grid>

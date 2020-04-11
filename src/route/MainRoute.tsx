@@ -185,7 +185,6 @@ export class MainRoute extends React.Component<iPageMainProps, iPageMainState> {
             </FullPage>
           );
         })}
-        <Footer />
 
         <div className={'nav-fixed-container'}>
           <Container>

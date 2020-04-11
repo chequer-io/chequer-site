@@ -76,7 +76,7 @@ export default class Company extends React.Component<any, any> {
                   </h1>
                   <article>
                     <p className={''}>
-                      We help data analysis gather data insights faster with our advanced Integrated Data Analytics Environment, QueryPie.
+                      We help data analysis gather data insights faster with our advanced Integrated Data Analysis Environment, QueryPie.
                     </p>
                   </article>
                 </div>
