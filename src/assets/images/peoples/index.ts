@@ -21,62 +21,65 @@ import kevin from './kevin.jpg';
 import peter from './peter.jpg';
 import yan from './yan.jpg';
 import keis from './keis.jpg';
+import evan from './evan.jpg';
 
 const benjamin_img = {
-    img: benjamin
+  img: benjamin,
 };
 const thomas_img = {
-    img: thomas,
+  img: thomas,
 };
 const brant_img = {
-    img: brant,
+  img: brant,
 };
 const bill_img = {
-    img: bill,
+  img: bill,
 };
 const cia_img = {
-    img: cia,
+  img: cia,
 };
 const woo_img = {
-    img: woo,
+  img: woo,
 };
 const kelly_img = {
-    img: kelly,
+  img: kelly,
 };
-const join_img = {img: join};
-const paul_img = {img: paul};
+const join_img = { img: join };
+const paul_img = { img: paul };
 
-const robb_img = {img: robb};
-const ellie_img = {img: ellie};
-const issac_img = {img: issac};
-const celine_img = {img: celine};
-const ella_img = {img: ella};
-const mahsa_img = {img: mahsa};
-const david_img = {img: david};
-const kevin_img = {img: kevin};
-const peter_img = {img: peter};
-const yan_img = {img: yan};
-const keis_img = {img: keis};
+const robb_img = { img: robb };
+const ellie_img = { img: ellie };
+const issac_img = { img: issac };
+const celine_img = { img: celine };
+const ella_img = { img: ella };
+const mahsa_img = { img: mahsa };
+const david_img = { img: david };
+const kevin_img = { img: kevin };
+const peter_img = { img: peter };
+const yan_img = { img: yan };
+const keis_img = { img: keis };
+const evan_img = { img: evan };
 
 export {
-    benjamin_img,
-    thomas_img,
-    brant_img,
-    bill_img,
-    cia_img,
-    woo_img,
-    kelly_img,
-    join_img,
-    paul_img,
-    robb_img,
-    ellie_img,
-    issac_img,
-    celine_img,
-    ella_img,
-    mahsa_img,
-    david_img,
-    kevin_img,
-    peter_img,
-    yan_img,
-    keis_img,
+  benjamin_img,
+  thomas_img,
+  brant_img,
+  bill_img,
+  cia_img,
+  woo_img,
+  kelly_img,
+  join_img,
+  paul_img,
+  robb_img,
+  ellie_img,
+  issac_img,
+  celine_img,
+  ella_img,
+  mahsa_img,
+  david_img,
+  kevin_img,
+  peter_img,
+  yan_img,
+  keis_img,
+  evan_img,
 };

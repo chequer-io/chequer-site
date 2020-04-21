@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, Icon} from 'semantic-ui-react';
-import {ProfileCard} from 'components/index';
+import { Grid, Icon } from 'semantic-ui-react';
+import { ProfileCard } from 'components/index';
 
 export default class People extends React.Component<
   iCommonPageProps,
@@ -138,8 +138,9 @@ export default class People extends React.Component<
         extra: [
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/%EA%B4%91%ED%98%84-%EC%97%84-a1bb1674/',
-          }
+            url:
+              'https://www.linkedin.com/in/%EA%B4%91%ED%98%84-%EC%97%84-a1bb1674/',
+          },
         ],
       },
       {
@@ -277,6 +278,25 @@ export default class People extends React.Component<
           {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/soyeonkwonux/',
+          },
+        ],
+      },
+      {
+        id: 'evan',
+        name: 'Evan Choi',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/jinyong.choi.338',
+          },
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/evan-choi-b63b27147/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/evan-choi',
           },
         ],
       },
