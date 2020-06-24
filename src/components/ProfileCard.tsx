@@ -24,6 +24,7 @@ export default class ProfileCard extends React.Component<any, any> {
               </a>
             );
           })}
+          &nbsp;
         </Card.Content>
       </Card>
     );

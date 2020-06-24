@@ -299,6 +299,54 @@ export default class People extends React.Component<
             url: 'https://github.com/evan-choi',
           },
         ],
+      },{
+        id: 'rogan',
+        name: 'Rogan Oh',
+        job: 'Growth Manager',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/rogan-oh-7b70671ab/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/roganOh',
+          },
+        ],
+      },{
+        id: 'tony',
+        name: 'Tony Jang',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/%EC%9C%A0%ED%83%81-%EC%9E%A5-822bb0157/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/tony-jang',
+          },
+        ],
+      },{
+        id: 'max',
+        name: 'Max Lim',
+        job: 'Software Developer',
+        extra: [
+        ],
+      },{
+        id: 'eddy',
+        name: 'Eddy Jeon',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/eddy-jeon-a56a681a9/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/Eddy-Jeon',
+          },
+        ],
       },
     ];
 

@@ -78,6 +78,11 @@ export default class Contact extends React.Component<
                     CA, United States
                   </Card.Description>
                 </Card.Content>
+                <Card.Content extra>
+                  TEL : <a href="tel:1-415-319-5225">+1 415-319-5225</a>
+                  <br />
+                  &nbsp;
+                </Card.Content>
               </Card>
             </Grid.Column>
           </Grid.Row>
