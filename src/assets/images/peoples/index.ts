@@ -22,6 +22,10 @@ import peter from './peter.jpg';
 import yan from './yan.jpg';
 import keis from './keis.jpg';
 import evan from './evan.jpg';
+import rogan from './rogan.jpg';
+import tony from './tony.jpg';
+import max from './max.jpg';
+import eddy from './eddy.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -59,6 +63,10 @@ const peter_img = { img: peter };
 const yan_img = { img: yan };
 const keis_img = { img: keis };
 const evan_img = { img: evan };
+const rogan_img = { img: rogan };
+const tony_img = { img: tony};
+const max_img = { img: max };
+const eddy_img = { img: eddy };
 
 export {
   benjamin_img,
@@ -82,4 +90,8 @@ export {
   yan_img,
   keis_img,
   evan_img,
+  rogan_img,
+  tony_img,
+  max_img,
+  eddy_img,
 };
