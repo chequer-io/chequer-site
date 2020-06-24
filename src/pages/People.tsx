@@ -328,6 +328,12 @@ export default class People extends React.Component<
           },
         ],
       },{
+        id: 'max',
+        name: 'Max Lim',
+        job: 'Software Developer',
+        extra: [
+        ],
+      },{
         id: 'eddy',
         name: 'Eddy Jeon',
         job: 'Software Developer',
