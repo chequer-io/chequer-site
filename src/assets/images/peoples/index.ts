@@ -26,6 +26,8 @@ import rogan from './rogan.jpg';
 import tony from './tony.jpg';
 import max from './max.jpg';
 import eddy from './eddy.jpg';
+import mitch from './mitch.jpg';
+import noel from './noel.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -64,9 +66,11 @@ const yan_img = { img: yan };
 const keis_img = { img: keis };
 const evan_img = { img: evan };
 const rogan_img = { img: rogan };
-const tony_img = { img: tony};
+const tony_img = { img: tony };
 const max_img = { img: max };
 const eddy_img = { img: eddy };
+const mitch_img = { img: mitch };
+const noel_img = { img: noel };
 
 export {
   benjamin_img,
@@ -94,4 +98,6 @@ export {
   tony_img,
   max_img,
   eddy_img,
+  mitch_img,
+  noel_img,
 };

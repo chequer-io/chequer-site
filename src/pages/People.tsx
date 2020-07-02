@@ -299,7 +299,8 @@ export default class People extends React.Component<
             url: 'https://github.com/evan-choi',
           },
         ],
-      },{
+      },
+      {
         id: 'rogan',
         name: 'Rogan Oh',
         job: 'Growth Manager',
@@ -313,27 +314,36 @@ export default class People extends React.Component<
             url: 'https://github.com/roganOh',
           },
         ],
-      },{
+      },
+      {
         id: 'tony',
         name: 'Tony Jang',
         job: 'Software Developer',
         extra: [
           {
             label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/%EC%9C%A0%ED%83%81-%EC%9E%A5-822bb0157/',
+            url:
+              'https://www.linkedin.com/in/%EC%9C%A0%ED%83%81-%EC%9E%A5-822bb0157/',
           },
           {
             label: <Icon name="github" />,
             url: 'https://github.com/tony-jang',
           },
         ],
-      },{
+      },
+      {
         id: 'max',
         name: 'Max Lim',
         job: 'Software Developer',
         extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url:
+              'https://www.linkedin.com/in/%EC%A2%85%ED%83%9C-%EC%9E%84-9712831b1/',
+          },
         ],
-      },{
+      },
+      {
         id: 'eddy',
         name: 'Eddy Jeon',
         job: 'Software Developer',
@@ -345,6 +355,32 @@ export default class People extends React.Component<
           {
             label: <Icon name="github" />,
             url: 'https://github.com/Eddy-Jeon',
+          },
+        ],
+      },
+      {
+        id: 'mitch',
+        name: 'Mitch No',
+        job: 'Growth Manager',
+        extra: [],
+      },
+      {
+        id: 'noel',
+        name: 'Noel Kim',
+        job: 'Software Engineer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url:
+              'https://www.linkedin.com/in/%EB%AF%BC%ED%98%81-%EA%B9%80-4358531b1/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/chequerNoel',
+          },
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/zusinShinpei/',
           },
         ],
       },
