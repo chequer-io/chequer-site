@@ -332,18 +332,6 @@ export default class People extends React.Component<
         ],
       },
       {
-        id: 'max',
-        name: 'Max Lim',
-        job: 'Software Developer',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url:
-              'https://www.linkedin.com/in/%EC%A2%85%ED%83%9C-%EC%9E%84-9712831b1/',
-          },
-        ],
-      },
-      {
         id: 'eddy',
         name: 'Eddy Jeon',
         job: 'Software Developer',
