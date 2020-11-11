@@ -52,10 +52,9 @@ export default class CompanyProduct extends React.Component<
                 <h1>PRODUCT</h1>
                 <h2>QueryPie</h2>
 
-                <p className={'large'}>Integrated Data Analysis Environment</p>
-
+                <p className={'large'}>Optimized for the cloud database management</p>
                 <p>
-                  QueryPie integrates data analysis workflows into a single Integrated Data Analysis Environment that allows data analysts to collect, analyze, and share all resources in one place, ensuring increased efficiency and productivity.
+                  QueryPie allows teams to share data with peace of mind. Assign data user access roles, rights, and track any data changes by date, time, and user id. Generate a complete data editing log.
                 </p>
 
                 <Button.Group basic size="big">
@@ -66,14 +65,6 @@ export default class CompanyProduct extends React.Component<
                     }}
                   >
                     Features
-                  </Button>
-                  <Button
-                    basic
-                    onClick={e => {
-                      window.open('https://www.querypie.com/download');
-                    }}
-                  >
-                    Download
                   </Button>
                 </Button.Group>
               </Grid.Column>

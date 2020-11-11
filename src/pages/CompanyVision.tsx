@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import {Grid} from 'semantic-ui-react';
 
 export default class CompanyVision extends React.Component<any, any> {
   constructor(props) {
@@ -21,8 +21,8 @@ export default class CompanyVision extends React.Component<any, any> {
 
                 <h1>MISSION</h1>
                 <p>
-                  make data work faster<br />
                   make data work safer<br />
+                  make data work faster<br />
                   make data work enjoyable<br />
                 </p>
                 <p />

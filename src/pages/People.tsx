@@ -229,36 +229,6 @@ export default class People extends React.Component<
         ],
       },
       {
-        id: 'mahsa',
-        name: 'Mahsa Abbasi',
-        job: 'Designer',
-        extra: [
-          {
-            label: <Icon name="facebook" />,
-            url: 'https://www.facebook.com/mahsabbasi',
-          },
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/mahsa-abbasi-36529463/',
-          },
-        ],
-      },
-      {
-        id: 'david',
-        name: 'David Joo',
-        job: 'Software Developer',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/sung-hun-joo-6bb5a2a7/',
-          },
-          {
-            label: <Icon name="github" />,
-            url: 'https://github.com/jshyoung90',
-          },
-        ],
-      },
-      {
         id: 'peter',
         name: 'Peter Shin',
         job: 'Head of Global Business',
@@ -266,17 +236,6 @@ export default class People extends React.Component<
           {
             label: <Icon name="linkedin" />,
             url: 'https://www.linkedin.com/in/shndon0220/',
-          },
-        ],
-      },
-      {
-        id: 'yan',
-        name: 'Yan Kwon',
-        job: 'Product Manager',
-        extra: [
-          {
-            label: <Icon name="linkedin" />,
-            url: 'https://www.linkedin.com/in/soyeonkwonux/',
           },
         ],
       },

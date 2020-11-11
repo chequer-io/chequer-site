@@ -1,6 +1,5 @@
 import React from 'react';
 import * as img from 'assets/images';
-import {Button} from 'semantic-ui-react';
 
 export default class Company extends React.Component<any, any> {
   constructor(props) {
@@ -59,6 +58,7 @@ export default class Company extends React.Component<any, any> {
             <tr>
               <td>
                 <div data-page-content="company">
+                  {/*
                   <div className="hiring">
                     <img
                       src={img.png_hiring}
@@ -71,12 +71,13 @@ export default class Company extends React.Component<any, any> {
                       <span className="chi-right" />
                     </a>
                   </div>
+                  */}
                   <h1>
-                    <b>Data Management & Analysis</b>Done Right
+                    <b>Data Access Control & Audit Trails</b>Done Right
                   </h1>
                   <article>
                     <p className={''}>
-                      We help data analysis gather data insights faster with our advanced Integrated Data Analysis Environment, QueryPie.
+The Most Innovated Cloud Database Management Company
                     </p>
                   </article>
                 </div>
