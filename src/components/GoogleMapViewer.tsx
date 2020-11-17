@@ -27,7 +27,7 @@ export default class GoogleMapViewer extends React.Component<
   }
 
   render() {
-    const GOOGLE_MAP_API_KEY = 'AIzaSyCM2lfWR5sc1mjf56tRf-Gfnni09dApb_M';
+    const GOOGLE_MAP_API_KEY = 'AIzaSyBVkU-TQbp0YE5hB-WQz3t9huZOISPSKn8';
 
     return (
       <GoogleMap
