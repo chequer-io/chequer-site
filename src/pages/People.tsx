@@ -275,6 +275,62 @@ export default class People extends React.Component<
           },
         ],
       },
+      {
+        id: 'rogan',
+        name: 'Rogan Oh',
+        job: 'Growth Manager',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/rogan-oh-7b70671ab/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/roganOh',
+          },
+        ],
+      },
+      {
+        id: 'eddy',
+        name: 'Eddy Jeon',
+        job: 'Software Developer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url: 'https://www.linkedin.com/in/eddy-jeon-a56a681a9/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/Eddy-Jeon',
+          },
+        ],
+      },
+      {
+        id: 'mitch',
+        name: 'Mitch No',
+        job: 'Growth Manager',
+        extra: [],
+      },
+      {
+        id: 'noel',
+        name: 'Noel Kim',
+        job: 'Software Engineer',
+        extra: [
+          {
+            label: <Icon name="linkedin" />,
+            url:
+              'https://www.linkedin.com/in/%EB%AF%BC%ED%98%81-%EA%B9%80-4358531b1/',
+          },
+          {
+            label: <Icon name="github" />,
+            url: 'https://github.com/chequerNoel',
+          },
+          {
+            label: <Icon name="facebook" />,
+            url: 'https://www.facebook.com/zusinShinpei/',
+          },
+        ],
+      },
     ];
 
     peoples.sort((a, b) => {
