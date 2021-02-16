@@ -6,7 +6,7 @@ export default class Company extends React.Component<any, any> {
     super(props);
 
     this.state = {
-      popupView: false,
+      popupView: true,
     };
   }
 
@@ -77,7 +77,7 @@ export default class Company extends React.Component<any, any> {
                   </h1>
                   <article>
                     <p className={''}>
-The Most Innovated Cloud Database Management Company
+                      The Most Innovated Cloud Database Management Company
                     </p>
                   </article>
                 </div>
@@ -88,7 +88,7 @@ The Most Innovated Cloud Database Management Company
             <tr>
               <td>
                 <div className={'footer'}>
-                  <a onClick={e => this.props.goPage('company-vision')}>
+                  <a onClick={(e) => this.props.goPage('company-vision')}>
                     <span className="chi-mouse" />
                   </a>
                 </div>

@@ -24,7 +24,7 @@ import png_monitor from './monitor.jpg';
 import png_monitor_querypie from './monitor-querypie.png';
 import png_monitor_sqlgate from './monitor-sqlgate.png';
 import png_hiring from './hiring.png';
-import jpg_notice from './notice.jpg';
+import jpg_notice from './notice.png';
 
 export {
   jpg_samsung,
