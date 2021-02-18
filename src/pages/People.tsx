@@ -323,7 +323,7 @@ export default class People extends React.Component<
           },
           {
             label: <Icon name="github" />,
-            url: 'https://github.com/chequerNoel',
+            url: 'https://github.com/nnnnoel',
           },
           {
             label: <Icon name="facebook" />,
