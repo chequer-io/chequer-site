@@ -27,6 +27,7 @@ import tony from './tony.jpg';
 import eddy from './eddy.jpg';
 import mitch from './mitch.jpg';
 import noel from './noel.jpg';
+import morris from './morris.jpg';
 
 const benjamin_img = {
   img: benjamin,
@@ -69,6 +70,7 @@ const tony_img = { img: tony };
 const eddy_img = { img: eddy };
 const mitch_img = { img: mitch };
 const noel_img = { img: noel };
+const morris_img = { img: morris };
 
 export {
   benjamin_img,
@@ -97,4 +99,5 @@ export {
   eddy_img,
   mitch_img,
   noel_img,
+  morris_img,
 };
